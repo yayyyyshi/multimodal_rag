@@ -1,0 +1,2452 @@
+[
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Internship III Report",
+    "source_type": "paddleocr",
+    "confidence": 0.9988,
+    "bbox": [
+      628.0,
+      116.0,
+      997.0,
+      162.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "On",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      785.0,
+      200.0,
+      847.0,
+      245.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Development and Testing of the Life Programmable Interface (LPI) Platform",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      541.0,
+      285.0,
+      1086.0,
+      423.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Submitted to",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      709.0,
+      459.0,
+      923.0,
+      505.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Amity University Uttar Pradesh",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      552.0,
+      538.0,
+      1076.0,
+      597.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "AMITY",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      721.0,
+      638.0,
+      935.0,
+      702.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "in partial fulfillment of the requirements for the award of the degree of",
+    "source_type": "paddleocr",
+    "confidence": 0.9981,
+    "bbox": [
+      248.0,
+      1021.0,
+      1415.0,
+      1098.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Bachelor of Technology",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      630.0,
+      1123.0,
+      1032.0,
+      1174.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Artificial Intelligence",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      653.0,
+      1212.0,
+      1012.0,
+      1263.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "By Yashika Verma (A023119823014)",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      696.0,
+      1301.0,
+      1000.0,
+      1434.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "under the guidance of",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      667.0,
+      1470.0,
+      1028.0,
+      1520.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "Dr. Mansi Sharma",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      649.0,
+      1559.0,
+      1048.0,
+      1609.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "AMITY SCHOOL OF ENGINEERING AND TECHNOLOGY DOMAIN OF ENGINEERING AND TECHNOLOGY AMITY UNIVERSITY UTTAR PRADESH",
+    "source_type": "paddleocr",
+    "confidence": 0.9992,
+    "bbox": [
+      341.0,
+      1714.0,
+      1379.0,
+      1859.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 1,
+    "text": "July 2026",
+    "source_type": "paddleocr",
+    "confidence": 0.999,
+    "bbox": [
+      780.0,
+      1930.0,
+      948.0,
+      1977.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "DECLARATION",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      685.0,
+      196.0,
+      959.0,
+      240.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "I, Yashika Verma, a student of B.Tech Artificial Intelligence hereby declare that the Internship",
+    "source_type": "paddleocr",
+    "confidence": 0.9952,
+    "bbox": [
+      141.0,
+      485.0,
+      1563.0,
+      528.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "III project titled \"Development and Testing of the Life Programmable Interface (LPI)",
+    "source_type": "paddleocr",
+    "confidence": 0.9939,
+    "bbox": [
+      142.0,
+      570.0,
+      1563.0,
+      612.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "Platform\" which is submitted by me to Amity School of Engineering and Technology, Domain",
+    "source_type": "paddleocr",
+    "confidence": 0.9926,
+    "bbox": [
+      141.0,
+      651.0,
+      1566.0,
+      700.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "of Engineering and Technology, Amity University Uttar Pradesh, in partial fulfillment of",
+    "source_type": "paddleocr",
+    "confidence": 0.995,
+    "bbox": [
+      142.0,
+      736.0,
+      1574.0,
+      784.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "requirement for the award of the degree of Bachelor of Technology Artificial Intelligence, has not",
+    "source_type": "paddleocr",
+    "confidence": 0.9993,
+    "bbox": [
+      141.0,
+      819.0,
+      1574.0,
+      873.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "been previously formed the basis for the award of any degree, diploma or other similar title or",
+    "source_type": "paddleocr",
+    "confidence": 0.9964,
+    "bbox": [
+      140.0,
+      898.0,
+      1579.0,
+      963.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "recognition.",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      141.0,
+      996.0,
+      325.0,
+      1041.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "Noida",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      132.0,
+      1212.0,
+      236.0,
+      1255.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 2,
+    "text": "Date Name and Signature of Student",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      116.0,
+      1427.0,
+      1390.0,
+      1475.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "CERTIFICATE",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      680.0,
+      260.0,
+      931.0,
+      298.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Based on declaration submitted by Yashika Verma, student of B. Tech Artificial Intelligence, I",
+    "source_type": "paddleocr",
+    "confidence": 0.9948,
+    "bbox": [
+      138.0,
+      458.0,
+      1552.0,
+      516.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "hereby certify that the Internship III project titled \"Development and Testing of the Life",
+    "source_type": "paddleocr",
+    "confidence": 0.9983,
+    "bbox": [
+      139.0,
+      542.0,
+      1549.0,
+      596.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "is submitted to AmitySchool of Programmable Interface (LPI) Platform\" whichi",
+    "source_type": "paddleocr",
+    "confidence": 0.9719,
+    "bbox": [
+      142.0,
+      629.0,
+      1554.0,
+      675.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Engineering and Technology , Domain of Engineering and Technology, Amity University Uttar",
+    "source_type": "paddleocr",
+    "confidence": 0.9967,
+    "bbox": [
+      143.0,
+      713.0,
+      1550.0,
+      758.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Pradesh, in partial fulfillment of the requirement for the award of the degree of Bachelor of",
+    "source_type": "paddleocr",
+    "confidence": 0.995,
+    "bbox": [
+      143.0,
+      795.0,
+      1459.0,
+      840.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Technology Artificial Intelligence, is an original contribution with existing knowledge and",
+    "source_type": "paddleocr",
+    "confidence": 0.9972,
+    "bbox": [
+      145.0,
+      878.0,
+      1556.0,
+      928.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "faithful record of work carried out by him/them under my guidance and supervision.",
+    "source_type": "paddleocr",
+    "confidence": 0.9966,
+    "bbox": [
+      148.0,
+      963.0,
+      1354.0,
+      1010.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "To the best of my knowledge this work has not been submitted in part or full for any Degree or",
+    "source_type": "paddleocr",
+    "confidence": 0.9989,
+    "bbox": [
+      145.0,
+      1133.0,
+      1605.0,
+      1180.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Diploma to this University or elsewhere.",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      145.0,
+      1217.0,
+      724.0,
+      1259.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "Noida",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      137.0,
+      1340.0,
+      235.0,
+      1381.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 3,
+    "text": "(Dr. Mansi Sharma) Date (Asst. Professor II) Amity School of Engineering and Technology Domain of Engineering and Technology Amity University Uttar Pradesh",
+    "source_type": "paddleocr",
+    "confidence": 0.9983,
+    "bbox": [
+      124.0,
+      1507.0,
+      1616.0,
+      1722.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 4,
+    "text": "TABLE OF CONTENTS",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      140.0,
+      143.0,
+      536.0,
+      193.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 4,
+    "text": "S.No Topic PageNo. I. Declaration 2 II. Certificate 3 III. Table Of Contents 4 IV. Abstract 5 1. Introduction 6 2. Literature Review 8 3. Methodology 11 4. Result and Discussions 15 5. Conclusion and Future Work 18 6. References 20",
+    "source_type": "paddleocr",
+    "confidence": 0.9991,
+    "bbox": [
+      82.0,
+      381.0,
+      1514.0,
+      1051.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 5,
+    "text": "Abstract",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      802.0,
+      116.0,
+      941.0,
+      153.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 5,
+    "text": "This report outlines the tasks performed during my 61 days' internship at WINNIIO AB as an Applied AI Intern. The internship was conducted in the fields of Artificial Intelligence and Software Engineering and was mostly aimed at developing, testing, documenting, and integrating the Life Programmable Interface (LPI) Platform – a backend in the LifeAtlas ecosystem intended for users goal management, processing of activity signals, and generating AI-based recommendations based on the SMILE lifecycle model. As a part of the internship, I got familiarized with the platform architecture, set up the local development environment, tested REST APIs, performed backend testing, took part in the quality assurance process, prepared technical documentation, and helped to integrate platform functionalities into different development modules. The LPI platform was created using such technologies as FastAPI, Supabase (PostgreSQL), Docker, Git, GitHub, pytest, and LangGraph. The contributions to the enhancement of automated test coverage, testing and validation of Activity Signals and Recommendation Engine workflows, improvement of recommendation feedback persistence with Supabase, ZeroClaw and GitHub webhooks integration, and assistance in setting up repositories and writing documentation were made during the internship period. They were demonstrated by means of validated pull requests for improvements to SMILE testing, expanded test coverage of Activity Signals with support of time range query, and Recommendation Feedback Persistence with Supabase Storage. The internship was finished with participating in the presentation of the final project that involved showing the finished product and its main features. The internship provided good practical experience in developing backend applications on a large scale, in API-centric architecture, working in a team on software engineering, testing and documentation.",
+    "source_type": "paddleocr",
+    "confidence": 0.997,
+    "bbox": [
+      141.0,
+      194.0,
+      1595.0,
+      1093.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "1. Introduction",
+    "source_type": "paddleocr",
+    "confidence": 0.9979,
+    "bbox": [
+      789.0,
+      88.0,
+      1032.0,
+      125.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "1.1 Background of the Domain The fast development of Artificial Intelligence and cloud computing has revolutionized the approach to the design, development, and implementation of the modern software application. In today's world, companies tend to use intelligent back-end systems that are capable of processing large amounts of structured information, making personalized suggestions, automating the decision-making process, and integrating with other external systems. As back-end systems become more complex, there is an increased need for scalable architecture, secure data management, and software engineering.",
+    "source_type": "paddleocr",
+    "confidence": 0.9984,
+    "bbox": [
+      157.0,
+      210.0,
+      1555.0,
+      546.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "Contemporary AI-based applications not only consist of machine learning algorithms but also use backend frameworks, databases, cloud technologies, automatic testing, and collaborative development processes. Stability of these applications is ensured by appropriate architecture, sufficient testing, data persistence, user authentication, and continuous integration techniques. That is why backend software engineering has become an integral part of developing intelligent applications.",
+    "source_type": "paddleocr",
+    "confidence": 0.9965,
+    "bbox": [
+      159.0,
+      571.0,
+      1552.0,
+      828.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "Life Programmable Interface (LPI) Platform by WINNIIO AB, which has been built as a part of the LifeAtlas ecosystem, is a great example of a modern backend platform that leverages AI capabilities. This platform offers a modular backend architecture that allows building a user-friendly environment where people can create and manage their goals, input structured activity signals, and get personalized recommendations via the SMILE lifecycle model. The platform consists of three core modules: Goal Registry, Activity Signals, and Recommendation Engine that interact with each other providing a cohesive process of intelligent goal management and recommendation generation.",
+    "source_type": "paddleocr",
+    "confidence": 0.9977,
+    "bbox": [
+      162.0,
+      852.0,
+      1556.0,
+      1193.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "The increasing use of AI-based backend platforms has made the collaboration process in software development more important than ever. For modern software development, versioning, automatic testing, continuous integration, technical documentation, debugging, and modularization of the software are needed in order to ensure high-quality and maintainable software. These concepts have become crucial for prospective software engineers that will work with Artificial Intelligence and backend applications.",
+    "source_type": "paddleocr",
+    "confidence": 0.9978,
+    "bbox": [
+      168.0,
+      1211.0,
+      1555.0,
+      1470.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "Interest in the field of AI, back-end software engineering, and intelligent recommendation systems was the driving force behind my decision to apply for this internship. Interning in this field gave me the chance to engage with actual production-oriented software projects as well as get experience in various aspects of back-end development like API validation and software testing.",
+    "source_type": "paddleocr",
+    "confidence": 0.9988,
+    "bbox": [
+      172.0,
+      1486.0,
+      1559.0,
+      1705.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "1.2 Objectives of the Internship To get hands-on experience in building and maintaining backend applications powered by artificial intelligence. To learn about the architecture and workflow of the Life Programmable Interface (LPI) Platform.",
+    "source_type": "paddleocr",
+    "confidence": 0.9978,
+    "bbox": [
+      173.0,
+      1733.0,
+      1597.0,
+      1955.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "Recommendation Engine modules.",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      242.0,
+      2028.0,
+      773.0,
+      2080.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 6,
+    "text": "6",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1585.0,
+      2142.0,
+      1610.0,
+      2173.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "To contribute to the software quality assurance process through debugging, integration tests, and automated test writing. To collaborate on software development through Git, GitHub, pull requests, and code review. To write technical documentation and developer setup instructions for the platform. To support the integration and validation of the platform's modules, including ZeroClaw integration and working with repositories. To improve my problem-solving, debugging, and software engineering skills through participation in an actual AI software development project.",
+    "source_type": "paddleocr",
+    "confidence": 0.9976,
+    "bbox": [
+      195.0,
+      97.0,
+      1583.0,
+      492.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "1.3 Scope of the Internship The scope of this internship was mainly focused on the backend software development and quality assurance tasks performed during the development of the Life Programmable Interface (LPI) Platform, a backend software in the LifeAtlas system ecosystem created at WINNIIO AB. The platform aims to provide a means of intelligent goal management, activity structuring and generating recommendations with the help of an AI, through a modular API based architecture.",
+    "source_type": "paddleocr",
+    "confidence": 0.9974,
+    "bbox": [
+      127.0,
+      531.0,
+      1585.0,
+      830.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "The tasks included gaining knowledge about the platform architecture and workflow, setting up and configuration of the local development environment, verification of backend APIs, automated testing, debugging of application problems, technical documentation preparation, and support for integration of the platform modules. The practical knowledge was obtained regarding the usage of such technologies as FastAPI, Supabase, Docker, Git, GitHub, pytest, and modern software engineering practices like feature branching, pull requests, etc.",
+    "source_type": "paddleocr",
+    "confidence": 0.9982,
+    "bbox": [
+      175.0,
+      863.0,
+      1587.0,
+      1118.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "My tasks as an Applied AI intern included performing testing tasks, conducting quality assurance, writing documentation, backend validation, and carrying out feature-specific development tasks assigned by the project team. In the course of the internship, I was engaged in extending automated test coverage of the Activity Signals module, enhancing SMILE test cases, developing Recommendation Feedback Persistence with Supabase, helping in validation of ZeroClaw integration, conducting GitHub webhook tests, and writing developer documentation in order to make the repository easier to onboard and maintain.",
+    "source_type": "paddleocr",
+    "confidence": 0.9985,
+    "bbox": [
+      174.0,
+      1146.0,
+      1590.0,
+      1481.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "The development of an entire platform independently is not included in the internship activities. However, the internship provides the experience in working on an existing production-focused software project where different developers were in charge of different modules of the system. This has allowed me to gain an understanding of backend architectures on a large scale, API development, software testing, debugging, and software engineering workflows in industry.",
+    "source_type": "paddleocr",
+    "confidence": 0.999,
+    "bbox": [
+      178.0,
+      1510.0,
+      1588.0,
+      1760.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 7,
+    "text": "The skills and knowledge that I acquired through this internship gave me a solid base in backend application development, collaborative software engineering, artificial intelligence-enabled systems, and quality assurance methodologies, and at the same time improved my contribution in real-life software development projects.",
+    "source_type": "paddleocr",
+    "confidence": 0.9986,
+    "bbox": [
+      180.0,
+      1790.0,
+      1587.0,
+      1957.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "2. Literature Review",
+    "source_type": "paddleocr",
+    "confidence": 0.9998,
+    "bbox": [
+      703.0,
+      77.0,
+      1020.0,
+      113.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "2.1 Overview of Backend Application Development Backend application development is concerned with the creation of server-based software designed for processing the business logic, managing data storage, processing the requests from clients, and coordinating communication between various software modules. As opposed to frontend applications, which emphasize user interaction, the backend applications deliver essential functionalities for the current software platforms through providing APIs, authentication, request processing, and database access.",
+    "source_type": "paddleocr",
+    "confidence": 0.9975,
+    "bbox": [
+      144.0,
+      205.0,
+      1603.0,
+      501.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "The fast development of Artificial Intelligence and cloud-native applications made the need for scalable backend architectures very important. Contemporary AI-powered platforms usually have modular backend solutions that unite data management, intelligent decision-making, authentication, and API integrations into one platform. Modular backend architectures make integration easier, increase scalability, and maintainability of the systems while making different services independent from each other.",
+    "source_type": "paddleocr",
+    "confidence": 0.9998,
+    "bbox": [
+      150.0,
+      526.0,
+      1608.0,
+      780.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "Modular backend architecture of Life Programmable Interface (LPI) Platform that I created during my internship consists of three main modules: Goal Registry, Activity Signals, and Recommendation Engine. These modules use REST APIs for communication and employ Supabase (PostgreSQL) as the main data persistence engine.",
+    "source_type": "paddleocr",
+    "confidence": 0.9968,
+    "bbox": [
+      153.0,
+      812.0,
+      1610.0,
+      982.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "2.2 RESTful API Architecture Representation State Transfer (REST) is among the most popular architectures used when building distributed systems. Through the use of RESTful APIs, clients can communicate with servers using HTTP methods like GET, POST, PATCH, and DELETE, making it possible for systems built on various technologies to exchange information seamlessly.",
+    "source_type": "paddleocr",
+    "confidence": 0.9968,
+    "bbox": [
+      151.0,
+      1013.0,
+      1613.0,
+      1227.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "The REST architecture creates loose coupling in the system by providing standardized endpoints that abstract the functions of the backend. This makes it scalable and allows the integration of third-party services into the system.",
+    "source_type": "paddleocr",
+    "confidence": 0.9974,
+    "bbox": [
+      156.0,
+      1258.0,
+      1614.0,
+      1384.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "The functionalities of the LPI Platform are provided by REST APIs created using FastAPI. Each function of the platform, including managing goals, ingestion of activity signals, recommendation, collection of recommendations, and administration tasks, is handled through dedicated API endpoints.",
+    "source_type": "paddleocr",
+    "confidence": 0.9987,
+    "bbox": [
+      157.0,
+      1419.0,
+      1615.0,
+      1594.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "2.3 FastAPI Framework FastAPI is a contemporary framework built for Python that allows users to create high-performing RESTful web applications. Its key distinguishing features include support for type hinting in Python and automatic generation of interactive documentation following the OpenAPI standard using tools like Swagger UI and ReDoc.",
+    "source_type": "paddleocr",
+    "confidence": 0.9951,
+    "bbox": [
+      153.0,
+      1629.0,
+      1616.0,
+      1835.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "As compared to conventional backend frameworks, FastAPI offers asynchronous processing, data validation using Pydantic, dependency injection, and an optimized routing system. All these contribute towards decreasing developers' efforts and improving the performance and maintainability of applications.",
+    "source_type": "paddleocr",
+    "confidence": 0.9967,
+    "bbox": [
+      156.0,
+      1868.0,
+      1614.0,
+      2042.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "As part of the internship, FastAPI was used as the basis for implementing the backend of the LPI",
+    "source_type": "paddleocr",
+    "confidence": 0.9914,
+    "bbox": [
+      159.0,
+      2066.0,
+      1615.0,
+      2117.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 8,
+    "text": "8",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1593.0,
+      2160.0,
+      1614.0,
+      2189.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "Platform. Specifically, it was employed to create the APIs for the modules like Goals, Activity Signals, Recommendations, GitHub Webhooks, and Team Metrics.",
+    "source_type": "paddleocr",
+    "confidence": 0.9977,
+    "bbox": [
+      140.0,
+      105.0,
+      1591.0,
+      191.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "2.4 Database Management using Supabase Supabase is an open source Backend-as-a-Service (BaaS) platform based on PostgreSQL. Supabase is a platform that provides database services, authentication services, storage facilities, row level security features, and RESTful APIs to enable easy development of backend applications.",
+    "source_type": "paddleocr",
+    "confidence": 0.9959,
+    "bbox": [
+      144.0,
+      250.0,
+      1589.0,
+      420.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "One of the most important strengths of Supabase is the ability to integrate seamlessly with PostgreSQL with developer-friendly services for authentication, migrations, and APIs. Supabase is thus appropriate for applications that require storage of structured data along with scalable backend services.",
+    "source_type": "paddleocr",
+    "confidence": 0.9986,
+    "bbox": [
+      146.0,
+      448.0,
+      1589.0,
+      615.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "The LPI platform uses Supabase as its main persistence layer for storage of goals, activity signals, recommendation feedback, activity logs, system logs, and other application data. Database migrations, authentication, and data persistence in the platform are done through the use of Supabase services.",
+    "source_type": "paddleocr",
+    "confidence": 0.9966,
+    "bbox": [
+      150.0,
+      649.0,
+      1587.0,
+      815.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "2.5 Containerization using Docker Docker is a container technology platform that allows applications and their dependencies to be encapsulated in containers. Containerization provides a similar development environment regardless of the operating system, while making the deployment process easier.",
+    "source_type": "paddleocr",
+    "confidence": 0.9944,
+    "bbox": [
+      151.0,
+      870.0,
+      1588.0,
+      1032.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "By running applications in containers, developers eliminate possible problems due to varying operating systems configurations and software version mismatches. Docker also facilitates collaboration through provision of the same execution environment for each developer.",
+    "source_type": "paddleocr",
+    "confidence": 0.9963,
+    "bbox": [
+      152.0,
+      1063.0,
+      1588.0,
+      1191.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "While working on the internship, Docker was utilized to set up and run the local development environment, especially those services of Supabase needed by the backend application.",
+    "source_type": "paddleocr",
+    "confidence": 0.9958,
+    "bbox": [
+      154.0,
+      1224.0,
+      1591.0,
+      1306.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "2.6 Software Testing Methodologies Software testing is an organized and well-planned verification process of making sure that the software adheres to the required functional and non-functional aspects. Efficient testing improves the quality of the software through identification of implementation faults, integration problems, and unanticipated system behaviors before actual deployment. Some of the commonly applied testing processes in modern backend applications include:",
+    "source_type": "paddleocr",
+    "confidence": 0.9988,
+    "bbox": [
+      150.0,
+      1344.0,
+      1590.0,
+      1586.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "Unit Testing - Unit testing tests the accuracy of each unit in the software, which includes testing of functions and classes individually. This form of testing helps developers to test individual code units before integration.",
+    "source_type": "paddleocr",
+    "confidence": 0.9995,
+    "bbox": [
+      151.0,
+      1619.0,
+      1591.0,
+      1740.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "Integration Testing - Integration testing tests how the interaction among several software units is performed, including testing of APIs, databases, authentication, and other external services. The testing makes sure that the independently designed modules work appropriately together.",
+    "source_type": "paddleocr",
+    "confidence": 0.9963,
+    "bbox": [
+      150.0,
+      1778.0,
+      1590.0,
+      1897.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "Regression Testing - Regression testing makes sure that the changes made during development do not affect previous functionalities. This is very useful for collaborative software where different developers are working together.",
+    "source_type": "paddleocr",
+    "confidence": 0.9943,
+    "bbox": [
+      151.0,
+      1932.0,
+      1591.0,
+      2050.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 9,
+    "text": "9",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1572.0,
+      2140.0,
+      1596.0,
+      2171.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "LPI Platform mainly used automated testing of the software with pytest in which tests were conducted on backend APIs, database, authentication, recommendation, and activity signals processing. Integration testing was vital for the validation of the interaction among different platform modules.",
+    "source_type": "paddleocr",
+    "confidence": 0.9969,
+    "bbox": [
+      143.0,
+      111.0,
+      1591.0,
+      290.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "2.7 Version Control and Collaborative Software Development The purpose of using version control systems is to be able to control the changes made to source code, track development history, and work collaboratively. Git has emerged as the most popular tool used for distributed version control whereas GitHub is one of the platforms that help in collaborative development of software applications.",
+    "source_type": "paddleocr",
+    "confidence": 0.997,
+    "bbox": [
+      150.0,
+      345.0,
+      1590.0,
+      555.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "Usually, the processes of feature branching, peer review, automated testing, and controlled merging to common branches make up collaborative workflows that help in improving the quality of software and avoiding merge conflicts.",
+    "source_type": "paddleocr",
+    "confidence": 0.9939,
+    "bbox": [
+      153.0,
+      592.0,
+      1591.0,
+      718.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "In the course of my internship experience, collaborative workflow using GitHub was implemented when developing the LPI Platform as well as feature branches, pull requests, staging, and peer reviews were involved.",
+    "source_type": "paddleocr",
+    "confidence": 0.9978,
+    "bbox": [
+      155.0,
+      752.0,
+      1594.0,
+      879.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "2.8 AI-Assisted Recommendation Systems Recommendation engines are advanced computational modules that make use of the available information in order to offer relevant recommendations to users. Classic recommendation engines used either collaborative or content-based recommendation methods, while current AI-enhanced recommendation engines employ the use of structured information about the user, contextual reasoning, and machine learning methods.",
+    "source_type": "paddleocr",
+    "confidence": 0.9962,
+    "bbox": [
+      157.0,
+      936.0,
+      1596.0,
+      1193.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "As far as the LPI Platform is concerned, recommendation creation is carried out with the help of a combination of information from the Goal Registry module and the Activity Signals module using the SMILE lifecycle pattern. The use of deterministic reasoning, LangGraph orchestration and several fallback methods allows reliable recommendation creation in the LPI Platform.",
+    "source_type": "paddleocr",
+    "confidence": 0.9962,
+    "bbox": [
+      158.0,
+      1219.0,
+      1599.0,
+      1393.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "2.9 Software Engineering Practices The modern software engineering practice focuses on maintainable code, modularity, testing, documentation, and collaboration. The use of code review, technical documentation, testing, and project structure helps achieve better maintenance of software and minimizes any defect in the software.",
+    "source_type": "paddleocr",
+    "confidence": 0.9982,
+    "bbox": [
+      155.0,
+      1453.0,
+      1599.0,
+      1657.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 10,
+    "text": "In the entire duration of the internship, there was consistent application of software engineering practices in the backend programming, testing, debugging, documentation, and reviewing of the pull requests. It was a good experience to work in a software engineering process in actual AI software development projects.",
+    "source_type": "paddleocr",
+    "confidence": 0.995,
+    "bbox": [
+      154.0,
+      1695.0,
+      1596.0,
+      1857.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "3. Methodology",
+    "source_type": "paddleocr",
+    "confidence": 0.9996,
+    "bbox": [
+      725.0,
+      104.0,
+      963.0,
+      138.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "3.1 System Architecture The LPI Platform has been designed as a modular backend application that allows users to create and manage goals, capture activity signals, and receive AI-generated recommendations via a single REST API interface. The platform is built based on the concept of API-first architecture, where each module operates independently yet uses the same persistent layer (Supabase/PostgreSQL). The backend framework used in the development is FastAPI which offers high-performance API endpoints, automated request validation, and Swagger API documentation. The overall architecture of the platform includes three main modules:",
+    "source_type": "paddleocr",
+    "confidence": 0.9953,
+    "bbox": [
+      140.0,
+      182.0,
+      1584.0,
+      510.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Goal Registry - This module is responsible for creation, update, retrieval, and management of user goals as well as tracking of the progress of their execution based on the SMILE lifecycle.",
+    "source_type": "paddleocr",
+    "confidence": 0.9936,
+    "bbox": [
+      148.0,
+      548.0,
+      1583.0,
+      631.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Activity Signals - This module is used for capturing structured activity events from various sources and building a timeline of user activities.",
+    "source_type": "paddleocr",
+    "confidence": 0.9989,
+    "bbox": [
+      150.0,
+      666.0,
+      1585.0,
+      745.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Recommendation Engine - This module performs analysis of goals and activity signals in order to deliver AI recommendations with the help of deterministic algorithms and LangGraph pipeline.",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      150.0,
+      785.0,
+      1589.0,
+      869.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "All the modules interact through REST API interfaces and a common database layer.",
+    "source_type": "paddleocr",
+    "confidence": 0.9935,
+    "bbox": [
+      157.0,
+      904.0,
+      1350.0,
+      947.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "3.2 Development Environment A consistent local development environment was adopted for the entire duration of the internship. The project dependencies were handled in Python, whereas the backend application was launched using FastAPI. Database services were offered through a local installation of Supabase running in Docker containers. The development environment was comprised of the following components:",
+    "source_type": "paddleocr",
+    "confidence": 0.9991,
+    "bbox": [
+      152.0,
+      982.0,
+      1559.0,
+      1192.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Component Purpose",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      153.0,
+      1208.0,
+      596.0,
+      1249.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Python 3.11 Backend application development",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      165.0,
+      1281.0,
+      965.0,
+      1324.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "REST API framework FastAPI",
+    "source_type": "paddleocr",
+    "confidence": 0.9957,
+    "bbox": [
+      162.0,
+      1359.0,
+      798.0,
+      1399.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Supabase PostgreSQL database and authentication",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      162.0,
+      1439.0,
+      1057.0,
+      1478.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Docker Local containerized services",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      158.0,
+      1514.0,
+      883.0,
+      1557.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Version control and collaboration Git & GitHub",
+    "source_type": "paddleocr",
+    "confidence": 0.9852,
+    "bbox": [
+      163.0,
+      1594.0,
+      955.0,
+      1630.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Automated testing pytest",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      155.0,
+      1672.0,
+      743.0,
+      1714.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "API validation and documentation Swagger UI",
+    "source_type": "paddleocr",
+    "confidence": 0.9997,
+    "bbox": [
+      159.0,
+      1746.0,
+      967.0,
+      1786.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "Setting up the development environment involved cloning the repository, setting up the project's dependencies, configuring environment variables, running the local Supabase instance, applying the database migrations and running the FastAPI app. After successful execution of the server, the auto-generated Swagger documentation was used to check the availability of the API.",
+    "source_type": "paddleocr",
+    "confidence": 0.9968,
+    "bbox": [
+      148.0,
+      1835.0,
+      1596.0,
+      2013.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "3.3 Development Workflow Development of the LPI Platform was carried out through a collaborative software development",
+    "source_type": "paddleocr",
+    "confidence": 0.9971,
+    "bbox": [
+      146.0,
+      2045.0,
+      1600.0,
+      2135.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 11,
+    "text": "11",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1564.0,
+      2154.0,
+      1601.0,
+      2191.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "process which allowed simultaneous contributions by several developers without compromising the integrity of the code and project stability. The workflow used in the development of the project involved the following steps:",
+    "source_type": "paddleocr",
+    "confidence": 0.996,
+    "bbox": [
+      121.0,
+      97.0,
+      1609.0,
+      231.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "1. Cloning of the current state of the repository and synchronization with the staging branch. 2. Setup of the local environment and configuration of the databases. 3. Creation of a specific branch for the assigned work. 4. Changes of implementation of features and fixing bugs as required. 5. Running of tests to ensure proper functionality. 6. Manual testing of APIs with Swagger UI. 7. Technical documentation creation when needed. 8. Submission of the changes via a Pull Request on GitHub. 9. Peer review and incorporation of feedback. 10. Merging the reviewed changes with the staging branch.",
+    "source_type": "paddleocr",
+    "confidence": 0.9951,
+    "bbox": [
+      124.0,
+      260.0,
+      1496.0,
+      696.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "This process facilitated collaborative development and increased code maintainability.",
+    "source_type": "paddleocr",
+    "confidence": 0.9993,
+    "bbox": [
+      127.0,
+      739.0,
+      1366.0,
+      776.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "3.4 Repository Structure The project repository was organized in a modular manner, which helped in keeping the business logic, routing, tests, database configuration, documentation, and frontend resources separated from each other. It helped to simplify the process of maintaining the code and make it possible to develop various modules separately. Major repository components are briefly listed below.",
+    "source_type": "paddleocr",
+    "confidence": 0.9975,
+    "bbox": [
+      130.0,
+      840.0,
+      1598.0,
+      1056.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Purpose Directory",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      116.0,
+      1142.0,
+      655.0,
+      1193.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Core backend application src/lpi",
+    "source_type": "paddleocr",
+    "confidence": 0.9993,
+    "bbox": [
+      119.0,
+      1286.0,
+      884.0,
+      1342.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "REST API endpoints routers",
+    "source_type": "paddleocr",
+    "confidence": 0.9993,
+    "bbox": [
+      118.0,
+      1438.0,
+      820.0,
+      1491.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Authentication and request processing middleware",
+    "source_type": "paddleocr",
+    "confidence": 0.9937,
+    "bbox": [
+      111.0,
+      1590.0,
+      1068.0,
+      1639.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Database interaction layer store.py",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      106.0,
+      1737.0,
+      889.0,
+      1793.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Automated test suites tests",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      97.0,
+      1888.0,
+      820.0,
+      1938.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 12,
+    "text": "Database migrations and configuration supabase",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      84.0,
+      2040.0,
+      1079.0,
+      2096.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "docs Technical documentation",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      128.0,
+      151.0,
+      896.0,
+      200.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "frontend-js React-based frontend application",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      131.0,
+      305.0,
+      1004.0,
+      355.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "Organizing various functions in separate modules made it easier to read and maintain the code without duplication. There were also various configuration files like pyproject.toml, Makefile, .env.example, and pre-commit hooks within the repository.",
+    "source_type": "paddleocr",
+    "confidence": 0.9991,
+    "bbox": [
+      152.0,
+      436.0,
+      1592.0,
+      556.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "3.5 Testing Methodology Testing was an important part of the software development life cycle during the internship period. Rather than performing only manual tests, the platform used an automated testing strategy using pytest, supplemented with manual testing using Swagger UI. The following steps were involved in the testing process. 1. API Testing - The backend endpoints were tested to confirm the appropriate handling of requests and responses, their status codes, format and the authentication process. API testing was conducted for Goal Registry, Activity Signals, Recommendation Engine, Recommendation Feedback and other backend services. 2. Integration Testing - This testing ensured that all components of the platform worked effectively in conjunction with one another. This kind of testing included validating interactions between FastAPI endpoints, Supabase database queries, authentication middlewares and recommendation workflows. 3. Regression Testing - After adding new features or resolving bugs, regression testing was done to check that the existing features were not broken. Test suits were run before sending pull requests to check any unwanted effects introduced. Manual Validation - Automated tests were complemented with manual validation of the endpoints using Swagger UI.",
+    "source_type": "paddleocr",
+    "confidence": 0.9978,
+    "bbox": [
+      107.0,
+      608.0,
+      1519.0,
+      1375.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "The testing strategy contributed to improving software reliability, identifying defects during development, and maintaining platform stability throughout the internship.",
+    "source_type": "paddleocr",
+    "confidence": 0.9981,
+    "bbox": [
+      158.0,
+      1408.0,
+      1590.0,
+      1506.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "3.6 Documentation Workflow Documentation was carried out in parallel to development in order to enhance maintainability and onboarding of developers. Documentation was done during the entire period of the internship in case any feature, test, or development was introduced. Documentation consisted of:",
+    "source_type": "paddleocr",
+    "confidence": 0.9988,
+    "bbox": [
+      152.0,
+      1531.0,
+      1591.0,
+      1702.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "Repository configuration guide. Setting up the local development environment. API documentation through Swagger UI. Test documentation. Documentation for pull requests. QA Documentation. Documentation for integration of the platform components. Troubleshooting documentation for developers.",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      207.0,
+      1733.0,
+      1042.0,
+      2074.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 13,
+    "text": "10",
+    "source_type": "paddleocr",
+    "confidence": 0.8339,
+    "bbox": [
+      1583.0,
+      2190.0,
+      1605.0,
+      2198.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 14,
+    "text": "3.7 Git Workflow",
+    "source_type": "paddleocr",
+    "confidence": 0.9971,
+    "bbox": [
+      132.0,
+      118.0,
+      413.0,
+      159.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 14,
+    "text": "The version control system for the project was Git and GitHub, and this was done using the collaborative branching model. Each task assigned was first done in a feature branch and later merged in the common staging branch after review. Below is an overview of the process that was followed during the internship.",
+    "source_type": "paddleocr",
+    "confidence": 0.9979,
+    "bbox": [
+      132.0,
+      198.0,
+      1594.0,
+      364.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 14,
+    "text": "Repository Initialization → Creation of a Feature Branch → Coding → Automated Testing → Manual Validation of APIs → Pull Request → Code Review → Feedback Review → Merging to Staging Branch",
+    "source_type": "paddleocr",
+    "confidence": 0.9954,
+    "bbox": [
+      133.0,
+      398.0,
+      1599.0,
+      527.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 14,
+    "text": "This process enabled traceability of changes in the code, collaboration, and quality of the codebase.",
+    "source_type": "paddleocr",
+    "confidence": 0.9996,
+    "bbox": [
+      135.0,
+      552.0,
+      1569.0,
+      603.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "4. Results and Discussion",
+    "source_type": "paddleocr",
+    "confidence": 0.9926,
+    "bbox": [
+      654.0,
+      102.0,
+      1030.0,
+      133.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "4.1 Overview The internship activities allowed me to contribute to the implementation of the Life Programmable Interface (LPI) Platform, which is a modular backend application developed as part of the LifeAtlas ecosystem at WINNIIO AB. The tasks performed during the course of the internship aimed at enhancing the quality and stability of the platform through backend testing, documentation, integration assistance, debugging, and feature-specific development.",
+    "source_type": "paddleocr",
+    "confidence": 0.9988,
+    "bbox": [
+      137.0,
+      175.0,
+      1577.0,
+      420.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "Through this internship, I gained experience in collaborative software engineering where the development process involved Github workflows, automated tests, code review, and continuous integration processes. My contributions were related to learning about the current architecture of the platform, validation of the backend system, automation of tests, helping with feature integration, developer documentation, and quality assurance activities for various modules of the platform.",
+    "source_type": "paddleocr",
+    "confidence": 0.9976,
+    "bbox": [
+      145.0,
+      451.0,
+      1580.0,
+      655.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "A major accomplishment of this internship was completion of three verified pull requests that helped improve the functionality of the platform and software quality:",
+    "source_type": "paddleocr",
+    "confidence": 0.9992,
+    "bbox": [
+      147.0,
+      683.0,
+      1583.0,
+      766.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "PR #14 – SMILE Test Updates PR #28 – Increased Activity Signals Test Coverage and Time Range Querying Feature PR #34 – Recommendation Feedback Storage Using Supabase Storage",
+    "source_type": "paddleocr",
+    "confidence": 0.9968,
+    "bbox": [
+      207.0,
+      799.0,
+      1432.0,
+      927.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "In addition to my involvement in coding the application, I was also involved in the final demo of the project and helped the team in testing, documentation, and integration efforts, which made the internship project a success.",
+    "source_type": "paddleocr",
+    "confidence": 0.9987,
+    "bbox": [
+      140.0,
+      955.0,
+      1599.0,
+      1077.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "4.2 Major Technical Contributions Automation Testing Improvements - One of the main contributions done during my internship was the improvement of the platform's automated testing system. Test cases already implemented were analyzed and run, and some additional test cases were created in order to better validate the work of the backend. Specifically, much effort was put into making sure that any newly added feature will not cause regression in already working parts of the system. The changes made with PR #14 helped improve the testing of the SMILE framework, and PR #28 extended the number of automated tests for Activity Signals module by creating new test cases and time-range queries support. Feedback Persistence Implementation - Yet another important contribution was the development of Recommendation Feedback Persistence using Supabase. With this feature, feedback given by users regarding the recommendations provided by the platform could be saved in the database of the platform. It was implemented in PR #34. Backend Validation and API Testing - Backend APIs were validated through automation and manual validation methods throughout the internship. Endpoints associated with Goals, Activity Signals, Recommendations, and other platform APIs were validated in order to check their request processing, response structure, and backend behavior. Manual validation of APIs through Swagger in FastAPI added to automated testing and assisted in finding bugs prior to code review. Documentation - Documentation was an integral part of the internship. Technical documentation was created and maintained to help in developer onboarding, repo configuration, and other processes. Documentation made it easier for us to collaborate and made things simpler for any developer joining the project.",
+    "source_type": "paddleocr",
+    "confidence": 0.997,
+    "bbox": [
+      130.0,
+      1120.0,
+      1592.0,
+      2095.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 15,
+    "text": "15",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1591.0,
+      2147.0,
+      1630.0,
+      2181.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "4.3 Repository Improvements Apart from the work on feature specific development, there were other efforts which aided the maintenance of the codebase of the project. They included:",
+    "source_type": "paddleocr",
+    "confidence": 0.9992,
+    "bbox": [
+      138.0,
+      151.0,
+      1583.0,
+      279.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "Working on test coverage. Working on testing documentation. Helping out in the documentation for repository setup. Checking for GitHub webhooks. Helping out in ZeroClaw documentation. Pull Request reviews and QA related tasks.",
+    "source_type": "paddleocr",
+    "confidence": 0.9985,
+    "bbox": [
+      203.0,
+      316.0,
+      970.0,
+      562.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "All these efforts helped in making the development process better.",
+    "source_type": "paddleocr",
+    "confidence": 0.9997,
+    "bbox": [
+      147.0,
+      601.0,
+      1070.0,
+      644.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "4.4 Team Collaboration The internship took place in a collaborative software engineering setting in which various developers worked on different modules of the system.",
+    "source_type": "paddleocr",
+    "confidence": 0.9993,
+    "bbox": [
+      150.0,
+      697.0,
+      1580.0,
+      818.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "My responsibilities entailed working with my colleagues at different stages such as developing, testing, debugging, documenting, and reviewing the pull requests. The pair programming and collaborative debugging were done at any point that integration problems came up, especially when testing and integrating ZeroClaw. Getting feedback through peer reviews was beneficial not only in improving code quality but also in gaining insights in software engineering practices.",
+    "source_type": "paddleocr",
+    "confidence": 0.9957,
+    "bbox": [
+      150.0,
+      857.0,
+      1583.0,
+      1064.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "Being part of the final project presentation helped me present the finished product and see how my contributions fitted into the system.",
+    "source_type": "paddleocr",
+    "confidence": 0.9908,
+    "bbox": [
+      153.0,
+      1094.0,
+      1581.0,
+      1172.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "4.5 Key Outcomes Some of the tangible results that came from the internship were the following for the platform and personal development.",
+    "source_type": "paddleocr",
+    "confidence": 0.9955,
+    "bbox": [
+      153.0,
+      1214.0,
+      1583.0,
+      1331.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "Technical Achievements Made contributions in the form of three confirmed pull requests. Increased the test coverage of the automated backend tests. Improved the validation of the Activity Signals module. Implemented the recommendation feedback persistence via Supabase. Worked on backend API validation. Worked on ZeroClaw integration validation. Contributions to developer documentation. Participation in quality assurance and debugging work.",
+    "source_type": "paddleocr",
+    "confidence": 0.9956,
+    "bbox": [
+      153.0,
+      1370.0,
+      1191.0,
+      1748.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 16,
+    "text": "Professional Achievements Got hands-on experience in collaborative software engineering. Developed experience in Git and GitHub development. Better knowledge of backend application architecture. Improved debugging and problem-solving skills. Learned modern testing approaches through pytest. Developed experience in technical documentation writing.",
+    "source_type": "paddleocr",
+    "confidence": 0.9998,
+    "bbox": [
+      142.0,
+      1782.0,
+      1100.0,
+      2092.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "Area Outcome",
+    "source_type": "paddleocr",
+    "confidence": 0.9999,
+    "bbox": [
+      180.0,
+      138.0,
+      841.0,
+      182.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "API validation and integration Backend Development",
+    "source_type": "paddleocr",
+    "confidence": 0.9941,
+    "bbox": [
+      187.0,
+      281.0,
+      1103.0,
+      332.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "Expanded automated coverage Testing",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      186.0,
+      428.0,
+      1109.0,
+      484.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "Setup guides and technical documentation Documentation",
+    "source_type": "paddleocr",
+    "confidence": 0.9841,
+    "bbox": [
+      190.0,
+      574.0,
+      1256.0,
+      621.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "QA Debugging and regression testing",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      191.0,
+      722.0,
+      1143.0,
+      767.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "GitHub workflow, PR reviews, final demo Collaboration",
+    "source_type": "paddleocr",
+    "confidence": 0.9998,
+    "bbox": [
+      200.0,
+      876.0,
+      1255.0,
+      915.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "4.6 Discussion However, the internship helped understand that the successful creation of a software development platform that is production-oriented entails much more than just implementing features. The efficient operation of backend systems relies on proper architecture, testing, documentation, collaboration, and quality assurance in order to become truly maintainable.",
+    "source_type": "paddleocr",
+    "confidence": 0.9971,
+    "bbox": [
+      158.0,
+      1012.0,
+      1597.0,
+      1224.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "Participation in the LPI Platform project gave me firsthand experience of how such engineering techniques were utilized during the software development process. Getting familiar with modular backend architecture, REST API creation, automation testing, versioning control, database integration, and code review taught me the importance of developing maintainable software and creating new functionality that would fit smoothly with the existing code.",
+    "source_type": "paddleocr",
+    "confidence": 0.9978,
+    "bbox": [
+      157.0,
+      1256.0,
+      1603.0,
+      1471.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 17,
+    "text": "While my personal contributions included mostly testing, documentation, backend validation, and feature development, they were parts of a larger effort towards enhancing the reliability and maintainability of the platform. Therefore, the internship was a great opportunity to apply my theoretical knowledge in practice and see how software engineering techniques were applied in the process of building AI-enabled backend systems.",
+    "source_type": "paddleocr",
+    "confidence": 0.9984,
+    "bbox": [
+      155.0,
+      1510.0,
+      1610.0,
+      1725.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "5. Conclusion and Future Scope",
+    "source_type": "paddleocr",
+    "confidence": 0.9893,
+    "bbox": [
+      611.0,
+      83.0,
+      1103.0,
+      122.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "5.1 Conclusion The present internship has been an excellent learning experience in the areas of Artificial Intelligence, software engineering, and development through participation in developing the LPI Platform for WINNIIO AB. The 61-day long internship has involved being part of a multi-disciplinary development team working on production backend development, performing activities related to software testing, validation, debugging, quality assurance, documentation, and feature development.",
+    "source_type": "paddleocr",
+    "confidence": 0.9979,
+    "bbox": [
+      138.0,
+      167.0,
+      1604.0,
+      461.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "The software development lifecycle from platform architecture and configuration of the local development environment to backend API validation, automated testing, repositories, documentation, and collaboration through GitHub was experienced during the internship. Working with technologies such as FastAPI, Supabase, Docker, Git, GitHub, and pytest has enabled me to gain a better understanding of modern backend applications development and software engineering.",
+    "source_type": "paddleocr",
+    "confidence": 0.9953,
+    "bbox": [
+      144.0,
+      491.0,
+      1607.0,
+      702.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "One of the major tasks was making the platform more reliable and maintainable via testing and QA-related work. I contributed to the improvement of automated tests for the Activity Signals component, SMILE test cases, Recommendation Feedback Persistence with Supabase, ZeroClaw integration validation, GitHub webhook testing, and preparation of technical documentation to help other developers join the project and keep the repository clean. These contributions were properly implemented via pull requests and became a part of the effort of the team to improve the platform.",
+    "source_type": "paddleocr",
+    "confidence": 0.9967,
+    "bbox": [
+      151.0,
+      739.0,
+      1609.0,
+      987.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "In addition to the technical work, I learned about the role of collaboration in large software development projects. Participating in architectural discussions, debugging, pull requests review, pair programming, and the demo of the project gave me valuable insights into how software engineering teams coordinate their work, ensure high quality, and incorporate separate contributions into a single codebase.",
+    "source_type": "paddleocr",
+    "confidence": 0.9964,
+    "bbox": [
+      153.0,
+      1024.0,
+      1613.0,
+      1231.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "From a personal point of view, the internship helped me acquire substantial theoretical knowledge about the backend software development process and improve my analytical skills, debugging process, problem-solving skills, and the confidence in working in a collaborative environment. Thus, the internship gave me an excellent opportunity to connect theoretical knowledge acquired in the process of academic learning with practice and helped me prepare for the career in Artificial Intelligence and software engineering.",
+    "source_type": "paddleocr",
+    "confidence": 0.9973,
+    "bbox": [
+      155.0,
+      1264.0,
+      1615.0,
+      1510.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "Despite the fact that the internship provided me with ample opportunity to learn the processes associated with the backend development and software engineering process, my personal contribution was limited to some particular modules and tasks assigned for development in the context of a collaborative process.",
+    "source_type": "paddleocr",
+    "confidence": 0.9964,
+    "bbox": [
+      157.0,
+      1547.0,
+      1617.0,
+      1708.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "5.2 Future Scope Based on the knowledge and experience gained in the course of the internship, the following enhancements can be proposed for the future development of the Life Programmable Interface (LPI) Platform:",
+    "source_type": "paddleocr",
+    "confidence": 0.9976,
+    "bbox": [
+      154.0,
+      1749.0,
+      1614.0,
+      1909.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "Recommendation Intelligence Enhancement: Upgrade the recommendation engine with more advanced approaches of AI and user feedback to create more customized and contextual recommendations. Increase in Automated Testing: Implement automated tests for all platform components and",
+    "source_type": "paddleocr",
+    "confidence": 0.9963,
+    "bbox": [
+      216.0,
+      1944.0,
+      1618.0,
+      2122.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 18,
+    "text": "18",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      1581.0,
+      2142.0,
+      1620.0,
+      2178.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 19,
+    "text": "add performance, integration, and security tests for increased software reliability. Improvement of Developer Experience: Develop technical documentation, reduce the complexity of the local developer environment and improve development processes. Platform Scalability Strengthening: Investigate cloud native approaches and optimization of backend infrastructure for better scalability and performance. Platform Development Continuation: Expand platform capabilities, provide integration opportunities and improve backend architecture.",
+    "source_type": "paddleocr",
+    "confidence": 0.9987,
+    "bbox": [
+      159.0,
+      130.0,
+      1587.0,
+      418.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "6. References",
+    "source_type": "paddleocr",
+    "confidence": 1.0,
+    "bbox": [
+      728.0,
+      97.0,
+      943.0,
+      144.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[1] FastAPI, \"FastAPI Documentation\". [Online]. Available: https:fastapi.tiangolo.com/ [2] Supabase Inc., \"Supabase Documentation”. [Online]. Available: https://supabase.com/docs [3] Docker Inc., \"Docker Documentation\". [Online]. Available: https://docs.docker.com/ [4] Git SCM, \"Git Documentation”. [Online]. Available: https://git-scm.com/doc",
+    "source_type": "paddleocr",
+    "confidence": 0.969,
+    "bbox": [
+      90.0,
+      254.0,
+      1434.0,
+      551.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[5] GitHub Inc., \"GitHub Docs\". [Online]. Available: https://docs.github.com/",
+    "source_type": "paddleocr",
+    "confidence": 0.9912,
+    "bbox": [
+      92.0,
+      570.0,
+      1197.0,
+      629.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[6] pytest Available: Documentation\". Team, “pytest Development [Online]. https://docs.pytest.org/en/stable/",
+    "source_type": "paddleocr",
+    "confidence": 0.9904,
+    "bbox": [
+      92.0,
+      647.0,
+      1589.0,
+      746.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[7] LangChain Available: \"LangGraph Inc., Documentation\". [Online]. https://langchain-ai.github.io/langgraph/",
+    "source_type": "paddleocr",
+    "confidence": 0.9946,
+    "bbox": [
+      95.0,
+      771.0,
+      1592.0,
+      863.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[8] Ollama, \"Ollama Documentation”. [Online]. Available: https://ollama.com/docs",
+    "source_type": "paddleocr",
+    "confidence": 0.9807,
+    "bbox": [
+      93.0,
+      889.0,
+      1279.0,
+      949.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "3 Documentation\". [Online]. Available: \"Python Foundation, [9] Python Software https://docs.python.org/3/",
+    "source_type": "paddleocr",
+    "confidence": 0.9884,
+    "bbox": [
+      95.0,
+      966.0,
+      1599.0,
+      1064.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[10] Pydantic Team, \"Pydantic Documentation\". [Online]. Available: https://docs.pydantic.dev/latest/",
+    "source_type": "paddleocr",
+    "confidence": 0.9792,
+    "bbox": [
+      88.0,
+      1090.0,
+      1582.0,
+      1153.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[11] PostgreSQL Global Development Group, \"PostgreSQL Documentation\". [Online]. Available: https://www.postgresql.org/docs/",
+    "source_type": "paddleocr",
+    "confidence": 0.9872,
+    "bbox": [
+      88.0,
+      1170.0,
+      1598.0,
+      1264.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[12] OpenAPI Initiative, \"OpenAPI [Online]. Available: Specification\". https://spec.openapis.org/oas/latest.html",
+    "source_type": "paddleocr",
+    "confidence": 0.99,
+    "bbox": [
+      83.0,
+      1289.0,
+      1598.0,
+      1387.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "yashika_verma_check",
+    "page_num": 20,
+    "text": "[13 Swagger, \"Swagger Documentation\". [Online]. Available: https://swagger.io/docs/ [14] Life Programmable Interface (LPI) Platform, \"Project README and Internal Technical Documentation\", WINNIIO AB, LifeAtlas Ecosystem, 2026. (Internal project documentation used during the internship.)",
+    "source_type": "paddleocr",
+    "confidence": 0.9928,
+    "bbox": [
+      69.0,
+      1407.0,
+      1610.0,
+      1636.0
+    ],
+    "extra": {}
+  }
+]

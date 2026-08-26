@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+data/processed/_tmp_pages/
+*.log
+.DS_Store
