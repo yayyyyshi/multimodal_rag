@@ -1,0 +1,2844 @@
+[
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Internship III Report",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      250.99,
+      74.51,
+      364.01,
+      87.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "On",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      102.11,
+      316.33,
+      129.2
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Development and Testing of the",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      225.22,
+      129.71,
+      389.78,
+      143.0
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Life Programmable Interface",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      230.8,
+      143.51,
+      384.2,
+      156.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "(LPI) Platform",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      157.3,
+      347.49,
+      184.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Submitted to",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      184.9,
+      339.83,
+      211.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Amity University Uttar Pradesh",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      212.5,
+      385.49,
+      235.66
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "in partial fulfillment of the requirements for the award of the degree of",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      136.4,
+      365.35,
+      478.6,
+      378.64
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Bachelor of Technology",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      248.11,
+      392.94,
+      366.89,
+      406.23
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Artificial Intelligence",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      420.54,
+      359.73,
+      447.63
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "By \nYashika Verma \n (A023119823014)",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      448.14,
+      354.87,
+      502.83
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "under the guidance of",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      503.34,
+      361.15,
+      530.42
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "Dr. Mansi Sharma",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      531.06,
+      368.85,
+      584.82
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "AMITY SCHOOL OF ENGINEERING AND \nTECHNOLOGY DOMAIN OF ENGINEERING AND \nTECHNOLOGY AMITY UNIVERSITY UTTAR PRADESH",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      585.33,
+      466.24,
+      653.81
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 1,
+    "text": "July 2026",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      281.5,
+      654.32,
+      333.5,
+      667.61
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "DECLARATION",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      88.31,
+      343.81,
+      184.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "I, Yashika Verma, a student of B.Tech Artificial Intelligence hereby declare that the Internship",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      184.9,
+      545.09,
+      198.19
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "III project titled “Development and Testing of the Life Programmable Interface (LPI)",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      212.5,
+      544.99,
+      225.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "Platform” which is submitted by me to Amity School of Engineering and Technology, Domain",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      240.1,
+      544.54,
+      253.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "of Engineering and Technology, Amity University Uttar Pradesh, in partial fulfillment of",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      267.69,
+      545.2,
+      280.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "requirement for the award of the degree of Bachelor of Technology Artificial Intelligence, has not",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      295.29,
+      545.05,
+      308.58
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "been previously formed the basis for the award of any degree, diploma or other similar title or",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      322.89,
+      544.61,
+      336.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "recognition.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      350.49,
+      132.65,
+      363.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "Noida",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      419.48,
+      104.33,
+      487.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "Date ​\nName and Signature of Student",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      488.48,
+      473.88,
+      501.76
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 2,
+    "text": "2",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "CERTIFICATE",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      109.91,
+      340.64,
+      178.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Based on declaration submitted by Yashika Verma, student of B. Tech Artificial Intelligence,  I",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      178.9,
+      545.03,
+      192.19
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "hereby certify that the Internship III project titled “Development and Testing of the Life",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      206.5,
+      544.54,
+      219.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Programmable Interface (LPI) Platform” which​\nis \nsubmitted \nto \nAmity \nSchool \nof",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      234.1,
+      544.9,
+      247.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Engineering and Technology , Domain of Engineering and Technology, Amity University Uttar",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      261.7,
+      544.52,
+      274.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Pradesh, in partial fulfillment of the requirement for the award of the degree of Bachelor of​",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      289.29,
+      512.83,
+      302.58
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Technology Artificial Intelligence, is an original contribution with existing knowledge and",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      316.89,
+      544.97,
+      330.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "faithful record of work carried out by him/them under my guidance and supervision.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      344.49,
+      479.88,
+      357.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "To the best of my knowledge this work has not been submitted in part or full for any Degree or",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      399.68,
+      560.38,
+      412.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Diploma to this University or elsewhere.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      427.28,
+      270.29,
+      440.57
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Noida",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      468.68,
+      104.33,
+      518.86
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Date",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      523.87,
+      97.65,
+      537.16
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "(Dr. Mansi Sharma) \n(Asst. Professor II) \nAmity School of Engineering and Technology \nDomain of Engineering and Technology",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      339.0,
+      519.37,
+      559.19,
+      574.06
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "Amity University Uttar Pradesh",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      367.5,
+      574.57,
+      523.48,
+      587.86
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 3,
+    "text": "3",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "TABLE OF CONTENTS",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      80.51,
+      197.47,
+      139.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "S. No \nTopic \nPage No.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      159.0,
+      517.82,
+      172.29
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "I. \nDeclaration \n2",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      179.25,
+      478.5,
+      192.54
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "II. \nCertificate \n3",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      199.5,
+      478.5,
+      212.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "III. \nTable Of Contents \n4",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      219.75,
+      478.5,
+      233.04
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "IV. \nAbstract \n5",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      240.0,
+      478.5,
+      253.29
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "1. \nIntroduction \n6",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      260.25,
+      478.5,
+      273.54
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "2. \nLiterature Review \n8",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      280.5,
+      478.5,
+      293.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "3. \nMethodology \n11",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      300.75,
+      484.05,
+      314.04
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "4. \nResult and Discussions \n15",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      321.0,
+      484.5,
+      334.29
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "5. \nConclusion and Future Work \n18",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      341.25,
+      484.5,
+      354.54
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "6. \nReferences \n20",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      69.75,
+      361.5,
+      484.5,
+      374.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 4,
+    "text": "4",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 5,
+    "text": "Abstract",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      283.67,
+      68.51,
+      331.33,
+      81.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 5,
+    "text": "This report outlines the tasks performed during my 61 days' internship at WINNIIO AB as an \nApplied AI Intern. The internship was conducted in the fields of Artificial Intelligence and \nSoftware Engineering and was mostly aimed at developing, testing, documenting, and integrating \nthe Life Programmable Interface (LPI) Platform – a backend in the LifeAtlas ecosystem intended \nfor users goal management, processing of activity signals, and generating AI-based \nrecommendations based on the SMILE lifecycle model. As a part of the internship, I got \nfamiliarized with the platform architecture, set up the local development environment, tested REST \nAPIs, performed backend testing, took part in the quality assurance process, prepared technical \ndocumentation, and helped to integrate platform functionalities into different development \nmodules. The LPI platform was created using such technologies as FastAPI, Supabase \n(PostgreSQL), Docker, Git, GitHub, pytest, and LangGraph. The contributions to the enhancement \nof automated test coverage, testing and validation of Activity Signals and Recommendation Engine \nworkflows, improvement of recommendation feedback persistence with Supabase, ZeroClaw and \nGitHub webhooks integration, and assistance in setting up repositories and writing documentation \nwere made during the internship period. They were demonstrated by means of validated pull \nrequests for improvements to SMILE testing, expanded test coverage of Activity Signals with \nsupport of time range query, and Recommendation Feedback Persistence with Supabase Storage. \nThe internship was finished with participating in the presentation of the final project that involved \nshowing the finished product and its main features. The internship provided good practical \nexperience in developing backend applications on a large scale, in API-centric architecture, \nworking in a team on software engineering, testing and documentation.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      96.11,
+      548.15,
+      385.37
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 5,
+    "text": "5",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "1.​Introduction",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      85.04,
+      68.51,
+      378.92,
+      109.4
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "1.1​Background of the Domain \nThe fast development of Artificial Intelligence and cloud computing has revolutionized the \napproach to the design, development, and implementation of the modern software \napplication. In today’s world, companies tend to use intelligent back-end systems that are \ncapable of processing large amounts of structured information, making personalized \nsuggestions, automating the decision-making process, and integrating with other external \nsystems. As back-end systems become more complex, there is an increased need for scalable \narchitecture, secure data management, and software engineering.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      109.91,
+      548.15,
+      219.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "Contemporary AI-based applications not only consist of machine learning algorithms but \nalso use backend frameworks, databases, cloud technologies, automatic testing, and \ncollaborative development processes. Stability of these applications is ensured by \nappropriate architecture, sufficient testing, data persistence, user authentication, and \ncontinuous integration techniques. That is why backend software engineering has become an \nintegral part of developing intelligent applications.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      230.3,
+      548.23,
+      312.58
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "Life Programmable Interface (LPI) Platform by WINNIIO AB, which has been built as a part \nof the LifeAtlas ecosystem, is a great example of a modern backend platform that leverages \nAI capabilities. This platform offers a modular backend architecture that allows building a \nuser-friendly environment where people can create and manage their goals, input structured \nactivity signals, and get personalized recommendations via the SMILE lifecycle model. The \nplatform consists of three core modules: Goal Registry, Activity Signals, and \nRecommendation Engine that interact with each other providing a cohesive process of \nintelligent goal management and recommendation generation.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      323.09,
+      548.22,
+      432.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "The increasing use of AI-based backend platforms has made the collaboration process in \nsoftware development more important than ever. For modern software development, \nversioning, automatic testing, continuous integration, technical documentation, debugging, \nand modularization of the software are needed in order to ensure high-quality and \nmaintainable software. These concepts have become crucial for prospective software \nengineers that will work with Artificial Intelligence and backend applications.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      443.48,
+      548.15,
+      525.76
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "Interest in the field of AI, back-end software engineering, and intelligent recommendation \nsystems was the driving force behind my decision to apply for this internship. Interning in \nthis field gave me the chance to engage with actual production-oriented software projects as \nwell as get experience in various aspects of back-end development like API validation and \nsoftware testing.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      536.27,
+      548.05,
+      604.76
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 6,
+    "text": "1.2​Objectives of the Internship \n●​ To get hands-on experience in building and maintaining backend applications powered by \nartificial intelligence. \n●​ To learn about the architecture and workflow of the Life Programmable Interface (LPI) \nPlatform.  \n●​ To set up and use a local development environment with FastAPI, Docker, and Supabase.  \n●​ To learn about the implementation of the Goal Registry, Activity Signals, and \nRecommendation Engine modules. \n●​ To learn how to build APIs in FastAPI and how to validate and test them with pytest.  \n \n6",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      615.27,
+      560.66,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "●​ To contribute to the software quality assurance process through debugging, integration \ntests, and automated test writing. \n●​ To collaborate on software development through Git, GitHub, pull requests, and code \nreview. \n●​ To write technical documentation and developer setup instructions for the platform.  \n●​ To support the integration and validation of the platform’s modules, including ZeroClaw \nintegration and working with repositories.  \n●​ To improve my problem-solving, debugging, and software engineering skills through \nparticipation in an actual AI software development project. \n \n1.3​Scope of the Internship \nThe scope of this internship was mainly focused on the backend software development and \nquality assurance tasks performed during the development of the Life Programmable \nInterface (LPI) Platform, a backend software in the LifeAtlas system ecosystem created at \nWINNIIO AB. The platform aims to provide a means of intelligent goal management, \nactivity structuring and generating recommendations with the help of an AI, through a \nmodular API based architecture.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      97.04,
+      65.39,
+      560.91,
+      299.84
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "The tasks included gaining knowledge about the platform architecture and workflow, setting \nup and configuration of the local development environment, verification of backend APIs, \nautomated testing, debugging of application problems, technical documentation preparation, \nand support for integration of the platform modules. The practical knowledge was obtained \nregarding the usage of such technologies as FastAPI, Supabase, Docker, Git, GitHub, pytest, \nand modern software engineering practices like feature branching, pull requests, etc.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      113.54,
+      310.35,
+      560.91,
+      392.64
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "My tasks as an Applied AI intern included performing testing tasks, conducting quality \nassurance, writing documentation, backend validation, and carrying out feature-specific \ndevelopment tasks assigned by the project team. In the course of the internship, I was \nengaged in extending automated test coverage of the Activity Signals module, enhancing \nSMILE test cases, developing Recommendation Feedback Persistence with Supabase, \nhelping in validation of ZeroClaw integration, conducting GitHub webhook tests, and \nwriting developer documentation in order to make the repository easier to onboard and \nmaintain.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      113.54,
+      403.15,
+      561.0,
+      513.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "The development of an entire platform independently is not included in the internship \nactivities. However, the internship provides the experience in working on an existing \nproduction-focused software project where different developers were in charge of different \nmodules of the system. This has allowed me to gain an understanding of backend \narchitectures on a large scale, API development, software testing, debugging, and software \nengineering workflows in industry.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      113.54,
+      523.54,
+      560.84,
+      605.82
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "The skills and knowledge that I acquired through this internship gave me a solid base in \nbackend \napplication \ndevelopment, \ncollaborative \nsoftware \nengineering, \nartificial \nintelligence-enabled systems, and quality assurance methodologies, and at the same time \nimproved my contribution in real-life software development projects.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      113.54,
+      616.33,
+      560.8,
+      671.02
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 7,
+    "text": "7",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      133.04,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "2.​Literature Review",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      65.51,
+      361.91,
+      106.4
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "2.1​Overview of Backend Application Development \nBackend application development is concerned with the creation of server-based software designed \nfor processing the business logic, managing data storage, processing the requests from clients, and \ncoordinating communication between various software modules. As opposed to frontend \napplications, which emphasize user interaction, the backend applications deliver essential \nfunctionalities for the current software platforms through providing APIs, authentication, request \nprocessing, and database access.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      106.91,
+      560.9,
+      202.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "The fast development of Artificial Intelligence and cloud-native applications made the need for \nscalable backend architectures very important. Contemporary AI-powered platforms usually have \nmodular backend solutions that unite data management, intelligent decision-making, authentication, \nand API integrations into one platform. Modular backend architectures make integration easier, \nincrease scalability, and maintainability of the systems while making different services independent \nfrom each other.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      213.5,
+      560.95,
+      295.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "Modular backend architecture of Life Programmable Interface (LPI) Platform that I created during \nmy internship consists of three main modules: Goal Registry, Activity Signals, and Recommendation \nEngine. These modules use REST APIs for communication and employ Supabase (PostgreSQL) as \nthe main data persistence engine.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      306.29,
+      560.9,
+      360.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "2.2​RESTful API Architecture \nRepresentation State Transfer (REST) is among the most popular architectures used when building \ndistributed systems. Through the use of RESTful APIs, clients can communicate with servers using \nHTTP methods like GET, POST, PATCH, and DELETE, making it possible for systems built on \nvarious technologies to exchange information seamlessly.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      371.49,
+      560.92,
+      439.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "The REST architecture creates loose coupling in the system by providing standardized endpoints that \nabstract the functions of the backend. This makes it scalable and allows the integration of third-party \nservices into the system.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      452.48,
+      560.54,
+      493.37
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "The functionalities of the LPI Platform are provided by REST APIs created using FastAPI. Each \nfunction of the platform, including managing goals, ingestion of activity signals, recommendation, \ncollection of recommendations, and administration tasks, is handled through dedicated API \nendpoints.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      505.88,
+      560.89,
+      560.56
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "2.3 FastAPI Framework \nFastAPI is a contemporary framework built for Python that allows users to create high-performing \nRESTful web applications. Its key distinguishing features include support for type hinting in Python \nand automatic generation of interactive documentation following the OpenAPI standard using tools \nlike Swagger UI and ReDoc.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      573.07,
+      560.88,
+      641.56
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "As compared to conventional backend frameworks, FastAPI offers asynchronous processing, data \nvalidation using Pydantic, dependency injection, and an optimized routing system. All these \ncontribute towards decreasing developers' efforts and improving the performance and maintainability \nof applications.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      654.07,
+      560.78,
+      708.75
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "As part of the internship, FastAPI was used as the basis for implementing the backend of the LPI",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      721.26,
+      560.49,
+      734.55
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 8,
+    "text": "8",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "Platform. Specifically, it was employed to create the APIs for the modules like Goals, Activity \nSignals, Recommendations, GitHub Webhooks, and Team Metrics.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      65.51,
+      560.7,
+      92.6
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "2.4 Database Management using Supabase \nSupabase is an open source Backend-as-a-Service (BaaS) platform based on PostgreSQL. Supabase is \na platform that provides database services, authentication services, storage facilities, row level \nsecurity features, and RESTful APIs to enable easy development of backend applications.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      111.11,
+      560.78,
+      165.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "One of the most important strengths of Supabase is the ability to integrate seamlessly with \nPostgreSQL with developer-friendly services for authentication, migrations, and APIs. Supabase is \nthus appropriate for applications that require storage of structured data along with scalable backend \nservices.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      178.3,
+      560.91,
+      232.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "The LPI platform uses Supabase as its main persistence layer for storage of goals, activity signals, \nrecommendation feedback, activity logs, system logs, and other application data. Database \nmigrations, authentication, and data persistence in the platform are done through the use of Supabase \nservices.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      245.5,
+      560.88,
+      300.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "2.5 Containerization using Docker \nDocker is a container technology platform that allows applications and their dependencies to be \nencapsulated in containers. Containerization provides a similar development environment regardless \nof the operating system, while making the deployment process easier.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      318.69,
+      560.85,
+      373.38
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "By running applications in containers, developers eliminate possible problems due to varying \noperating systems configurations and software version mismatches. Docker also facilitates \ncollaboration through provision of the same execution environment for each developer.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      385.89,
+      560.54,
+      426.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "While working on the internship, Docker was utilized to set up and run the local development \nenvironment, especially those services of Supabase needed by the backend application.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      439.29,
+      560.88,
+      466.37
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "2.6 Software Testing Methodologies \nSoftware testing is an organized and well-planned verification process of making sure that the \nsoftware adheres to the required functional and non-functional aspects. Efficient testing improves the \nquality of the software through identification of implementation faults, integration problems, and \nunanticipated system behaviors before actual deployment. Some of the commonly applied testing \nprocesses in modern backend applications include:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      478.88,
+      560.96,
+      561.17
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "Unit Testing - Unit testing tests the accuracy of each unit in the software, which includes testing of \nfunctions and classes individually. This form of testing helps developers to test individual code units \nbefore integration.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      573.68,
+      560.89,
+      614.56
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "Integration Testing - Integration testing tests how the interaction among several software units is \nperformed, including testing of APIs, databases, authentication, and other external services. The \ntesting makes sure that the independently designed modules work appropriately together.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      627.07,
+      560.96,
+      667.96
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "Regression Testing - Regression testing makes sure that the changes made during development do not \naffect previous functionalities. This is very useful for collaborative software where different \ndevelopers are working together.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      680.47,
+      560.65,
+      721.36
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 9,
+    "text": "9",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "LPI Platform mainly used automated testing of the software with pytest in which tests were \nconducted on backend APIs, database, authentication, recommendation, and activity signals \nprocessing. Integration testing was vital for the validation of the interaction among different platform \nmodules.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      65.51,
+      560.87,
+      120.2
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "2.7 Version Control and Collaborative Software Development \nThe purpose of using version control systems is to be able to control the changes made to source \ncode, track development history, and work collaboratively. Git has emerged as the most popular tool \nused for distributed version control whereas GitHub is one of the platforms that help in collaborative \ndevelopment of software applications.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      138.71,
+      560.79,
+      207.19
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "Usually, the processes of feature branching, peer review, automated testing, and controlled merging to \ncommon branches make up collaborative workflows that help in improving the quality of software \nand avoiding merge conflicts.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      219.7,
+      560.62,
+      260.59
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "In the course of my internship experience, collaborative workflow using GitHub was implemented \nwhen developing the LPI Platform as well as feature branches, pull requests, staging, and peer \nreviews were involved.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      273.1,
+      560.95,
+      313.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "2.8 AI-Assisted Recommendation Systems \nRecommendation engines are advanced computational modules that make use of the available \ninformation in order to offer relevant recommendations to users. Classic recommendation engines \nused either collaborative or content-based recommendation methods, while current AI-enhanced \nrecommendation engines employ the use of structured information about the user, contextual \nreasoning, and machine learning methods.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      332.49,
+      560.89,
+      414.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "As far as the LPI Platform is concerned, recommendation creation is carried out with the help of a \ncombination of information from the Goal Registry module and the Activity Signals module using \nthe SMILE lifecycle pattern. The use of deterministic reasoning, LangGraph orchestration and \nseveral fallback methods allows reliable recommendation creation in the LPI Platform.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      427.29,
+      560.84,
+      481.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "2.9 Software Engineering Practices \nThe modern software engineering practice focuses on maintainable code, modularity, testing, \ndocumentation, and collaboration. The use of code review, technical documentation, testing, and \nproject structure helps achieve better maintenance of software and minimizes any defect in the \nsoftware.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      500.48,
+      560.73,
+      568.96
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "In the entire duration of the internship, there was consistent application of software engineering \npractices in the backend programming, testing, debugging, documentation, and reviewing of the pull \nrequests. It was a good experience to work in a software engineering process in actual AI software \ndevelopment projects.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      581.47,
+      560.66,
+      636.16
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 10,
+    "text": "10",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "3.​Methodology",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      266.25,
+      68.51,
+      348.58,
+      81.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "3.1​System Architecture \nThe LPI Platform has been designed as a modular backend application that allows users to create and \nmanage goals, capture activity signals, and receive AI-generated recommendations via a single REST \nAPI interface. The platform is built based on the concept of API-first architecture, where each \nmodule operates independently yet uses the same persistent layer (Supabase/PostgreSQL). The \nbackend framework used in the development is FastAPI which offers high-performance API \nendpoints, automated request validation, and Swagger API documentation. The overall architecture \nof the platform includes three main modules:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      96.11,
+      560.85,
+      205.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Goal Registry - This module is responsible for creation, update, retrieval, and management of user \ngoals as well as tracking of the progress of their execution based on the SMILE lifecycle.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      218.5,
+      560.69,
+      245.59
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Activity Signals - This module is used for capturing structured activity events from various sources \nand building a timeline of user activities.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      258.1,
+      560.57,
+      285.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Recommendation Engine - This module performs analysis of goals and activity signals in order to \ndeliver AI recommendations with the help of deterministic algorithms and LangGraph pipeline.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      297.69,
+      560.65,
+      324.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "All the modules interact through REST API interfaces and a common database layer.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      337.29,
+      478.8,
+      350.58
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "3.2​Development Environment \nA consistent local development environment was adopted for the entire duration of the internship. \nThe project dependencies were handled in Python, whereas the backend application was launched \nusing FastAPI. Database services were offered through a local installation of Supabase running in \nDocker containers. The development environment was comprised of the following components:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      363.09,
+      548.24,
+      431.58
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Component \nPurpose",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      437.33,
+      220.5,
+      450.62
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Python 3.11 \nBackend application development",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      462.83,
+      347.03,
+      476.12
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "FastAPI \nREST API framework",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      488.33,
+      291.06,
+      501.62
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Supabase \nPostgreSQL database and authentication",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      513.83,
+      378.03,
+      527.12
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Docker \nLocal containerized services",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      539.33,
+      320.34,
+      552.62
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Git & GitHub \nVersion control and collaboration",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      564.83,
+      344.04,
+      578.12
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "pytest \nAutomated testing",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      590.33,
+      272.07,
+      603.62
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Swagger UI \nAPI validation and documentation",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      71.25,
+      615.83,
+      348.71,
+      629.12
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "Setting up the development environment involved cloning the repository, setting up the project’s \ndependencies, configuring environment variables, running the local Supabase instance, applying the \ndatabase migrations and running the FastAPI app. After successful execution of the server, the \nauto-generated Swagger documentation was used to check the availability of the API.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      648.08,
+      560.44,
+      702.77
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "3.3​Development Workflow \nDevelopment of the LPI Platform was carried out through a collaborative software development",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      715.28,
+      560.94,
+      742.37
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 11,
+    "text": "11",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "process which allowed simultaneous contributions by several developers without compromising the \nintegrity of the code and project stability. The workflow used in the development of the project \ninvolved the following steps:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      65.51,
+      560.75,
+      106.4
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "1.​ Cloning of the current state of the repository and synchronization with the staging branch. \n2.​ Setup of the local environment and configuration of the databases. \n3.​ Creation of a specific branch for the assigned work. \n4.​ Changes of implementation of features and fixing bugs as required. \n5.​ Running of tests to ensure proper functionality. \n6.​ Manual testing of APIs with Swagger UI. \n7.​ Technical documentation creation when needed. \n8.​ Submission of the changes via a Pull Request on GitHub. \n9.​ Peer review and incorporation of feedback. \n10.​Merging the reviewed changes with the staging branch.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      118.91,
+      524.89,
+      256.38
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "This process facilitated collaborative development and increased code maintainability.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      268.89,
+      485.31,
+      282.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "3.4 Repository Structure \nThe project repository was organized in a modular manner, which helped in keeping the business \nlogic, routing, tests, database configuration, documentation, and frontend resources separated from \neach other. It helped to simplify the process of maintaining the code and make it possible to develop \nvarious modules separately. Major repository components are briefly listed below.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      300.69,
+      560.79,
+      369.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "Directory \nPurpose",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      398.94,
+      243.75,
+      412.23
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "src/lpi \nCore backend application",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      446.73,
+      324.37,
+      462.55
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "routers \nREST API endpoints",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      497.05,
+      303.09,
+      512.88
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "middleware \nAuthentication and request processing",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      547.38,
+      385.37,
+      563.21
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "store.py \nDatabase interaction layer",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      597.71,
+      327.02,
+      613.53
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "tests \nAutomated test suites",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      648.03,
+      305.07,
+      663.86
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "supabase \nDatabase migrations and configuration",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      698.36,
+      388.03,
+      714.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 12,
+    "text": "12",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "docs \nTechnical documentation",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      82.25,
+      322.53,
+      98.08
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "frontend-js \nReact-based frontend application",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      59.25,
+      132.58,
+      360.35,
+      148.4
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "Organizing various functions in separate modules made it easier to read and maintain the code \nwithout duplication. There were also various configuration files like pyproject.toml, Makefile, \n.env.example, and pre-commit hooks within the repository.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      178.16,
+      560.54,
+      219.05
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "3.5 Testing Methodology \nTesting was an important part of the software development life cycle during the internship period. \nRather than performing only manual tests, the platform used an automated testing strategy using \npytest, supplemented with manual testing using Swagger UI. The following steps were involved in \nthe testing process.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      237.56,
+      530.89,
+      306.04
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "1.​ API Testing - The backend endpoints were tested to confirm the appropriate handling of \nrequests and responses, their status codes, format and the authentication process. API \ntesting was conducted for Goal Registry, Activity Signals, Recommendation Engine, \nRecommendation Feedback and other backend services. \n2.​ Integration Testing - This testing ensured that all components of the platform worked \neffectively in conjunction with one another. This kind of testing included validating \ninteractions between FastAPI endpoints, Supabase database queries, authentication \nmiddlewares and recommendation workflows. \n3.​ Regression Testing - After adding new features or resolving bugs, regression testing was \ndone to check that the existing features were not broken. Test suits were run before \nsending pull requests to check any unwanted effects introduced. \n4.​ Manual Validation - Automated tests were complemented with manual validation of the \nendpoints using Swagger UI.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      310.55,
+      530.98,
+      493.43
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "The testing strategy contributed to improving software reliability, identifying defects during \ndevelopment, and maintaining platform stability throughout the internship.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      505.94,
+      560.78,
+      533.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "3.6 Documentation Workflow \nDocumentation was carried out in parallel to development in order to enhance maintainability and \nonboarding of developers. Documentation was done during the entire period of the internship in case \nany feature, test, or development was introduced. Documentation consisted of:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      545.54,
+      560.92,
+      600.22
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "●​ Repository configuration guide. \n●​ Setting up the local development environment. \n●​ API documentation through Swagger UI. \n●​ Test documentation. \n●​ Documentation for pull requests. \n●​ QA Documentation. \n●​ Documentation for integration of the platform components. \n●​ Troubleshooting documentation for developers.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      612.61,
+      377.92,
+      723.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 13,
+    "text": "13",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 14,
+    "text": "3.7 Git Workflow",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      65.51,
+      160.25,
+      78.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 14,
+    "text": "The version control system for the project was Git and GitHub, and this was done using the \ncollaborative branching model. Each task assigned was first done in a feature branch and later merged \nin the common staging branch after review. Below is an overview of the process that was followed \nduring the internship.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      91.31,
+      560.84,
+      145.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 14,
+    "text": "Repository Initialization → Creation of a Feature Branch → Coding → Automated Testing → \nManual Validation of APIs → Pull Request → Code Review → Feedback Review → Merging to \nStaging Branch",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      158.5,
+      560.82,
+      199.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 14,
+    "text": "This process enabled traceability of changes in the code, collaboration, and quality of the codebase.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      211.9,
+      548.74,
+      225.19
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 14,
+    "text": "14",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "4.​Results and Discussion",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      241.5,
+      68.51,
+      373.2,
+      81.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "4.1​Overview \nThe internship activities allowed me to contribute to the implementation of the Life Programmable \nInterface (LPI) Platform, which is a modular backend application developed as part of the LifeAtlas \necosystem at WINNIIO AB. The tasks performed during the course of the internship aimed at \nenhancing the quality and stability of the platform through backend testing, documentation, \nintegration assistance, debugging, and feature-specific development.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      96.11,
+      560.49,
+      178.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "Through this internship, I gained experience in collaborative software engineering where the \ndevelopment process involved Github workflows, automated tests, code review, and continuous \nintegration processes. My contributions were related to learning about the current architecture of the \nplatform, validation of the backend system, automation of tests, helping with feature integration, \ndeveloper documentation, and quality assurance activities for various modules of the platform.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      190.9,
+      560.75,
+      259.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "A major accomplishment of this internship was completion of three verified pull requests that helped \nimprove the functionality of the platform and software quality:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      271.9,
+      560.29,
+      298.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "●​ PR #14 – SMILE Test Updates \n●​ PR #28 – Increased Activity Signals Test Coverage and Time Range Querying Feature \n●​ PR #34 – Recommendation Feedback Storage Using Supabase Storage",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      311.38,
+      508.3,
+      352.54
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "In addition to my involvement in coding the application, I was also involved in the final demo of the \nproject and helped the team in testing, documentation, and integration efforts, which made the \ninternship project a success.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      365.05,
+      560.98,
+      405.93
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "4.2​Major Technical Contributions \n●​ Automation Testing Improvements - One of the main contributions done during my \ninternship was the improvement of the platform's automated testing system. Test cases already \nimplemented were analyzed and run, and some additional test cases were created in order to \nbetter validate the work of the backend. Specifically, much effort was put into making sure \nthat any newly added feature will not cause regression in already working parts of the system. \nThe changes made with PR #14 helped improve the testing of the SMILE framework, and PR \n#28 extended the number of automated tests for Activity Signals module by creating new test \ncases and time-range queries support. \n●​ Feedback Persistence Implementation - Yet another important contribution was the \ndevelopment of Recommendation Feedback Persistence using Supabase. With this feature, \nfeedback given by users regarding the recommendations provided by the platform could be \nsaved in the database of the platform. It was implemented in PR #34. \n●​ Backend Validation and API Testing - Backend APIs were validated through automation \nand manual validation methods throughout the internship. Endpoints associated with Goals, \nActivity Signals, Recommendations, and other platform APIs were validated in order to check \ntheir request processing, response structure, and backend behavior. Manual validation of APIs \nthrough Swagger in FastAPI added to automated testing and assisted in finding bugs prior to \ncode review. \n●​ Documentation - Documentation was an integral part of the internship. Technical \ndocumentation was created and maintained to help in developer onboarding, repo \nconfiguration, and other processes. Documentation made it easier for us to collaborate and \nmade things simpler for any developer joining the project.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      418.44,
+      548.24,
+      737.53
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 15,
+    "text": "15",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "4.3​Repository Improvements \nApart from the work on feature specific development, there were other efforts which aided the \nmaintenance of the codebase of the project. They included:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      79.31,
+      560.6,
+      120.2
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "●​ Working on test coverage. \n●​ Working on testing documentation. \n●​ Helping out in the documentation for repository setup. \n●​ Checking for GitHub webhooks. \n●​ Helping out in ZeroClaw documentation. \n●​ Pull Request reviews and QA related tasks.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      132.59,
+      354.28,
+      215.3
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "All these efforts helped in making the development process better.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      227.81,
+      388.94,
+      241.1
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "4.4 Team Collaboration \nThe internship took place in a collaborative software engineering setting in which various developers \nworked on different modules of the system.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      259.61,
+      560.51,
+      300.5
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "My responsibilities entailed working with my colleagues at different stages such as developing, \ntesting, debugging, documenting, and reviewing the pull requests. The pair programming and \ncollaborative debugging were done at any point that integration problems came up, especially when \ntesting and integrating ZeroClaw. Getting feedback through peer reviews was beneficial not only in \nimproving code quality but also in gaining insights in software engineering practices.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      313.01,
+      560.76,
+      381.49
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "Being part of the final project presentation helped me present the finished product and see how my \ncontributions fitted into the system.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      394.0,
+      560.85,
+      421.09
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "4.5 Key Outcomes \nSome of the tangible results that came from the internship were the following for the platform and \npersonal development.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      433.6,
+      560.45,
+      474.49
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "Technical Achievements",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      487.0,
+      189.36,
+      500.29
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "●​ Made contributions in the form of three confirmed pull requests. \n●​ Increased the test coverage of the automated backend tests. \n●​ Improved the validation of the Activity Signals module. \n●​ Implemented the recommendation feedback persistence via Supabase. \n●​ Worked on backend API validation. \n●​ Worked on ZeroClaw integration validation. \n●​ Contributions to developer documentation. \n●​ Participation in quality assurance and debugging work.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      500.68,
+      429.2,
+      611.1
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "Professional Achievements",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      623.61,
+      202.22,
+      636.9
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "●​ Got hands-on experience in collaborative software engineering. \n●​ Developed experience in Git and GitHub development. \n●​ Better knowledge of backend application architecture. \n●​ Improved debugging and problem-solving skills. \n●​ Learned modern testing approaches through pytest. \n●​ Developed experience in technical documentation writing.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      637.29,
+      397.88,
+      720.01
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 16,
+    "text": "16",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Area \nOutcome",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      82.76,
+      307.65,
+      96.05
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Backend Development \nAPI validation and integration",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      131.02,
+      394.15,
+      143.2
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Testing \nExpanded automated coverage",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      178.16,
+      395.65,
+      190.35
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Documentation \nSetup guides and technical documentation",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      225.31,
+      446.35,
+      237.49
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "QA \nDebugging and regression testing",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      272.46,
+      408.2,
+      284.64
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Collaboration \nGitHub workflow, PR reviews, final demo",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      82.5,
+      319.61,
+      447.18,
+      331.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "4.6 Discussion \nHowever, the internship helped understand that the successful creation of a software development \nplatform that is production-oriented entails much more than just implementing features. The efficient \noperation of backend systems relies on proper architecture, testing, documentation, collaboration, and \nquality assurance in order to become truly maintainable.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      361.55,
+      560.92,
+      430.04
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "Participation in the LPI Platform project gave me firsthand experience of how such engineering \ntechniques were utilized during the software development process. Getting familiar with modular \nbackend architecture, REST API creation, automation testing, versioning control, database \nintegration, and code review taught me the importance of developing maintainable software and \ncreating new functionality that would fit smoothly with the existing code.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      442.55,
+      560.94,
+      511.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "While my personal contributions included mostly testing, documentation, backend validation, and \nfeature development, they were parts of a larger effort towards enhancing the reliability and \nmaintainability of the platform. Therefore, the internship was a great opportunity to apply my \ntheoretical knowledge in practice and see how software engineering techniques were applied in the \nprocess of building AI-enabled backend systems.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      523.54,
+      560.98,
+      592.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 17,
+    "text": "17",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "5.​Conclusion and Future Scope",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      225.0,
+      65.51,
+      390.81,
+      78.8
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "5.1​Conclusion \nThe present internship has been an excellent learning experience in the areas of Artificial \nIntelligence, software engineering, and development through participation in developing the LPI \nPlatform for WINNIIO AB. The 61-day long internship has involved being part of a \nmulti-disciplinary development team working on production backend development, performing \nactivities related to software testing, validation, debugging, quality assurance, documentation, and \nfeature development.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      93.11,
+      560.98,
+      189.19
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "The software development lifecycle from platform architecture and configuration of the local \ndevelopment environment to backend API validation, automated testing, repositories, documentation, \nand collaboration through GitHub was experienced during the internship. Working with technologies \nsuch as FastAPI, Supabase, Docker, Git, GitHub, and pytest has enabled me to gain a better \nunderstanding of modern backend applications development and software engineering.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      201.7,
+      560.92,
+      270.18
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "One of the major tasks was making the platform more reliable and maintainable via testing and \nQA-related work. I contributed to the improvement of automated tests for the Activity Signals \ncomponent, SMILE test cases, Recommendation Feedback Persistence with Supabase, ZeroClaw \nintegration validation, GitHub webhook testing, and preparation of technical documentation to help \nother developers join the project and keep the repository clean. These contributions were properly \nimplemented via pull requests and became a part of the effort of the team to improve the platform.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      282.69,
+      560.79,
+      364.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "In addition to the technical work, I learned about the role of collaboration in large software \ndevelopment projects. Participating in architectural discussions, debugging, pull requests review, pair \nprogramming, and the demo of the project gave me valuable insights into how software engineering \nteams coordinate their work, ensure high quality, and incorporate separate contributions into a single \ncodebase.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      377.49,
+      560.79,
+      445.97
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "From a personal point of view, the internship helped me acquire substantial theoretical knowledge \nabout the backend software development process and improve my analytical skills, debugging \nprocess, problem-solving skills, and the confidence in working in a collaborative environment. Thus, \nthe internship gave me an excellent opportunity to connect theoretical knowledge acquired in the \nprocess of academic learning with practice and helped me prepare for the career in Artificial \nIntelligence and software engineering.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      458.48,
+      560.86,
+      540.76
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "Despite the fact that the internship provided me with ample opportunity to learn the processes \nassociated with the backend development and software engineering process, my personal contribution \nwas limited to some particular modules and tasks assigned for development in the context of a \ncollaborative process.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      68.25,
+      553.27,
+      560.97,
+      607.96
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "5.2​Future Scope \nBased on the knowledge and experience gained in the course of the internship, the following \nenhancements can be proposed for the future development of the Life Programmable Interface (LPI) \nPlatform:",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      66.0,
+      620.47,
+      560.88,
+      675.16
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 18,
+    "text": "●​ Recommendation Intelligence Enhancement: Upgrade the recommendation engine with more \nadvanced approaches of AI and user feedback to create more customized and contextual \nrecommendations. \n●​ Increase in Automated Testing: Implement automated tests for all platform components and \n \n18",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      687.55,
+      560.9,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 19,
+    "text": "add performance, integration, and security tests for increased software reliability. \n●​ Improvement of Developer Experience: Develop technical documentation, reduce the \ncomplexity of the local developer environment and improve development processes. \n●​ Platform Scalability Strengthening: Investigate cloud native approaches and optimization of \nbackend infrastructure for better scalability and performance. \n●​ Platform Development Continuation: Expand platform capabilities, provide integration \nopportunities and improve backend architecture.",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      72.0,
+      65.51,
+      560.8,
+      161.75
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 19,
+    "text": "19",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "6.​References",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      54.0,
+      68.51,
+      343.0,
+      109.4
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[1]​FastAPI, “FastAPI Documentation”. [Online]. Available: https://fastapi.tiangolo.com/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      121.91,
+      484.05,
+      135.2
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[2]​Supabase Inc., “Supabase Documentation”. [Online]. Available: https://supabase.com/docs",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      147.71,
+      508.37,
+      160.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[3]​Docker Inc., “Docker Documentation”. [Online]. Available: https://docs.docker.com/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      173.5,
+      479.34,
+      186.79
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[4]​Git SCM, “Git Documentation”. [Online]. Available: https://git-scm.com/doc",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      199.3,
+      442.75,
+      212.59
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[5]​GitHub Inc., “GitHub Docs”. [Online]. Available: https://docs.github.com/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      225.1,
+      430.07,
+      238.39
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[6]​pytest \nDevelopment \nTeam, \n“pytest \nDocumentation”. \n[Online]. \nAvailable: \nhttps://docs.pytest.org/en/stable/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      250.9,
+      560.36,
+      277.99
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[7]​LangChain \nInc., \n“LangGraph \nDocumentation”. \n[Online]. \nAvailable: \nhttps://langchain-ai.github.io/langgraph/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      290.5,
+      560.48,
+      317.59
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[8]​Ollama, “Ollama Documentation”. [Online]. Available: https://ollama.com/docs",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      330.1,
+      456.38,
+      343.38
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[9]​Python \nSoftware \nFoundation, \n“Python \n3 \nDocumentation”. \n[Online]. \nAvailable: \nhttps://docs.python.org/3/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      355.89,
+      560.56,
+      382.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[10]​\nPydantic Team, “Pydantic Documentation”. [Online]. Available: https://docs.pydantic.dev/latest/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      395.49,
+      554.17,
+      408.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[11]​\nPostgreSQL Global Development Group, “PostgreSQL Documentation”. [Online]. Available: \nhttps://www.postgresql.org/docs/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      421.29,
+      560.69,
+      448.38
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[12]​\nOpenAPI \nInitiative, \n“OpenAPI \nSpecification”. \n[Online]. \nAvailable: \nhttps://spec.openapis.org/oas/latest.html",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      460.89,
+      560.78,
+      487.98
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[13]​\nSwagger, “Swagger Documentation”. [Online]. Available: https://swagger.io/docs/",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      500.49,
+      485.24,
+      513.78
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "[14]​\nLife Programmable Interface (LPI) Platform, “Project README and Internal Technical \nDocumentation”, WINNIIO AB, LifeAtlas Ecosystem, 2026. (Internal project documentation used \nduring the internship.)",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      48.0,
+      526.29,
+      560.91,
+      567.17
+    ],
+    "extra": {}
+  },
+  {
+    "doc_id": "jyoti_test",
+    "page_num": 20,
+    "text": "20",
+    "source_type": "pymupdf_text",
+    "confidence": null,
+    "bbox": [
+      102.0,
+      744.29,
+      560.25,
+      760.03
+    ],
+    "extra": {}
+  }
+]
