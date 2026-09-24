@@ -1,89 +1,113 @@
-# Multimodal RAG — Yashika's Branch (OCR + Preprocessing)
+# Retrieval-Augmented Multimodal Reasoning over Images, Text, Tables and Reports
 
-This covers **your portion** of the project: OCR-based extraction (PaddleOCR)
-and cleaning/structuring of that extracted content. Jyoti's PyMuPDF
-extraction lives in a parallel file (`src/extraction/pymupdf_extractor.py`)
-that she'll add — both of you write to the **same shared schema** in
-`src/utils/metadata.py` so the outputs merge cleanly later.
+Minor Project (ETMN600) · Amity School of Engineering & Technology · Dept. of AI
+Jyoti (A023119823037) · Yashika Verma (A023119823014) · Guide: Dr. Jitender Jadon
 
-## 1. First-time setup (do this once)
+A multimodal RAG system built from scratch. It answers questions about PDFs, images and
+spreadsheets by **retrieving evidence** (text passages, tables, charts and figures) and letting an
+**open-source LLM** (Qwen) reason over it. Every answer **cites its sources**, and the model says
+*"Not answerable"* when the evidence isn't there.
 
-### Option A — Test in Google Colab first (recommended for first run)
-1. Open https://colab.research.google.com, new notebook.
-2. Runtime → Change runtime type → GPU (optional but faster).
-3. Run:
-   ```
-   !pip install paddlepaddle paddleocr PyMuPDF opencv-python pillow
-   ```
-4. Upload a sample scanned PDF and test that PaddleOCR runs without errors
-   before touching the real repo. This just de-risks the install.
+The retrieval pipeline is written by hand: no LangChain, no LlamaIndex, no paid APIs.
 
-### Option B — Local setup in VSCode (for actual project work)
+---
+
+## Sem VII objectives and where each one is met
+
+| Objective | Implementation | Measured by |
+|---|---|---|
+| **Multimodal retrieval system** (images, documents, tables, text) | `src/extraction` pulls text, tables (Markdown) and figures (embedded images + vector charts, cropped). OCR covers scanned pages and chart labels. BLIP writes captions for figures. Sentence-Transformers embeds text, CLIP embeds images. Everything goes into two ChromaDB collections that are fused at query time. | Retrieval split by evidence type (Text / Layout / Table / Chart / Figure), multimodal vs text-only |
+| **Contextual retrieval** (only the most relevant knowledge, top-k) | Contextual chunk headers ("Document / Page / type"). Dense text search plus CLIP image search, merged with Reciprocal Rank Fusion. Optional cross-encoder rerank. Top-k passed to the LLM. | Hit@k, Recall@k, MRR on the gold evidence pages |
+| **Reduce hallucinations** (ground LLM outputs) | Grounded prompt with a mandatory `[n]` citation for each fact. A weak-evidence gate. An explicit abstention answer ("Not answerable"). | Accuracy and hallucination rate: **LLM alone vs text RAG vs multimodal RAG** on 54 unanswerable and 148 answerable questions |
+
+## Architecture
+
+```
+            ┌──────────────── Kaggle GPU (heavy, run once) ────────────────┐
+PDF/IMG/CSV │ PyMuPDF text+tables+figures ─► PaddleOCR (scanned pages,      │
+            │ chart labels) ─► cleaning ─► chunking (+context header)       │
+            │ ─► BLIP captions ─► bge-small (text) + CLIP (images)          │
+            │ ─► artifacts.zip  (chunks.jsonl, *.npy, images/, manifest)    │
+            └───────────────────────────────┬───────────────────────────────┘
+                                            │ download
+            ┌──────────────── Your laptop (CPU) ────────▼───────────────────┐
+question ──►│ bge query emb ─► ChromaDB mm_text ─┐                           │
+            │ CLIP text emb ─► ChromaDB mm_image ─┴► RRF ─► rerank ─► top-k  │
+            │ ─► grounded prompt (+ images for VLM) ─► Qwen ─► answer [n]    │
+            └────────────────────────────────────────────────────────────────┘
+```
+
+Why the split? Building embeddings means running CLIP, BLIP and OCR over thousands of chunks and
+images, which needs a GPU. At query time only **one** question has to be embedded, and bge-small and
+CLIP-B/32 handle that on CPU in milliseconds. **The query must use the same models as the
+artifacts.** `manifest.json` records which models were used, and the code always loads those.
+
+## Dataset: MMLongBench-Doc (NeurIPS 2024 D&B, Apache-2.0)
+
+The benchmark has 135 real long PDFs (research reports, papers, brochures, financial reports,
+manuals, slide decks) and 1,082 questions. Each question is labelled with its **evidence pages** and
+**evidence type** (Pure-text, Layout, Table, Chart, Figure), and 20% of them are **"Not answerable"**.
+We use a stratified **20-document subset** (≤60 pages each) with 202 questions, 54 of them
+unanswerable. See `data/eval/`.
+
+## Project layout
+
+```
+configs/config.yaml          all paths, model names, parameters (one place)
+src/
+  utils/metadata.py          shared schemas: ExtractedBlock, Chunk
+  extraction/                pymupdf_extractor.py (text/tables/figures), ocr_extractor.py (PaddleOCR)
+  preprocessing/cleaner.py   noise, running headers, safe OCR fixes, confidence flags
+  ingestion/pipeline.py      routes PDF / image / CSV-XLSX / TXT -> blocks
+  chunking/chunker.py        page-bounded chunks, table splitting, figure descriptions
+  embeddings/models.py       TextEmbedder, ClipEmbedder, Captioner (BLIP), Reranker
+  vectorstore/chroma_store.py
+  retrieval/retriever.py     multimodal fusion retriever
+  generation/                prompts + backends (transformers, transformers_vl, ollama, extractive)
+  pipeline/rag.py            MultimodalRAG.answer(...)
+  evaluation/                dataset loader + metrics
+scripts/                     prepare_dataset -> ingest -> build_embeddings -> build_index -> ask / evaluate
+notebooks/                   01 Kaggle: build artifacts · 02 Kaggle: LLM + evaluation
+app/streamlit_app.py         demo UI
+tests/                       pytest (no GPU / no downloads)
+```
+
+## How to run
+
+### A. Kaggle (heavy work, about 30–40 min)
+1. kaggle.com → *New Notebook* → *File → Import notebook* → `notebooks/01_kaggle_build_artifacts.ipynb`
+2. Settings: **GPU T4**, **Internet ON** (Internet needs a phone-verified Kaggle account).
+3. Set `BRANCH` in the first cell, then *Run all*. Download `multimodal_rag/artifacts.zip` from **Output**.
+4. (Optional, for the report numbers) import `02_kaggle_rag_evaluation.ipynb`, *Add Input* → notebook 01's
+   output, *Run all*. You get `results/kaggle_full/summary.md` and `comparison.png`.
+
+### B. Laptop (Windows, VS Code, CPU)
 ```bash
-# clone the repo (after it's created on GitHub)
-git clone <repo-url>
-cd multimodal-rag
-
-# create a virtual environment
 python -m venv venv
-source venv/bin/activate      # Windows: venv\Scripts\activate
-
-# install dependencies
+venv\Scripts\activate                       # Linux/Mac: source venv/bin/activate
+pip install torch --index-url https://download.pytorch.org/whl/cpu
 pip install -r requirements.txt
-```
-Open the folder in VSCode, install the Python extension if prompted.
 
-## 2. Running your part
-
-```bash
-# 1. Run OCR extraction on a sample PDF
-python src/extraction/ocr_extractor.py --pdf data/raw/sample.pdf --doc-id sample
-
-# 2. Clean the raw OCR output
-python src/preprocessing/cleaner.py --in data/processed/sample_ocr.json --out data/processed/sample_clean.json
+python scripts/build_index.py --zip artifacts.zip        # unzip + load into ChromaDB (seconds)
+python scripts/ask.py "How do 5% of Latinos see upward mobility for their children?"
+streamlit run app/streamlit_app.py
+python scripts/evaluate.py --retrieval-only              # retrieval metrics on CPU
+pytest -q
 ```
 
-Output: `data/processed/sample_clean.json` — a list of text blocks with
-page number, confidence score, bounding box, and a `flagged_low_confidence`
-field for anything that needs manual review.
+**LLM on a CPU laptop:** install [Ollama](https://ollama.com), run `ollama pull qwen2.5vl:3b`, then pick the
+`ollama` backend (it's the fastest on CPU and it can see the images). With the `transformers` backend,
+Qwen2.5-1.5B-Instruct runs through Hugging Face. It works, but it's slower.
 
-## 3. Git / GitHub workflow (two people, PR-based)
+### Adding your own documents
+Put PDFs, images, CSV or XLSX files in `data/raw/`. Then run `python scripts/ingest.py --inputs data/raw` on
+Kaggle or locally with `--no-ocr`, followed by `build_embeddings.py` and `build_index.py`.
 
-1. **Create the repo once** (either person), add the other as collaborator.
-2. `main` stays stable — never commit directly to it.
-3. Each person works on their own branch:
-   ```bash
-   git checkout -b feature/ocr-extraction     # you
-   git checkout -b feature/pymupdf-extraction # Jyoti
-   ```
-4. Commit in small chunks with clear messages:
-   ```bash
-   git add src/extraction/ocr_extractor.py
-   git commit -m "ocr: add PaddleOCR wrapper and page rasterization"
-   ```
-5. Push and open a PR into `main`:
-   ```bash
-   git push origin feature/ocr-extraction
-   ```
-   Then open the PR on GitHub, tag Jyoti as reviewer.
-6. Review each other's PRs before merging — mainly check that the output
-   still matches the shared schema in `metadata.py`.
-7. Pull the latest `main` before starting new work each session:
-   ```bash
-   git checkout main
-   git pull
-   ```
+## Configuration notes
+* Change models in `configs/config.yaml`. If you change `text_embedder` or `clip`, **rebuild the artifacts**.
+* `generation.abstain_policy: hard` refuses without calling the LLM when evidence is weak. That's stricter,
+  so there are fewer hallucinations but more over-refusals.
+* `hash:<dim>` model names give a dependency-free fake embedder. It's only for tests and smoke runs.
 
-## 4. Why separate files avoid merge conflicts
-
-You and Jyoti each own separate files (`ocr_extractor.py` vs
-`pymupdf_extractor.py`), so your PRs touch different files and rarely
-conflict. The only shared file is `src/utils/metadata.py` — agree on any
-changes to it together before editing.
-
-## 5. Next steps after this stage is validated
-- Document chunking
-- Multimodal embedding generation
-- Vector database integration (Qdrant/ChromaDB)
-- Semantic retrieval
-- Reasoning + response generation
+## Status
+See [`docs/PROGRESS.md`](docs/PROGRESS.md).

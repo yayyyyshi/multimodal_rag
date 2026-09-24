@@ -1,8 +1,22 @@
-paddlepaddle==3.2.0
-paddleocr==3.7.0
-paddlex==3.7.2
-pymupdf==1.28.2
+# ---- Local (Windows / CPU) requirements -----------------------------------
+# Install PyTorch CPU build FIRST (smaller, no CUDA):
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+# then:
+#   pip install -r requirements.txt
+# OCR is optional and heavy -> requirements-ocr.txt (better: run OCR on Kaggle)
 
-opencv-python==4.10.0.84
-Pillow==10.4.0
-numpy==1.26.4
+pymupdf>=1.24.10
+numpy>=1.26,<3
+pyyaml>=6.0
+pandas>=2.0
+openpyxl>=3.1
+pillow>=10.0
+chromadb>=0.5.5
+
+torch>=2.2
+transformers>=4.49
+sentence-transformers>=3.0
+accelerate>=0.30
+
+streamlit>=1.36
+pytest>=8.0

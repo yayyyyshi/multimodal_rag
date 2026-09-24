@@ -4,6 +4,17 @@ __pycache__/
 venv/
 env/
 .ipynb_checkpoints/
-data/processed/_tmp_pages/
+.pytest_cache/
 *.log
 .DS_Store
+
+# downloaded benchmark (≈640 MB) — fetched by scripts/prepare_dataset.py
+data/mmlongbench
+data/processed/_tmp_pages/
+data/processed/*/
+
+# produced on Kaggle, downloaded as artifacts.zip — never commit
+artifacts/*
+!artifacts/.gitkeep
+artifacts.zip
+results/
