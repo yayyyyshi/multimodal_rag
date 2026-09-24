@@ -1,0 +1,5 @@
+# Optional: PaddleOCR for scanned pages / chart labels (versions verified by Jyoti, Sep 2026)
+paddlepaddle==3.2.0
+paddleocr==3.7.0
+paddlex==3.7.2
+opencv-python>=4.10

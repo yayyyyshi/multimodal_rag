@@ -1,156 +1,134 @@
-"""
-OCR-based text extraction using PaddleOCR.
+"""PaddleOCR 3.x text extraction.
 
-Handles scanned pages / image-based content that PyMuPDF cannot
-extract text from directly (Jyoti's extractor handles the
-machine-readable pages; this file handles the rest).
+Used for scanned PDF pages (only the ones the PyMuPDF extractor flags),
+standalone image files, and chart crops whose labels are drawn as paths
+instead of text. PaddleOCR is imported only when needed, so the rest of the
+project works without it installed.
 
 Usage:
     python src/extraction/ocr_extractor.py --pdf data/raw/sample.pdf --doc-id sample
+    python src/extraction/ocr_extractor.py --pdf data/raw/sample.pdf --doc-id sample --pages 1 4 7
 """
 
+from __future__ import annotations
+
 import argparse
-import os
 import sys
+from pathlib import Path
 
-from paddleocr import PaddleOCR
-import pymupdf as fitz  # PyMuPDF, used only to rasterize pages to images
+import pymupdf as fitz
 
-sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
-from src.utils.metadata import ExtractedBlock, save_blocks
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from src.utils.metadata import TEXT, ExtractedBlock, save_blocks
+
+_ENGINE = None
 
 
-def pdf_pages_to_images(pdf_path: str, out_dir: str, dpi: int = 200) -> list[str]:
-    """
-    Convert every page of a PDF into a PNG image.
-    Returns list of image file paths, one per page (1-indexed order).
-    """
-    os.makedirs(out_dir, exist_ok=True)
+def get_ocr_engine(lang: str = "en"):
+    """Loaded once per process because model loading takes several seconds."""
+    global _ENGINE
+    if _ENGINE is None:
+        from paddleocr import PaddleOCR
+        # document unwarping and orientation models are slow and not needed for PDF renders
+        base = dict(lang=lang, use_textline_orientation=True,
+                    use_doc_orientation_classify=False, use_doc_unwarping=False)
+        try:  # mobile detector is several times faster on CPU
+            _ENGINE = PaddleOCR(text_detection_model_name="PP-OCRv5_mobile_det", **base)
+        except Exception:
+            _ENGINE = PaddleOCR(**base)
+    return _ENGINE
+
+
+def pdf_pages_to_images(pdf_path, out_dir, dpi: int = 200, pages: list[int] | None = None) -> dict[int, str]:
+    """Returns {page_num: png_path} for the requested 1-indexed pages (all if None)."""
+    out_dir = Path(out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
     doc = fitz.open(pdf_path)
-    image_paths = []
-
-    zoom = dpi / 72  # PDF default is 72 dpi
-    matrix = fitz.Matrix(zoom, zoom)
-
+    result = {}
     for i, page in enumerate(doc, start=1):
-        pix = page.get_pixmap(matrix=matrix)
-        img_path = os.path.join(out_dir, f"page_{i}.png")
-        pix.save(img_path)
-        image_paths.append(img_path)
-
+        if pages and i not in pages:
+            continue
+        img_path = out_dir / f"page_{i}.png"
+        page.get_pixmap(dpi=dpi).save(str(img_path))
+        result[i] = str(img_path)
     doc.close()
-    return image_paths
+    return result
 
 
-def run_ocr_on_image(ocr_engine: PaddleOCR, image_path: str) -> list[dict]:
-    """
-    Run PaddleOCR on a single image and return raw line-level results:
-    [{"text": ..., "confidence": ..., "bbox": [...]}, ...]
-
-    Uses the PaddleOCR 3.x API: `.predict()` instead of the old `.ocr()`.
-    Each result object behaves like a dict with keys: rec_texts, rec_scores,
-    rec_boxes (already [x0, y0, x1, y1] per line — no corner-point math needed).
-    """
-    results = ocr_engine.predict(image_path)
+def run_ocr_on_image(image_path: str, engine=None) -> list[dict]:
+    """Returns one dict per detected line: text, confidence, bbox in pixels."""
+    engine = engine or get_ocr_engine()
     lines = []
-
-    for res in results:
-        texts = res.get("rec_texts", [])
-        scores = res.get("rec_scores", [])
-        boxes = res.get("rec_boxes", [])  # each box: [x0, y0, x1, y1]
-
-        for text, score, box in zip(texts, scores, boxes):
-            lines.append({
-                "text": text,
-                "confidence": float(score),
-                "bbox": [float(v) for v in box],
-            })
-
+    for res in engine.predict(str(image_path)):
+        for text, score, box in zip(res.get("rec_texts", []), res.get("rec_scores", []), res.get("rec_boxes", [])):
+            lines.append({"text": text, "confidence": float(score), "bbox": [float(v) for v in box]})
     return lines
 
 
 def group_lines_into_blocks(lines: list[dict], y_threshold: float = 15.0) -> list[dict]:
-    """
-    Merge OCR lines that are close together vertically into paragraph-like
-    blocks, so we don't store one JSON entry per single line of text.
-    """
+    """Merges lines whose vertical gap is at most y_threshold pixels into one block."""
     if not lines:
         return []
-
-    # sort top-to-bottom
-    sorted_lines = sorted(lines, key=lambda l: l["bbox"][1])
-
-    blocks = []
-    current = [sorted_lines[0]]
-
+    sorted_lines = sorted(lines, key=lambda l: (l["bbox"][1], l["bbox"][0]))
+    groups, current = [], [sorted_lines[0]]
     for line in sorted_lines[1:]:
-        prev_bottom = current[-1]["bbox"][3]
-        this_top = line["bbox"][1]
-        if this_top - prev_bottom <= y_threshold:
+        if line["bbox"][1] - current[-1]["bbox"][3] <= y_threshold:
             current.append(line)
         else:
-            blocks.append(current)
+            groups.append(current)
             current = [line]
-    blocks.append(current)
+    groups.append(current)
 
     merged = []
-    for block_lines in blocks:
-        text = " ".join(l["text"] for l in block_lines)
-        avg_conf = sum(l["confidence"] for l in block_lines) / len(block_lines)
-        xs0 = min(l["bbox"][0] for l in block_lines)
-        ys0 = min(l["bbox"][1] for l in block_lines)
-        xs1 = max(l["bbox"][2] for l in block_lines)
-        ys1 = max(l["bbox"][3] for l in block_lines)
+    for g in groups:
         merged.append({
-            "text": text,
-            "confidence": avg_conf,
-            "bbox": [xs0, ys0, xs1, ys1],
+            "text": " ".join(l["text"] for l in g),
+            "confidence": sum(l["confidence"] for l in g) / len(g),
+            "bbox": [min(l["bbox"][0] for l in g), min(l["bbox"][1] for l in g),
+                     max(l["bbox"][2] for l in g), max(l["bbox"][3] for l in g)],
         })
-
     return merged
 
 
-def extract_ocr_blocks(pdf_path: str, doc_id: str, tmp_image_dir: str = "data/processed/_tmp_pages") -> list[ExtractedBlock]:
-    """
-    Full pipeline: PDF -> page images -> OCR -> grouped blocks -> ExtractedBlock list.
-    """
-    # PaddleOCR 3.x: `use_angle_cls` and `show_log` were removed/renamed.
-    ocr_engine = PaddleOCR(use_textline_orientation=True, lang="en")
+def ocr_image_text(image_path: str, min_conf: float = 0.5) -> str:
+    """All lines above min_conf joined into one string. Returns '' on failure."""
+    try:
+        lines = run_ocr_on_image(image_path)
+    except Exception as e:
+        print(f"[OCR] failed on {image_path}: {e}")
+        return ""
+    return " ".join(l["text"] for l in lines if l["confidence"] >= min_conf)
 
-    image_paths = pdf_pages_to_images(pdf_path, tmp_image_dir)
-    all_blocks = []
 
-    for page_num, img_path in enumerate(image_paths, start=1):
-        print(f"[OCR] Processing page {page_num}/{len(image_paths)} ...")
-        raw_lines = run_ocr_on_image(ocr_engine, img_path)
-        grouped = group_lines_into_blocks(raw_lines)
-
-        for g in grouped:
-            all_blocks.append(ExtractedBlock(
-                doc_id=doc_id,
-                page_num=page_num,
-                text=g["text"],
-                source_type="paddleocr",
+def extract_ocr_blocks(pdf_path, doc_id: str, pages: list[int] | None = None,
+                       tmp_image_dir="data/processed/_tmp_pages", dpi: int = 200) -> list[ExtractedBlock]:
+    """Renders the selected pages, runs OCR and returns one block per text group."""
+    engine = get_ocr_engine()
+    image_paths = pdf_pages_to_images(pdf_path, Path(tmp_image_dir) / doc_id, dpi=dpi, pages=pages)
+    scale = 72.0 / dpi  # pixel boxes to PDF points, same units as PyMuPDF
+    blocks = []
+    for page_num, img_path in sorted(image_paths.items()):
+        print(f"[OCR] {doc_id}: page {page_num}")
+        for g in group_lines_into_blocks(run_ocr_on_image(img_path, engine)):
+            blocks.append(ExtractedBlock(
+                doc_id=doc_id, page_num=page_num, text=g["text"], source_type="paddleocr",
                 confidence=round(g["confidence"], 4),
-                bbox=[round(v, 2) for v in g["bbox"]],
+                bbox=[round(v * scale, 2) for v in g["bbox"]], modality=TEXT,
             ))
-
-    return all_blocks
+    return blocks
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Run PaddleOCR extraction on a PDF")
-    parser.add_argument("--pdf", required=True, help="Path to input PDF")
-    parser.add_argument("--doc-id", required=True, help="Identifier for this document")
-    parser.add_argument("--out", default=None, help="Output JSON path (default: data/processed/<doc_id>_ocr.json)")
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser(description="Run PaddleOCR extraction on a PDF")
+    ap.add_argument("--pdf", required=True)
+    ap.add_argument("--doc-id", required=True)
+    ap.add_argument("--pages", type=int, nargs="*", default=None, help="1-indexed pages (default: all)")
+    ap.add_argument("--out", default=None, help="default: data/processed/<doc_id>_ocr.json")
+    args = ap.parse_args()
 
     out_path = args.out or f"data/processed/{args.doc_id}_ocr.json"
-    os.makedirs(os.path.dirname(out_path), exist_ok=True)
-
-    blocks = extract_ocr_blocks(args.pdf, args.doc_id)
+    blocks = extract_ocr_blocks(args.pdf, args.doc_id, pages=args.pages)
     save_blocks(blocks, out_path)
-
     print(f"[DONE] Extracted {len(blocks)} OCR blocks -> {out_path}")
 
 

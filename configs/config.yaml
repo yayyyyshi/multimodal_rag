@@ -1,0 +1,60 @@
+# Paths, models and parameters for the whole pipeline.
+# Kaggle and the laptop use the same file. After changing text_embedder or
+# clip, rebuild the artifacts on Kaggle, since queries must use the same models.
+
+paths:
+  raw_dir: data/raw                  # own PDFs, images and CSVs
+  processed_dir: data/processed      # blocks.json per document
+  artifacts_dir: artifacts           # contents of artifacts.zip from Kaggle
+  chroma_dir: artifacts/chroma
+
+dataset:
+  name: MMLongBench-Doc              # Apache-2.0
+  repo_url: https://github.com/mayubo2333/MMLongBench-Doc
+  local_dir: data/mmlongbench
+  n_docs: 20
+  max_pages: 60                      # longer documents are skipped
+  seed: 42
+
+extraction:
+  min_text_chars_native: 30          # pages with fewer characters go to OCR
+  use_ocr: true
+  ocr_dpi: 200
+  figure_dpi: 150
+  min_image_side_pt: 60              # smaller images (icons, logos) are ignored
+  min_figure_area_ratio: 0.03        # drawing clusters below 3% of the page are ignored
+  max_figure_area_ratio: 0.95        # larger ones are page backgrounds
+
+chunking:
+  max_chars: 1000
+  overlap_chars: 150
+  max_table_rows_per_chunk: 25
+  add_context_header: true           # prepend "Document: <title> | Page N | <type>"
+
+models:
+  text_embedder: BAAI/bge-small-en-v1.5          # 33M params, 384-d
+  text_query_instruction: "Represent this sentence for searching relevant passages: "
+  clip: openai/clip-vit-base-patch32              # 512-d
+  captioner: Salesforce/blip-image-captioning-base
+  reranker: BAAI/bge-reranker-base                # null disables reranking
+  generator: Qwen/Qwen2.5-1.5B-Instruct           # backend "transformers"
+  vl_generator: Qwen/Qwen2.5-VL-3B-Instruct       # backend "transformers_vl"
+
+retrieval:
+  top_k_text: 12          # candidates from mm_text
+  top_k_image: 6          # candidates from mm_image
+  final_k: 6              # chunks given to the LLM
+  rrf_k: 60
+  image_weight: 0.7       # weight of the CLIP list in RRF
+  min_text_score: 0.30    # best cosine below this marks the evidence as weak
+  min_rerank_score: -4.0  # same check on the reranker logit
+
+generation:
+  backend: transformers   # transformers, transformers_vl, ollama or extractive
+  ollama_model: qwen2.5vl:3b
+  ollama_url: http://localhost:11434
+  max_new_tokens: 256
+  temperature: 0.0
+  max_images: 2           # figures sent to a vision-language model
+  abstain_text: "Not answerable"
+  abstain_policy: prompt  # prompt: warn the LLM when evidence is weak; hard: answer "Not answerable" without calling it
