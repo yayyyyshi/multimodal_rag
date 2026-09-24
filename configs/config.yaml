@@ -52,7 +52,7 @@ retrieval:
   min_rerank_score: -4.0  # same check on the reranker logit
 
 generation:
-  backend: transformers  
+  backend: ollama  
   ollama_model: qwen2.5vl:3b
   ollama_url: http://localhost:11434
   max_new_tokens: 256
