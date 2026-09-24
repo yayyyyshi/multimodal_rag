@@ -1,8 +1,5 @@
 # Retrieval-Augmented Multimodal Reasoning over Images, Text, Tables and Reports
 
-Minor Project (ETMN600) · Amity School of Engineering & Technology · Dept. of AI
-Jyoti (A023119823037) · Yashika Verma (A023119823014) · Guide: Dr. Jitender Jadon
-
 A multimodal RAG system built from scratch. It answers questions about PDFs, images and
 spreadsheets by **retrieving evidence** (text passages, tables, charts and figures) and letting an
 **open-source LLM** (Qwen) reason over it. Every answer **cites its sources**, and the model says
