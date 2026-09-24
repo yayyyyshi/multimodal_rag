@@ -5,7 +5,7 @@ overlap. Chunks never span two pages, so every citation points to one page.
 Tables become one chunk each; long tables are split every
 max_table_rows_per_chunk rows with the header row repeated.
 Each figure becomes one chunk described by its caption and inner text. The
-BLIP caption and OCR text are added later on Kaggle by build_embeddings.py.
+The generated caption and OCR text are added later on Kaggle by build_embeddings.py.
 
 The embedding text of every chunk starts with "Document: <title> | Page N |
 <type>" so short generic chunks still carry their document context.
@@ -65,7 +65,7 @@ def split_long_text(text: str, max_chars: int, overlap: int) -> list[str]:
 
 
 def compose_image_content(extra: dict, inside_text: str, page: int) -> str:
-    """Text description of a figure built from its caption, BLIP caption and inner text."""
+    """Text description of a figure built from its caption, generated caption and inner text."""
     parts = [f"[Figure on page {page}]"]
     if extra.get("caption"):
         parts.append(f"Caption: {extra['caption']}")
@@ -150,7 +150,7 @@ def chunk_document(blocks: list[dict], cfg: dict | None = None) -> list[Chunk]:
 
 
 def refresh_image_chunk(chunk: dict, title: str | None = None) -> dict:
-    """Rebuilds text and content after OCR text or a BLIP caption was added to extra."""
+    """Rebuilds text and content after OCR text or a generated caption was added to extra."""
     extra = chunk.get("extra", {})
     content = compose_image_content(extra, extra.get("inside_text", ""), chunk["page_num"])
     header = chunk["text"].split("\n", 1)[0] if chunk["text"].startswith("Document:") else None

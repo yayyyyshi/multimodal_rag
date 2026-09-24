@@ -161,9 +161,65 @@ class Captioner:
             for i in range(0, len(paths), batch_size):
                 imgs = [Image.open(p).convert("RGB") for p in paths[i:i + batch_size]]
                 inp = self.processor(images=imgs, return_tensors="pt").to(self.device, self.dtype)
-                ids = self.model.generate(**inp, max_new_tokens=max_new_tokens, num_beams=3)
+                ids = self.model.generate(**inp, max_new_tokens=max_new_tokens, num_beams=3,
+                                          no_repeat_ngram_size=3, repetition_penalty=1.3)
                 caps += [c.strip() for c in self.processor.batch_decode(ids, skip_special_tokens=True)]
         return caps
+
+
+FIGURE_PROMPT = (
+    "This image was cropped from a document. In at most three sentences, say what kind of visual it is "
+    "(bar chart, line chart, pie chart, table, diagram, flowchart, screenshot, photo, map, ...), what it shows, "
+    "and the most important labels, categories and numbers you can read. Only state what is visible."
+)
+
+
+class VLCaptioner:
+    """Figure descriptions with a vision-language model (default Qwen2.5-VL-3B).
+
+    BLIP was trained on everyday photos and writes things like "a diagram showing
+    the structure of a protein" for a flowchart. A VLM can read the chart type,
+    labels and values, which is what retrieval and the answering LLM need.
+    """
+
+    def __init__(self, model_name: str, device: str | None = None):
+        import torch
+        from transformers import AutoProcessor
+        try:
+            from transformers import AutoModelForImageTextToText as AutoVL
+        except ImportError:  # transformers < 4.50
+            from transformers import AutoModelForVision2Seq as AutoVL
+        self.torch = torch
+        cuda = _device(device) == "cuda"
+        dtype = (torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16) if cuda else torch.float32
+        self.processor = AutoProcessor.from_pretrained(model_name, min_pixels=128 * 28 * 28, max_pixels=512 * 28 * 28)
+        self.processor.tokenizer.padding_side = "left"  # required for batched generation
+        self.model = AutoVL.from_pretrained(model_name, torch_dtype=dtype,
+                                            device_map="auto" if cuda else None).eval()
+
+    def caption(self, paths: list[str], batch_size: int = 8, max_new_tokens: int = 96,
+                prompt: str = FIGURE_PROMPT) -> list[str]:
+        from PIL import Image
+        msg = [{"role": "user", "content": [{"type": "image"}, {"type": "text", "text": prompt}]}]
+        text = self.processor.apply_chat_template(msg, tokenize=False, add_generation_prompt=True)
+        caps = []
+        with self.torch.no_grad():
+            for i in range(0, len(paths), batch_size):
+                imgs = [Image.open(p).convert("RGB") for p in paths[i:i + batch_size]]
+                inp = self.processor(text=[text] * len(imgs), images=imgs, padding=True,
+                                     return_tensors="pt").to(self.model.device)
+                out = self.model.generate(**inp, max_new_tokens=max_new_tokens, do_sample=False,
+                                          repetition_penalty=1.05)
+                caps += [c.strip() for c in self.processor.batch_decode(
+                    out[:, inp["input_ids"].shape[1]:], skip_special_tokens=True)]
+                if (i // batch_size) % 10 == 0:
+                    print(f"  captions {min(i + batch_size, len(paths))}/{len(paths)}")
+        return caps
+
+    def unload(self):
+        del self.model
+        if self.torch.cuda.is_available():
+            self.torch.cuda.empty_cache()
 
 
 class Reranker:

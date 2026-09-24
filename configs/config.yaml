@@ -35,6 +35,8 @@ models:
   text_embedder: BAAI/bge-small-en-v1.5          # 33M params, 384-d
   text_query_instruction: "Represent this sentence for searching relevant passages: "
   clip: openai/clip-vit-base-patch32              # 512-d
+  captioner_backend: qwen_vl                      # qwen_vl (reads charts, needs GPU) or blip
+  captioner_vl: Qwen/Qwen2.5-VL-3B-Instruct
   captioner: Salesforce/blip-image-captioning-base
   reranker: BAAI/bge-reranker-base                # null disables reranking
   generator: Qwen/Qwen2.5-1.5B-Instruct           # backend "transformers"
@@ -50,7 +52,7 @@ retrieval:
   min_rerank_score: -4.0  # same check on the reranker logit
 
 generation:
-  backend: transformers   # transformers, transformers_vl, ollama or extractive
+  backend: ollama  
   ollama_model: qwen2.5vl:3b
   ollama_url: http://localhost:11434
   max_new_tokens: 256

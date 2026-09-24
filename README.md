@@ -13,7 +13,7 @@ The retrieval pipeline is written by hand: no LangChain, no LlamaIndex, no paid 
 
 | Objective | Implementation | Measured by |
 |---|---|---|
-| **Multimodal retrieval system** (images, documents, tables, text) | `src/extraction` pulls text, tables (Markdown) and figures (embedded images + vector charts, cropped). OCR covers scanned pages and chart labels. BLIP writes captions for figures. Sentence-Transformers embeds text, CLIP embeds images. Everything goes into two ChromaDB collections that are fused at query time. | Retrieval split by evidence type (Text / Layout / Table / Chart / Figure), multimodal vs text-only |
+| **Multimodal retrieval system** (images, documents, tables, text) | `src/extraction` pulls text, tables (Markdown) and figures (embedded images + vector charts, cropped). OCR covers scanned pages and chart labels. Qwen2.5-VL describes each figure (chart type, labels, values); BLIP is kept as a fallback. Sentence-Transformers embeds text, CLIP embeds images. Everything goes into two ChromaDB collections that are fused at query time. | Retrieval split by evidence type (Text / Layout / Table / Chart / Figure), multimodal vs text-only |
 | **Contextual retrieval** (only the most relevant knowledge, top-k) | Contextual chunk headers ("Document / Page / type"). Dense text search plus CLIP image search, merged with Reciprocal Rank Fusion. Optional cross-encoder rerank. Top-k passed to the LLM. | Hit@k, Recall@k, MRR on the gold evidence pages |
 | **Reduce hallucinations** (ground LLM outputs) | Grounded prompt with a mandatory `[n]` citation for each fact. A weak-evidence gate. An explicit abstention answer ("Not answerable"). | Accuracy and hallucination rate: **LLM alone vs text RAG vs multimodal RAG** on 54 unanswerable and 148 answerable questions |
 
@@ -23,7 +23,7 @@ The retrieval pipeline is written by hand: no LangChain, no LlamaIndex, no paid 
             ┌──────────────── Kaggle GPU (heavy, run once) ────────────────┐
 PDF/IMG/CSV │ PyMuPDF text+tables+figures ─► PaddleOCR (scanned pages,      │
             │ chart labels) ─► cleaning ─► chunking (+context header)       │
-            │ ─► BLIP captions ─► bge-small (text) + CLIP (images)          │
+            │ ─► Qwen2.5-VL figure descriptions ─► bge-small + CLIP         │
             │ ─► artifacts.zip  (chunks.jsonl, *.npy, images/, manifest)    │
             └───────────────────────────────┬───────────────────────────────┘
                                             │ download
@@ -34,7 +34,7 @@ question ──►│ bge query emb ─► ChromaDB mm_text ─┐              
             └────────────────────────────────────────────────────────────────┘
 ```
 
-Why the split? Building embeddings means running CLIP, BLIP and OCR over thousands of chunks and
+Why the split? Building embeddings means running CLIP, the figure describer and OCR over thousands of chunks and
 images, which needs a GPU. At query time only **one** question has to be embedded, and bge-small and
 CLIP-B/32 handle that on CPU in milliseconds. **The query must use the same models as the
 artifacts.** `manifest.json` records which models were used, and the code always loads those.
@@ -57,7 +57,7 @@ src/
   preprocessing/cleaner.py   noise, running headers, safe OCR fixes, confidence flags
   ingestion/pipeline.py      routes PDF / image / CSV-XLSX / TXT -> blocks
   chunking/chunker.py        page-bounded chunks, table splitting, figure descriptions
-  embeddings/models.py       TextEmbedder, ClipEmbedder, Captioner (BLIP), Reranker
+  embeddings/models.py       TextEmbedder, ClipEmbedder, VLCaptioner (Qwen2.5-VL), Captioner (BLIP), Reranker
   vectorstore/chroma_store.py
   retrieval/retriever.py     multimodal fusion retriever
   generation/                prompts + backends (transformers, transformers_vl, ollama, extractive)
