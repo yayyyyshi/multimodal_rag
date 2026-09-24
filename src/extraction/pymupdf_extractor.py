@@ -73,26 +73,76 @@ def _clean(text: str) -> str:
     return re.sub(r"\s{2,}", " ", text).strip()
 
 
-def _find_caption(rect: fitz.Rect, text_blocks: list[tuple], max_gap: float = 40.0) -> str:
-    """Prefer a nearby block starting with 'Figure N' or 'Table N'. If none exists,
-    use up to two short blocks directly above, since reports and brochures put
-    chart titles on top."""
-    best, best_gap = "", max_gap
+def _caption_with_continuation(start: tuple, text_blocks: list[tuple], max_lines: int = 4) -> str:
+    """A caption wrapped over several lines can be split into several blocks;
+    append the blocks that follow directly below it (gap under 4 pt)."""
+    parts, cur = [start[4]], start
+    for _ in range(max_lines):
+        nxt = [b for b in text_blocks if -2 <= b[1] - cur[3] < 4 and b is not cur and min(b[2], cur[2]) - max(b[0], cur[0]) > 0
+               and not CAPTION_RE.match(b[4].strip())]
+        if not nxt:
+            break
+        cur = min(nxt, key=lambda b: b[1])
+        parts.append(cur[4])
+    return _clean(" ".join(parts))
+
+
+def _find_caption(rect: fitz.Rect, text_blocks: list[tuple], max_gap: float = 40.0, prefer: str = "fig") -> str:
+    """Prefer a block starting with 'Figure N' or 'Table N' that is inside the
+    region or within max_gap of it; captions of the preferred kind ('fig' or
+    'table') win over closer ones of the other kind. If none exists, use up to
+    two short blocks directly above, since reports put chart titles on top."""
+    best, best_key = None, (2, max_gap)
     above: list[tuple[float, str]] = []
-    for (x0, y0, x1, y1, txt, *_rest) in text_blocks:
+    for b in text_blocks:
+        x0, y0, x1, y1, txt = b[:5]
         t = txt.strip()
         horiz_overlap = min(x1, rect.x1) - max(x0, rect.x0)
         if horiz_overlap <= 0:
             continue
-        gap = y0 - rect.y1 if y0 >= rect.y1 else rect.y0 - y1
-        if CAPTION_RE.match(t) and 0 <= gap < best_gap:
-            best, best_gap = _clean(t), gap
-        elif y1 <= rect.y0 + 2 and 0 <= gap < 70 and len(t) < 300:
+        inside = _rect_overlap_ratio(fitz.Rect(x0, y0, x1, y1), rect) > 0.8
+        gap = 0.0 if inside else (y0 - rect.y1 if y0 >= rect.y1 else rect.y0 - y1)
+        if CAPTION_RE.match(t) and 0 <= gap < max_gap:
+            key = (0 if t.lower().startswith(prefer) else 1, gap)
+            if key < best_key:
+                best, best_key = b, key
+        elif not inside and y1 <= rect.y0 + 2 and 0 <= gap < 70 and len(t) < 300:
             above.append((gap, _clean(t)))
-    if best:
-        return best
+    if best is not None:
+        return _caption_with_continuation(best, text_blocks)
     above.sort()
     return " ".join(t for _, t in reversed(above[:2]))
+
+
+def _looks_like_table(caption: str, inside_text: str) -> bool:
+    """Tables drawn with horizontal rules only are missed by find_tables() and
+    end up as drawing clusters. Only the caption is trusted here: bar charts
+    are also full of numbers but must stay images for CLIP."""
+    return bool(re.match(r"^\s*table\s*[\dIVX]+", caption, re.IGNORECASE)) and len(inside_text) > 40
+
+
+def _numbers_intact(rows: list, page_words: set[str]) -> bool:
+    """strategy='text' can split '53.40' into '5340' and '.'; every number must exist on the page."""
+    nums = [w for row in rows for c in row if c for w in str(c).split() if re.search(r"\d", w)]
+    return all(w.strip("().,;:%$*") in page_words or w in page_words for w in nums)
+
+
+def _table_text_in_region(page: fitz.Page, rect: fitz.Rect, page_words: set[str]) -> str:
+    """Markdown from find_tables(strategy='text') inside rect, or '' if it is not usable."""
+    try:
+        tabs = page.find_tables(clip=rect, strategy="text")
+    except Exception:
+        return ""
+    for t in tabs.tables:
+        try:
+            md, rows = t.to_markdown(clean=True).strip(), t.extract()
+        except Exception:
+            continue
+        md = re.sub(r"<br\s*/?>", " ", html.unescape(html.unescape(md)))
+        if t.row_count >= 2 and t.col_count >= 2 and _table_is_plausible({"rows": rows}, page_words) \
+                and _numbers_intact(rows, page_words):
+            return md
+    return ""
 
 
 def _table_is_plausible(table: dict, page_words: set[str]) -> bool:
@@ -117,17 +167,36 @@ def extract_tables(page: fitz.Page) -> list[dict]:
     except Exception:
         return out
     page_words = {w[4].strip(".,;:()%$") for w in page.get_text("words")} | {w[4] for w in page.get_text("words")}
+    parts = []
     for t in tabs.tables:
         try:
             md = t.to_markdown(clean=True).strip()
             rows = t.extract()
         except Exception:
             continue
-        if not md or t.row_count < 2 or t.col_count < 2:
+        if not md or t.col_count < 2:
             continue
-        md = html.unescape(html.unescape(md))
-        md = re.sub(r"<br\s*/?>", " ", md)
-        table = {"bbox": fitz.Rect(t.bbox), "markdown": md, "rows": rows}
+        md = re.sub(r"<br\s*/?>", " ", html.unescape(html.unescape(md)))
+        parts.append({"bbox": fitz.Rect(t.bbox), "markdown": md, "rows": rows})
+
+    # a table with horizontal rules between row groups comes back as several
+    # tables stacked on top of each other with the same width; join them
+    merged: list[dict] = []
+    for p in sorted(parts, key=lambda p: p["bbox"].y0):
+        last = merged[-1] if merged else None
+        if last and abs(p["bbox"].x0 - last["bbox"].x0) < 3 and abs(p["bbox"].x1 - last["bbox"].x1) < 3 \
+                and 0 <= p["bbox"].y0 - last["bbox"].y1 < 8:
+            last["markdown"] += "\n" + "\n".join(p["markdown"].splitlines()[2:])  # drop repeated header lines
+            last["rows"] += p["rows"]
+            last["bbox"] |= p["bbox"]
+        else:
+            merged.append(p)
+
+    for table in merged:
+        if len(table["rows"]) < 2:
+            continue
+        if any(CAPTION_RE.match(str(c)) and str(c).lower().startswith("fig") for row in table["rows"] for c in row if c):
+            continue  # a figure whose caption fell inside the detected grid
         if _table_is_plausible(table, page_words):
             out.append(table)
     return out
@@ -156,8 +225,8 @@ def find_visual_regions(page: fitz.Page, cfg: dict, table_rects: list[fitz.Rect]
         ratio = r.get_area() / page_area
         if ratio < cfg["min_figure_area_ratio"] or ratio > cfg["max_figure_area_ratio"]:
             continue
-        if any(_rect_overlap_ratio(r, t) > 0.5 for t in table_rects):
-            continue  # table borders
+        if any(_rect_overlap_ratio(r, t) > 0.5 or _rect_overlap_ratio(t, r) > 0.6 for t in table_rects):
+            continue  # rules or frame of a table already found
         if any(_rect_overlap_ratio(r, img) > 0.7 for img, _ in regions):
             continue  # frame around an embedded image
         regions.append((r, "pymupdf_figure"))
@@ -221,7 +290,7 @@ def extract_pymupdf_blocks(
             blocks.append(ExtractedBlock(
                 doc_id=doc_id, page_num=page_num, text=t["markdown"], source_type="pymupdf_table",
                 bbox=[round(v, 2) for v in t["bbox"]], modality=TABLE,
-                extra={"n_rows": len(t["rows"]), "caption": _find_caption(t["bbox"], raw)},
+                extra={"n_rows": len(t["rows"]), "caption": _find_caption(t["bbox"], raw, max_gap=80, prefer="table")},
             ))
 
         visual_rects: list[fitz.Rect] = []
@@ -236,14 +305,25 @@ def extract_pymupdf_blocks(
                     continue
                 visual_rects.append(rect)
                 inside = _clean(page.get_text("text", clip=rect))
+                caption = _find_caption(rect, raw)
                 try:
                     rel = out.resolve().relative_to(Path(image_rel_root).resolve()) if image_rel_root else out
                 except ValueError:
                     rel = out
+                extra = {"image_path": Path(rel).as_posix(), "caption": caption}
+                if kind == "pymupdf_figure" and _looks_like_table(caption, inside):
+                    words = {w[4] for w in page.get_text("words")}
+                    md = _table_text_in_region(page, rect, words | {w.strip(".,;:()%$") for w in words})
+                    if any(b.page_num == page_num and b.modality == TABLE and b.text == (md or inside[:3000]) for b in blocks):
+                        continue  # same table found through a second drawing cluster
+                    blocks.append(ExtractedBlock(
+                        doc_id=doc_id, page_num=page_num, text=md or inside[:3000], source_type="pymupdf_ruled_table",
+                        bbox=[round(v, 2) for v in rect], modality=TABLE, extra=extra,
+                    ))
+                    continue
                 blocks.append(ExtractedBlock(
                     doc_id=doc_id, page_num=page_num, text=inside[:1500], source_type=kind,
-                    bbox=[round(v, 2) for v in rect], modality=IMAGE,
-                    extra={"image_path": Path(rel).as_posix(), "caption": _find_caption(rect, raw)},
+                    bbox=[round(v, 2) for v in rect], modality=IMAGE, extra=extra,
                 ))
 
         for (x0, y0, x1, y1, txt, *_r) in raw:

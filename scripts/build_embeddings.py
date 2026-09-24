@@ -2,10 +2,10 @@
 
     python scripts/build_embeddings.py
     python scripts/build_embeddings.py --ocr-figures        # OCR charts without a text layer
-    python scripts/build_embeddings.py --no-caption --zip   # skip BLIP, write artifacts.zip
+    python scripts/build_embeddings.py --no-caption --zip   # skip captions, write artifacts.zip
 
 Reads artifacts/chunks.jsonl and artifacts/images/ (from ingest.py) and writes:
-    chunks.jsonl            figure chunks updated with BLIP caption and OCR text
+    chunks.jsonl            figure chunks updated with the generated caption and OCR text
     text_embeddings.npy     row i belongs to line i of chunks.jsonl
     image_embeddings.npy    one CLIP vector per figure
     image_chunk_ids.json    chunk_id of each row in image_embeddings.npy
@@ -42,7 +42,7 @@ def zip_artifacts(art: Path) -> Path:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--config", default=None)
-    ap.add_argument("--no-caption", action="store_true", help="skip BLIP captions")
+    ap.add_argument("--no-caption", action="store_true", help="skip figure captions")
     ap.add_argument("--ocr-figures", action="store_true", help="PaddleOCR on figures that have no text layer")
     ap.add_argument("--zip", action="store_true")
     ap.add_argument("--text-model", default=None, help="override models.text_embedder (e.g. hash:384 for a smoke test)")
@@ -71,15 +71,26 @@ def main():
             if n % 50 == 0:
                 print(f"  {n}/{len(todo)}")
 
-    # BLIP captions
+    backend = m.get("captioner_backend", "blip")
     if not args.no_caption and img_idx:
-        from src.embeddings.models import Captioner
-        cap = Captioner(m["captioner"])
-        caps = cap.caption([str(art / chunks[i]["image_path"]) for i in img_idx])
-        for i, c in zip(img_idx, caps):
+        if backend == "qwen_vl":
+            from src.embeddings.models import VLCaptioner
+            todo = img_idx
+            cap = VLCaptioner(m["captioner_vl"])
+        else:
+            # BLIP only describes pictures well; for text-heavy figures (tables,
+            # code, diagrams full of labels) the inner text is already better
+            from src.embeddings.models import Captioner
+            todo = [i for i in img_idx if len(chunks[i]["extra"].get("inside_text", "")) < 150]
+            cap = Captioner(m["captioner"])
+        print(f"[embed] {backend} captions for {len(todo)} figures ...")
+        caps = cap.caption([str(art / chunks[i]["image_path"]) for i in todo])
+        for i, c in zip(todo, caps):
             chunks[i]["extra"]["generated_caption"] = c
+        if hasattr(cap, "unload"):
+            cap.unload()
         del cap
-        print(f"[embed] BLIP captions done ({time.time() - t0:.0f}s)")
+        print(f"[embed] captions done ({time.time() - t0:.0f}s)")
 
     for i in img_idx:
         refresh_image_chunk(chunks[i])
@@ -103,7 +114,7 @@ def main():
         "text_embedder": text_model, "text_dim": int(text_emb.shape[1]),
         "text_query_instruction": m.get("text_query_instruction", ""),
         "clip": clip_model, "clip_dim": int(image_emb.shape[1]) if len(img_idx) else clip.dim,
-        "captioner": None if args.no_caption else m["captioner"],
+        "captioner": None if args.no_caption else (m["captioner_vl"] if backend == "qwen_vl" else m["captioner"]),
         "figure_ocr": bool(args.ocr_figures),
         "n_chunks": len(chunks), "n_images": len(img_idx),
         "n_docs": len({c["doc_id"] for c in chunks}),
