@@ -1,134 +1,309 @@
-"""PaddleOCR 3.x text extraction.
 
-Used for scanned PDF pages (only the ones the PyMuPDF extractor flags),
-standalone image files, and chart crops whose labels are drawn as paths
-instead of text. PaddleOCR is imported only when needed, so the rest of the
-project works without it installed.
-
-Usage:
-    python src/extraction/ocr_extractor.py --pdf data/raw/sample.pdf --doc-id sample
-    python src/extraction/ocr_extractor.py --pdf data/raw/sample.pdf --doc-id sample --pages 1 4 7
-"""
+"""Tesseract OCR extraction for scanned PDF pages and images."""
 
 from __future__ import annotations
 
 import argparse
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 import pymupdf as fitz
+import pytesseract
+from PIL import Image
+from pytesseract import Output
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+
 from src.utils.metadata import TEXT, ExtractedBlock, save_blocks
 
-_ENGINE = None
+
+# Update this path if Tesseract is installed elsewhere.
+TESSERACT_EXE = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
+
+if Path(TESSERACT_EXE).exists():
+    pytesseract.pytesseract.tesseract_cmd = TESSERACT_EXE
 
 
-def get_ocr_engine(lang: str = "en"):
-    """Loaded once per process because model loading takes several seconds."""
-    global _ENGINE
-    if _ENGINE is None:
-        from paddleocr import PaddleOCR
-        # document unwarping and orientation models are slow and not needed for PDF renders
-        base = dict(lang=lang, use_textline_orientation=True,
-                    use_doc_orientation_classify=False, use_doc_unwarping=False)
-        try:  # mobile detector is several times faster on CPU
-            _ENGINE = PaddleOCR(text_detection_model_name="PP-OCRv5_mobile_det", **base)
-        except Exception:
-            _ENGINE = PaddleOCR(**base)
-    return _ENGINE
+def get_ocr_engine(lang: str = "eng") -> str:
+    """Verify Tesseract is available and return the OCR language."""
+    pytesseract.get_tesseract_version()
+    return lang
 
 
-def pdf_pages_to_images(pdf_path, out_dir, dpi: int = 200, pages: list[int] | None = None) -> dict[int, str]:
-    """Returns {page_num: png_path} for the requested 1-indexed pages (all if None)."""
+def pdf_pages_to_images(
+    pdf_path: str | Path,
+    out_dir: str | Path,
+    dpi: int = 200,
+    pages: list[int] | None = None,
+) -> dict[int, str]:
+    """Render selected 1-indexed PDF pages to PNG files."""
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+
+    rendered = {}
     doc = fitz.open(pdf_path)
-    result = {}
-    for i, page in enumerate(doc, start=1):
-        if pages and i not in pages:
+
+    try:
+        selected = (
+            pages
+            if pages is not None
+            else range(1, len(doc) + 1)
+        )
+
+        for page_num in selected:
+            if not 1 <= page_num <= len(doc):
+                continue
+
+            page = doc[page_num - 1]
+            image_path = out_dir / f"page_{page_num}.png"
+
+            page.get_pixmap(dpi=dpi, alpha=False).save(str(image_path))
+            rendered[page_num] = str(image_path)
+    finally:
+        doc.close()
+
+    return rendered
+
+
+def run_ocr_on_image(
+    image_path: str | Path,
+    engine: str | None = None,
+) -> list[dict]:
+    """
+    Extract text lines from an image.
+
+    Returns dictionaries containing:
+      text: recognized text
+      confidence: normalized score from 0 to 1
+      bbox: [x0, y0, x1, y1] in image pixels
+    """
+    lang = engine or "eng"
+
+    with Image.open(image_path) as image:
+        data = pytesseract.image_to_data(
+            image.convert("RGB"),
+            lang=lang,
+            config="--psm 6",
+            output_type=Output.DICT,
+        )
+
+    grouped = defaultdict(list)
+
+    for i, word in enumerate(data["text"]):
+        word = word.strip()
+
+        try:
+            confidence = float(data["conf"][i])
+        except (ValueError, TypeError):
             continue
-        img_path = out_dir / f"page_{i}.png"
-        page.get_pixmap(dpi=dpi).save(str(img_path))
-        result[i] = str(img_path)
-    doc.close()
-    return result
 
+        if not word or confidence < 0:
+            continue
 
-def run_ocr_on_image(image_path: str, engine=None) -> list[dict]:
-    """Returns one dict per detected line: text, confidence, bbox in pixels."""
-    engine = engine or get_ocr_engine()
+        key = (
+            data["block_num"][i],
+            data["par_num"][i],
+            data["line_num"][i],
+        )
+
+        left = int(data["left"][i])
+        top = int(data["top"][i])
+        width = int(data["width"][i])
+        height = int(data["height"][i])
+
+        grouped[key].append({
+            "text": word,
+            "confidence": confidence / 100.0,
+            "bbox": [
+                left,
+                top,
+                left + width,
+                top + height,
+            ],
+        })
+
     lines = []
-    for res in engine.predict(str(image_path)):
-        for text, score, box in zip(res.get("rec_texts", []), res.get("rec_scores", []), res.get("rec_boxes", [])):
-            lines.append({"text": text, "confidence": float(score), "bbox": [float(v) for v in box]})
+
+    for words in grouped.values():
+        words.sort(key=lambda item: item["bbox"][0])
+
+        boxes = [word["bbox"] for word in words]
+
+        lines.append({
+            "text": " ".join(word["text"] for word in words),
+            "confidence": sum(
+                word["confidence"] for word in words
+            ) / len(words),
+            "bbox": [
+                min(box[0] for box in boxes),
+                min(box[1] for box in boxes),
+                max(box[2] for box in boxes),
+                max(box[3] for box in boxes),
+            ],
+        })
+
+    lines.sort(key=lambda line: (line["bbox"][1], line["bbox"][0]))
     return lines
 
 
-def group_lines_into_blocks(lines: list[dict], y_threshold: float = 15.0) -> list[dict]:
-    """Merges lines whose vertical gap is at most y_threshold pixels into one block."""
+def group_lines_into_blocks(
+    lines: list[dict],
+    y_threshold: float = 15.0,
+) -> list[dict]:
+    """Combine vertically adjacent OCR lines into text blocks."""
     if not lines:
         return []
-    sorted_lines = sorted(lines, key=lambda l: (l["bbox"][1], l["bbox"][0]))
-    groups, current = [], [sorted_lines[0]]
-    for line in sorted_lines[1:]:
-        if line["bbox"][1] - current[-1]["bbox"][3] <= y_threshold:
+
+    lines = sorted(
+        lines,
+        key=lambda line: (line["bbox"][1], line["bbox"][0]),
+    )
+
+    blocks = []
+    current = [lines[0]]
+
+    for line in lines[1:]:
+        previous = current[-1]
+        vertical_gap = line["bbox"][1] - previous["bbox"][3]
+
+        if vertical_gap <= y_threshold:
             current.append(line)
         else:
-            groups.append(current)
+            blocks.append(_make_block(current))
             current = [line]
-    groups.append(current)
 
-    merged = []
-    for g in groups:
-        merged.append({
-            "text": " ".join(l["text"] for l in g),
-            "confidence": sum(l["confidence"] for l in g) / len(g),
-            "bbox": [min(l["bbox"][0] for l in g), min(l["bbox"][1] for l in g),
-                     max(l["bbox"][2] for l in g), max(l["bbox"][3] for l in g)],
-        })
-    return merged
+    blocks.append(_make_block(current))
+    return blocks
 
 
-def ocr_image_text(image_path: str, min_conf: float = 0.5) -> str:
-    """All lines above min_conf joined into one string. Returns '' on failure."""
-    try:
-        lines = run_ocr_on_image(image_path)
-    except Exception as e:
-        print(f"[OCR] failed on {image_path}: {e}")
-        return ""
-    return " ".join(l["text"] for l in lines if l["confidence"] >= min_conf)
+def _make_block(lines: list[dict]) -> dict:
+    """Combine OCR lines and their bounding boxes."""
+    boxes = [line["bbox"] for line in lines]
+
+    return {
+        "text": "\n".join(line["text"] for line in lines),
+        "confidence": sum(
+            line["confidence"] for line in lines
+        ) / len(lines),
+        "bbox": [
+            min(box[0] for box in boxes),
+            min(box[1] for box in boxes),
+            max(box[2] for box in boxes),
+            max(box[3] for box in boxes),
+        ],
+    }
 
 
-def extract_ocr_blocks(pdf_path, doc_id: str, pages: list[int] | None = None,
-                       tmp_image_dir="data/processed/_tmp_pages", dpi: int = 200) -> list[ExtractedBlock]:
-    """Renders the selected pages, runs OCR and returns one block per text group."""
-    engine = get_ocr_engine()
-    image_paths = pdf_pages_to_images(pdf_path, Path(tmp_image_dir) / doc_id, dpi=dpi, pages=pages)
-    scale = 72.0 / dpi  # pixel boxes to PDF points, same units as PyMuPDF
+def ocr_image_text(
+    image_path: str | Path,
+    min_conf: float = 0.5,
+) -> str:
+    """Return recognized lines meeting the confidence threshold."""
+    lines = run_ocr_on_image(image_path)
+
+    return "\n".join(
+        line["text"]
+        for line in lines
+        if line["confidence"] >= min_conf
+    )
+
+
+def extract_ocr_blocks(
+    pdf_path: str | Path,
+    doc_id: str,
+    pages: list[int] | None = None,
+    tmp_image_dir: str | Path = "data/processed/_tmp_pages",
+    dpi: int = 200,
+) -> list[ExtractedBlock]:
+    """
+    OCR selected PDF pages and return ExtractedBlock objects.
+
+    Bounding boxes are converted from image pixels to PDF points.
+    """
+    lang = get_ocr_engine()
+
+    rendered_pages = pdf_pages_to_images(
+        pdf_path=pdf_path,
+        out_dir=tmp_image_dir,
+        dpi=dpi,
+        pages=pages,
+    )
+
     blocks = []
-    for page_num, img_path in sorted(image_paths.items()):
-        print(f"[OCR] {doc_id}: page {page_num}")
-        for g in group_lines_into_blocks(run_ocr_on_image(img_path, engine)):
-            blocks.append(ExtractedBlock(
-                doc_id=doc_id, page_num=page_num, text=g["text"], source_type="paddleocr",
-                confidence=round(g["confidence"], 4),
-                bbox=[round(v * scale, 2) for v in g["bbox"]], modality=TEXT,
-            ))
+
+    for page_num, image_path in rendered_pages.items():
+        lines = run_ocr_on_image(image_path, engine=lang)
+        text_blocks = group_lines_into_blocks(lines)
+
+        scale = 72.0 / dpi
+
+        for block in text_blocks:
+            if not block["text"].strip():
+                continue
+
+            x0, y0, x1, y1 = block["bbox"]
+
+            pdf_bbox = [
+                round(x0 * scale, 2),
+                round(y0 * scale, 2),
+                round(x1 * scale, 2),
+                round(y1 * scale, 2),
+            ]
+
+            blocks.append(
+                ExtractedBlock(
+                    doc_id=doc_id,
+                    page_num=page_num,
+                    text=block["text"],
+                    source_type="tesseract",
+                    confidence=block["confidence"],
+                    bbox=pdf_bbox,
+                    modality=TEXT,
+                )
+            )
+
+        print(
+            f"[Tesseract] Page {page_num}: "
+            f"{len(text_blocks)} text blocks"
+        )
+
     return blocks
 
 
 def main():
-    ap = argparse.ArgumentParser(description="Run PaddleOCR extraction on a PDF")
-    ap.add_argument("--pdf", required=True)
-    ap.add_argument("--doc-id", required=True)
-    ap.add_argument("--pages", type=int, nargs="*", default=None, help="1-indexed pages (default: all)")
-    ap.add_argument("--out", default=None, help="default: data/processed/<doc_id>_ocr.json")
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser(
+        description="Extract text from PDF pages using Tesseract OCR"
+    )
+    parser.add_argument("--pdf", required=True)
+    parser.add_argument("--doc-id", required=True)
+    parser.add_argument("--pages", nargs="*", type=int, default=None)
+    parser.add_argument("--dpi", type=int, default=200)
+    parser.add_argument(
+        "--out",
+        default=None,
+        help="Output JSON path",
+    )
+    parser.add_argument(
+        "--tmp-image-dir",
+        default="data/processed/_tmp_pages",
+    )
 
-    out_path = args.out or f"data/processed/{args.doc_id}_ocr.json"
-    blocks = extract_ocr_blocks(args.pdf, args.doc_id, pages=args.pages)
+    args = parser.parse_args()
+
+    blocks = extract_ocr_blocks(
+        pdf_path=args.pdf,
+        doc_id=args.doc_id,
+        pages=args.pages,
+        tmp_image_dir=args.tmp_image_dir,
+        dpi=args.dpi,
+    )
+
+    out_path = args.out or (
+        f"data/processed/{args.doc_id}/ocr.json"
+    )
     save_blocks(blocks, out_path)
+
     print(f"[DONE] Extracted {len(blocks)} OCR blocks -> {out_path}")
 
 

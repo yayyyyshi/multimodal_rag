@@ -1,44 +1,74 @@
-"""Ask one question from the terminal.
 
-    python scripts/ask.py "How many Latinos see their children being less well off?"
-    python scripts/ask.py "..." --doc PH_2016_06_08_Economy_Final   # search one document
-    python scripts/ask.py "..." --backend ollama
-    python scripts/ask.py "..." --mode no_rag                       # LLM without retrieval
-"""
 
-import argparse
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+ROOT = Path(__file__).resolve().parent.parent
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+    
+import argparse
+
 from src.pipeline.rag import MultimodalRAG
 
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("question")
-    ap.add_argument("--doc", nargs="*", default=None, help="doc_id(s) to search in")
-    ap.add_argument("--mode", default="multimodal", choices=["multimodal", "text_only", "no_rag"])
-    ap.add_argument("--backend", default=None, choices=["transformers", "transformers_vl", "ollama", "extractive"])
-    ap.add_argument("--no-rerank", action="store_true")
-    ap.add_argument("--config", default=None)
-    args = ap.parse_args()
+    parser = argparse.ArgumentParser(description="Ask the multimodal RAG system.")
+    parser.add_argument("question", type=str, help="Question to ask")
+    parser.add_argument("--doc", action="append", help="Restrict retrieval to a document ID")
+    parser.add_argument("--backend", default=None, help="Generation backend")
+    parser.add_argument("--mode", default="multimodal", choices=["multimodal", "text_only", "no_rag"])
+    parser.add_argument("--no-rerank", action="store_true", help="Disable reranking")
+    args = parser.parse_args()
 
-    rag = MultimodalRAG.from_config(args.config, backend=args.backend, use_reranker=not args.no_rerank)
-    out = rag.answer(args.question, doc_ids=args.doc, mode=args.mode)
+    rag = MultimodalRAG.from_config(
+        backend=args.backend,
+        use_reranker=False if args.no_rerank else None,
+    )
 
-    print("\n=== ANSWER ===\n" + out["answer"])
-    if out["weak_evidence"]:
-        print("(retrieval evidence was weak)")
-    print("\n=== SOURCES ===")
-    for c in out["citations"]:
-        print(f"[{c['n']}] {c['doc_id']} p.{c['page']} ({c['modality']})" + (f"  {c['image_path']}" if c["image_path"] else ""))
-    if not out["citations"] and out["contexts"]:
-        print("(no citation in answer) top retrieved:")
-        for it in out["contexts"][:3]:
-            print(f"  - {it['doc_id']} p.{it['page_num']} ({it['modality']})")
-    print(f"\nlatency: {out['latency']}")
+    out = rag.answer(
+        args.question,
+        doc_ids=args.doc,
+        mode=args.mode,
+    )
+
+    print("\n=== ANSWER ===\n")
+    print(out["answer"])
+
+    if out.get("weak_evidence"):
+        print("\n[Warning: retrieved evidence may be insufficient.]")
+
+    citations = out.get("citations") or []
+    contexts = out.get("contexts") or []
+
+    if citations:
+        print("\n=== CITED SOURCES ===")
+        for c in citations:
+            print(
+                f"[{c['n']}] {c['doc_id']} "
+                f"p.{c['page']} ({c['modality']})"
+            )
+            if c.get("snippet"):
+                print(f"    {c['snippet'].replace(chr(10), ' ')}")
+    elif contexts and args.mode != "no_rag":
+        print("\n=== RETRIEVED EVIDENCE (not claim-level citations) ===")
+        for i, item in enumerate(contexts, start=1):
+            doc_id = item.get("doc_id", "unknown document")
+            page = item.get("page_num", "?")
+            modality = item.get("modality", "unknown")
+            content = (item.get("content") or "").strip()
+            if not content:
+                content = item.get("caption") or "[No text snippet available]"
+            content = " ".join(content.split())
+
+            print(f"\n[{i}] {doc_id} | page {page} | {modality}")
+            print(content[:700])
+
+    latency = out.get("latency")
+    if latency is not None:
+        print(f"\n=== LATENCY ===\n{latency}")
 
 
 if __name__ == "__main__":
     main()
+

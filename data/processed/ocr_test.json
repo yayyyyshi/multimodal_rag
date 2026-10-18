@@ -1,0 +1,527 @@
+[
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "Our vision is to become a leading tobacco player in India and beyond with a global mindset and the Company\nstands ready to work with the government to achieve the solution outlined above.",
+    "source_type": "tesseract",
+    "confidence": 0.9590000000000003,
+    "bbox": [
+      56.52,
+      59.76,
+      474.12,
+      79.92
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "ASSISTANCE TO FARMERS\nExport Potential for Tobacco\nThe Company undertook a number of\ndevelopmental activities in different tobacco areas to\nhelp uplift the farming community by transferring\nlatest farm technology to achieve higher yield per\nhectare and better produce, enabling them to realise\nbetter prices and earnings per hectare. We also\nhelped them introduce an Integrated Pest\nManagement System and supply of pheromone\ntraps, nuclear polyhydro virus solution and neem\nIndia currently holds only 0.7% share of the USD 30 bn. annual products to reduce the pesticide residue in tobacco\nGlobal Import Export Tobacco Trade production. We also did trials on production of\nSource: The Tobacco Institute of India flavourful tobacco to help farmers produce more\nexportable tobaccos and realise better profits, with\nvery promising results. These efforts have been duly recognised by Government scientists and Tobacco Board\nofficials.",
+    "source_type": "tesseract",
+    "confidence": 0.9560847338935574,
+    "bbox": [
+      28.08,
+      103.32,
+      474.12,
+      284.4
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "PROGRESS IN 2002/08",
+    "source_type": "tesseract",
+    "confidence": 0.8866666666666667,
+    "bbox": [
+      56.16,
+      310.68,
+      144.72,
+      317.52
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "Not unaccustomed to working in difficult environments, your Company has managed to launch three new\nbrands and grow our market share of the domestic cigarette industry to over 11%. This is a 10+% increase on\n2001-02 and was undertaken at a time when the industry had only marginal growth.",
+    "source_type": "tesseract",
+    "confidence": 0.9527857142857146,
+    "bbox": [
+      56.16,
+      332.28,
+      474.12,
+      363.24
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "This year saw the most significant investment in new and existing brands, including the launch of Piper, Tipper\nand Prince. Both Piper and Tipper involved new innovations in the Indian market, with Tipper's technology\nbeing copied by competitors. Prince was launched in a totally revamped version with improved smoke as well\nas packaging. New campaigns were undertaken for Four Square and Cavanders brands.",
+    "source_type": "tesseract",
+    "confidence": 0.9536938316993466,
+    "bbox": [
+      55.8,
+      375.84,
+      474.12,
+      417.96
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "The Company also launched three cigar brands, Phillies, Hav-a-tampa and Don Diego in the domestic market\nin 2002. These cigars are imported by the Company under an arrangement with Altadis of USA, one of the\nWorld's leading cigar manufacturers.",
+    "source_type": "tesseract",
+    "confidence": 0.9540350877192983,
+    "bbox": [
+      55.8,
+      430.2,
+      474.12,
+      461.52
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "To ensure that these new brands and your Company's existing brands are well presented and accessible to\ncustomers, investments have been made in the sales and distribution system resulting in significant increase in\nretail servicing and brand presence. At the same time, we are investing in building stronger relationships with\nour trade partners.",
+    "source_type": "tesseract",
+    "confidence": 0.9548437500000002,
+    "bbox": [
+      55.8,
+      473.76,
+      474.12,
+      515.88
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "A major investment was made in R & D facilities at the Mumbai factory to establish a state-of-the-art facility.\nFurther investments were made in upgrading both the manufacturing facilities. Continued training and the\napplication of the “Kaizen Teian” scheme have again resulted in improvement in overall operating efficiencies\nand reduction in manufacturing costs. In recognition of these efforts, the Company won the highest award\nfrom INSAAN for the sixth successive year.",
+    "source_type": "tesseract",
+    "confidence": 0.9524688596491231,
+    "bbox": [
+      56.16,
+      527.04,
+      473.76,
+      581.4
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "TEA",
+    "source_type": "tesseract",
+    "confidence": 0.95,
+    "bbox": [
+      55.8,
+      594.0,
+      73.8,
+      600.84
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "The global over supply of tea led to bearish trends in commodity prices for the fourth successive year. These\ndepressed market conditions led to a 9% decline in the domestic packet tea market resulting in its further\nfragmentation.",
+    "source_type": "tesseract",
+    "confidence": 0.9587134502923979,
+    "bbox": [
+      55.8,
+      615.6,
+      474.12,
+      646.56
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "To meet these challenges, the Tea business was restructured and overheads reduced. The Company focused on\nmarkets which satisfied contribution and profitability objectives, while exiting unviable territories. As a result\nof this the business achieved positive cash flows by the second half of the financial year. Total segment\nrevenues were Rs. 31 crore for the year.",
+    "source_type": "tesseract",
+    "confidence": 0.9548759920634922,
+    "bbox": [
+      55.8,
+      659.16,
+      474.12,
+      701.28
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "Good progress was made with opportunities identified in the high value, growth segment of out-of-home\nbeverages. Test marketing of innovative ways of addressing this market are planned during the current\nfinancial year.",
+    "source_type": "tesseract",
+    "confidence": 0.9606666666666669,
+    "bbox": [
+      56.16,
+      713.52,
+      474.12,
+      744.84
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 3,
+    "text": "During the first quarter of the current year your Company has achieved sales of Rs.6.3 crore against\nRs. 7.2 crore in the corresponding period last year. The sales decline is mainly due to exiting low profitability\nareas in the domestic market and lower exports. Domestic marginal contribution has been increased by around\n2% over the corresponding period.",
+    "source_type": "tesseract",
+    "confidence": 0.9536099071207432,
+    "bbox": [
+      56.16,
+      757.08,
+      474.12,
+      799.2
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "2. Development of low tar/nicotine cigarettes.",
+    "source_type": "tesseract",
+    "confidence": 0.89,
+    "bbox": [
+      82.08,
+      57.6,
+      260.64,
+      66.96
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "Improvement as a result of these developments :",
+    "source_type": "tesseract",
+    "confidence": 0.8487499999999999,
+    "bbox": [
+      82.08,
+      78.12,
+      262.8,
+      90.36
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "1. Improvement in blend/taste of existing cigarettes.\n2. Improvement in smoke consistency ofall brands of cigarettes.",
+    "source_type": "tesseract",
+    "confidence": 0.8030952380952381,
+    "bbox": [
+      82.08,
+      101.16,
+      330.12,
+      121.32
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "TECHNOLOGICAL ABSORPTION, ADOPTION AND INNOVATION",
+    "source_type": "tesseract",
+    "confidence": 0.958,
+    "bbox": [
+      81.72,
+      144.72,
+      355.32,
+      153.72
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "The measures initiated/implemented are :",
+    "source_type": "tesseract",
+    "confidence": 0.8760000000000001,
+    "bbox": [
+      81.72,
+      166.68,
+      239.4,
+      176.04
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "1. Commissioning of Cigarette Inspection Device on makers which has improved the quality of cigarettes.\n2. Successful commercial production of innovative Piper and Tipper cigarette packs.\n3. Commissioning of Coupon feed facility onall packers.\n4. Date code printing by Ink Jet Printers on all Hinge Lid packers.\n5. Autocontrol in Cut Tobacco Store/Dry Room's relative humidity giving guarantee of product quality in\n'In Process Material’.",
+    "source_type": "tesseract",
+    "confidence": 0.9193850038850039,
+    "bbox": [
+      81.72,
+      188.28,
+      486.36,
+      249.84
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "FOREIGN EXCHANGE EARNINGS AND OUTGO",
+    "source_type": "tesseract",
+    "confidence": 0.9400000000000001,
+    "bbox": [
+      81.72,
+      264.96,
+      278.28,
+      271.8
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "The earnings in foreign exchange during the year under report by way of exports and other income amounted to\nRs. 53.26 crore (previous year Rs. 11.68 crore) as against the foreign exchange outgo on imports, dividends and other\nexpenditure aggregating to Rs. 40.05 crore (previous year Rs. 26.14 crore).",
+    "source_type": "tesseract",
+    "confidence": 0.9587719298245615,
+    "bbox": [
+      81.72,
+      286.56,
+      522.72,
+      317.52
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "FIXED DEPOSITS",
+    "source_type": "tesseract",
+    "confidence": 0.96,
+    "bbox": [
+      81.72,
+      330.12,
+      150.84,
+      337.32
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "At the end of the financial year, the balance on account of Fixed Deposits accepted from the Public and Members\nstood at Rs. 4,29,32,000, which included 69 deposits totaling Rs. 6,85,000 not claimed on due dates. Out of these, 24\ndeposits for an aggregate amount of Rs. 2,65,000 have since been repaid or renewed at the option of the depositors\nleaving a balance of Rs. 4,20,000 for completion of formalities.",
+    "source_type": "tesseract",
+    "confidence": 0.9541250000000003,
+    "bbox": [
+      81.72,
+      351.72,
+      522.36,
+      393.84
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "Presently the Company is neither accepting fresh deposits nor renewing the existing ones as it is no longer\neconomical for the Company to raise money through this mode of finance.",
+    "source_type": "tesseract",
+    "confidence": 0.9594444444444447,
+    "bbox": [
+      82.08,
+      406.44,
+      522.72,
+      426.6
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "DIRECTORS",
+    "source_type": "tesseract",
+    "confidence": 0.96,
+    "bbox": [
+      81.72,
+      439.56,
+      132.84,
+      446.4
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "Mr. R.A. Shah, Mr. S.V. Shanbhag and Mr. C.M. Maniar, Directors, will retire by rotation at the forthcoming Annual\nGeneral Meeting and, being eligible, have offered themselves for re-election.",
+    "source_type": "tesseract",
+    "confidence": 0.9458947368421053,
+    "bbox": [
+      82.08,
+      460.8,
+      522.36,
+      481.32
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "The three year term of Mr. K.K. Modi as Managing Director shall expire on the date of the ensuing Annual General\nMeeting. A resolution for his re-appointment for further period of three years is being put up for your consideration\nat the forthcoming Annual General Meeting.",
+    "source_type": "tesseract",
+    "confidence": 0.9575856307435257,
+    "bbox": [
+      81.72,
+      493.56,
+      522.36,
+      524.88
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "DIRECTORS' RESPONSIBILITY STATEMENT",
+    "source_type": "tesseract",
+    "confidence": 0.9400000000000001,
+    "bbox": [
+      81.72,
+      537.12,
+      261.72,
+      544.32
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "Pursuant to the requirement under Section 217(2AA) of the Companies Act, 1956 with respect to Directors’\nResponsibilities Statement, it is hereby confirmed :",
+    "source_type": "tesseract",
+    "confidence": 0.9263392857142858,
+    "bbox": [
+      82.08,
+      559.08,
+      522.0,
+      579.24
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "(i) that in the preparation of the Annual Accounts for the financial year ended 31“ March, 2003, the applicable\nAccounting Standards had been followed along with proper explanation relating to material departures;",
+    "source_type": "tesseract",
+    "confidence": 0.9343522267206479,
+    "bbox": [
+      82.08,
+      591.84,
+      522.0,
+      612.36
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "(ii) that the directors had selected such Accounting Policies and applied them consistently and made judgements\nand estimates that were reasonable and prudent so as to give a true and fair view of the state of affairs of the\nCompany at the end of the financial year and of the profit of the Company for the year under review;",
+    "source_type": "tesseract",
+    "confidence": 0.9432735507246379,
+    "bbox": [
+      82.08,
+      624.6,
+      522.36,
+      655.92
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "(iii) that the directors had taken proper and sufficient care for the maintenance of adequate accounting records in\naccordance with the provisions of the Companies Act, 1956 for safeguarding the assets of the Company and for\npreventing and detecting fraud and other irregularities;",
+    "source_type": "tesseract",
+    "confidence": 0.9439947089947092,
+    "bbox": [
+      82.08,
+      668.16,
+      522.72,
+      699.48
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "(iv) that the directors had prepared the accounts for the financial year ended 31st March, 2003 ona 'going concern’\nbasis.",
+    "source_type": "tesseract",
+    "confidence": 0.9315789473684211,
+    "bbox": [
+      82.08,
+      711.72,
+      522.0,
+      729.72
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "CORPORATE GOVERNANCE",
+    "source_type": "tesseract",
+    "confidence": 0.96,
+    "bbox": [
+      82.08,
+      744.84,
+      202.32,
+      751.68
+    ],
+    "extra": {},
+    "modality": "text"
+  },
+  {
+    "doc_id": "ocr_test",
+    "page_num": 6,
+    "text": "The Company is committed to maximise the value of its stakeholders by adopting the principles of good Corporate\nGovernance in line with the provisions stipulated in the Listing Agreement. It encourages wide participation from all\nstakeholders. Its objective and that of its management and employees is to manufacture and market the Company's",
+    "source_type": "tesseract",
+    "confidence": 0.9558605664488019,
+    "bbox": [
+      81.72,
+      766.44,
+      522.36,
+      797.4
+    ],
+    "extra": {},
+    "modality": "text"
+  }
+]

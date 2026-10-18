@@ -4,7 +4,7 @@
     python scripts/build_index.py                       # artifacts/ already unzipped
 
 No model is loaded, the vectors are read from the .npy files.
-"""
+""" 
 
 import argparse
 import sys

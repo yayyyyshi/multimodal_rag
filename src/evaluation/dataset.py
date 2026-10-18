@@ -108,3 +108,4 @@ def select_subset(samples: list[dict], docs_dir: Path, n_docs: int, max_pages: i
             if by_type[t] and len(chosen) < n_docs:
                 chosen.append(by_type[t].pop(0)[1])
     return chosen
+
