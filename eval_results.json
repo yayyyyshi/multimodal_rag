@@ -1,0 +1,719 @@
+[
+  {
+    "case": "single_fact",
+    "category": "answerable from one passage",
+    "run": 1,
+    "question": "How long was the Germanwings website inaccessible after the crash?",
+    "answer": "The Germanwings website was inaccessible for approximately 2 hours. [1]",
+    "raw_answer": "The Germanwings website was inaccessible for approximately 2 hours. [1]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      1
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 2,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      },
+      {
+        "n": 3,
+        "page": 10,
+        "modality": "text",
+        "chars": 426
+      },
+      {
+        "n": 4,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 5,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      },
+      {
+        "n": 6,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.734,
+      "generation_s": 29.915
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 5.882,
+      "prompt_tokens": 1561,
+      "prompt_eval_s": 20.547,
+      "gen_tokens": 17,
+      "gen_s": 1.37
+    }
+  },
+  {
+    "case": "single_fact",
+    "category": "answerable from one passage",
+    "run": 2,
+    "question": "How long was the Germanwings website inaccessible after the crash?",
+    "answer": "The Germanwings website was inaccessible for approximately 2 hours. [1]",
+    "raw_answer": "The Germanwings website was inaccessible for approximately 2 hours. [1]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      1
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 2,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      },
+      {
+        "n": 3,
+        "page": 10,
+        "modality": "text",
+        "chars": 426
+      },
+      {
+        "n": 4,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 5,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      },
+      {
+        "n": 6,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.055,
+      "generation_s": 3.707
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.021,
+      "prompt_tokens": 1561,
+      "prompt_eval_s": 0.119,
+      "gen_tokens": 17,
+      "gen_s": 1.464
+    }
+  },
+  {
+    "case": "multi_passage",
+    "category": "needs several passages",
+    "run": 1,
+    "question": "How did Germanwings communicate updates during the first hours of the crisis?",
+    "answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, and their website remained inaccessible for approximately two hours. [3] [4] [5]",
+    "raw_answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, and their website remained inaccessible for approximately two hours. [3] [4] [5]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": false,
+      "no_known_error": true
+    },
+    "passed": false,
+    "model_referenced": [
+      3,
+      4,
+      5
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 2,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 3,
+        "page": 1,
+        "modality": "text",
+        "chars": 116
+      },
+      {
+        "n": 4,
+        "page": 3,
+        "modality": "text",
+        "chars": 403
+      },
+      {
+        "n": 5,
+        "page": 4,
+        "modality": "text",
+        "chars": 830
+      },
+      {
+        "n": 6,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.088,
+      "generation_s": 18.388
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.019,
+      "prompt_tokens": 1408,
+      "prompt_eval_s": 13.664,
+      "gen_tokens": 34,
+      "gen_s": 2.586
+    }
+  },
+  {
+    "case": "multi_passage",
+    "category": "needs several passages",
+    "run": 2,
+    "question": "How did Germanwings communicate updates during the first hours of the crisis?",
+    "answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, but their website remained inaccessible. [3] [4] [5] [6]",
+    "raw_answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, but their website remained inaccessible. [3] [4] [5] [6]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": false,
+      "no_known_error": true
+    },
+    "passed": false,
+    "model_referenced": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 2,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 3,
+        "page": 1,
+        "modality": "text",
+        "chars": 116
+      },
+      {
+        "n": 4,
+        "page": 3,
+        "modality": "text",
+        "chars": 403
+      },
+      {
+        "n": 5,
+        "page": 4,
+        "modality": "text",
+        "chars": 830
+      },
+      {
+        "n": 6,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.062,
+      "generation_s": 4.959
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.02,
+      "prompt_tokens": 1408,
+      "prompt_eval_s": 0.115,
+      "gen_tokens": 33,
+      "gen_s": 2.717
+    }
+  },
+  {
+    "case": "unanswerable",
+    "category": "unanswerable in-domain",
+    "run": 1,
+    "question": "What was the total number of passengers Germanwings carried in 2014?",
+    "answer": "Not answerable",
+    "raw_answer": "Not answerable",
+    "abstained": true,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      },
+      {
+        "n": 2,
+        "page": 16,
+        "modality": "text",
+        "chars": 436
+      },
+      {
+        "n": 3,
+        "page": 19,
+        "modality": "text",
+        "chars": 552
+      },
+      {
+        "n": 4,
+        "page": 2,
+        "modality": "text",
+        "chars": 274
+      },
+      {
+        "n": 5,
+        "page": 7,
+        "modality": "text",
+        "chars": 863
+      },
+      {
+        "n": 6,
+        "page": 3,
+        "modality": "text",
+        "chars": 403
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.065,
+      "generation_s": 19.92
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.022,
+      "prompt_tokens": 1613,
+      "prompt_eval_s": 17.516,
+      "gen_tokens": 4,
+      "gen_s": 0.252
+    }
+  },
+  {
+    "case": "unanswerable",
+    "category": "unanswerable in-domain",
+    "run": 2,
+    "question": "What was the total number of passengers Germanwings carried in 2014?",
+    "answer": "Not answerable",
+    "raw_answer": "Not answerable",
+    "abstained": true,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      },
+      {
+        "n": 2,
+        "page": 16,
+        "modality": "text",
+        "chars": 436
+      },
+      {
+        "n": 3,
+        "page": 19,
+        "modality": "text",
+        "chars": 552
+      },
+      {
+        "n": 4,
+        "page": 2,
+        "modality": "text",
+        "chars": 274
+      },
+      {
+        "n": 5,
+        "page": 7,
+        "modality": "text",
+        "chars": 863
+      },
+      {
+        "n": 6,
+        "page": 3,
+        "modality": "text",
+        "chars": 403
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.075,
+      "generation_s": 2.447
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.01,
+      "prompt_tokens": 1613,
+      "prompt_eval_s": 0.106,
+      "gen_tokens": 4,
+      "gen_s": 0.25
+    }
+  },
+  {
+    "case": "confusable",
+    "category": "two passages easy to confuse",
+    "run": 1,
+    "question": "During the first hour, were Twitter and Facebook available to the public while the Germanwings website was down?",
+    "answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "raw_answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      3
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 2,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      },
+      {
+        "n": 3,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      },
+      {
+        "n": 4,
+        "page": 10,
+        "modality": "text",
+        "chars": 426
+      },
+      {
+        "n": 5,
+        "page": 8,
+        "modality": "text",
+        "chars": 398
+      },
+      {
+        "n": 6,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.078,
+      "generation_s": 13.977
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.046,
+      "prompt_tokens": 1479,
+      "prompt_eval_s": 9.959,
+      "gen_tokens": 23,
+      "gen_s": 1.786
+    }
+  },
+  {
+    "case": "confusable",
+    "category": "two passages easy to confuse",
+    "run": 2,
+    "question": "During the first hour, were Twitter and Facebook available to the public while the Germanwings website was down?",
+    "answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "raw_answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      3
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 2,
+        "page": 9,
+        "modality": "text",
+        "chars": 469
+      },
+      {
+        "n": 3,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      },
+      {
+        "n": 4,
+        "page": 10,
+        "modality": "text",
+        "chars": 426
+      },
+      {
+        "n": 5,
+        "page": 8,
+        "modality": "text",
+        "chars": 398
+      },
+      {
+        "n": 6,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.07,
+      "generation_s": 3.981
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.03,
+      "prompt_tokens": 1479,
+      "prompt_eval_s": 0.11,
+      "gen_tokens": 23,
+      "gen_s": 1.777
+    }
+  },
+  {
+    "case": "repetition_prone",
+    "category": "previously repetitive output",
+    "run": 1,
+    "question": "What were the main findings of the Germanwings digital crisis analysis?",
+    "answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "raw_answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      },
+      {
+        "n": 2,
+        "page": 1,
+        "modality": "text",
+        "chars": 116
+      },
+      {
+        "n": 3,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 4,
+        "page": 4,
+        "modality": "text",
+        "chars": 830
+      },
+      {
+        "n": 5,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 6,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.071,
+      "generation_s": 23.724
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.01,
+      "prompt_tokens": 1524,
+      "prompt_eval_s": 15.106,
+      "gen_tokens": 82,
+      "gen_s": 6.499
+    }
+  },
+  {
+    "case": "repetition_prone",
+    "category": "previously repetitive output",
+    "run": 2,
+    "question": "What were the main findings of the Germanwings digital crisis analysis?",
+    "answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis, and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "raw_answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis, and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 4,
+        "modality": "text",
+        "chars": 722
+      },
+      {
+        "n": 2,
+        "page": 1,
+        "modality": "text",
+        "chars": 116
+      },
+      {
+        "n": 3,
+        "page": 6,
+        "modality": "text",
+        "chars": 689
+      },
+      {
+        "n": 4,
+        "page": 4,
+        "modality": "text",
+        "chars": 830
+      },
+      {
+        "n": 5,
+        "page": 12,
+        "modality": "text",
+        "chars": 764
+      },
+      {
+        "n": 6,
+        "page": 18,
+        "modality": "text",
+        "chars": 783
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.059,
+      "generation_s": 9.891
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.012,
+      "prompt_tokens": 1524,
+      "prompt_eval_s": 0.105,
+      "gen_tokens": 83,
+      "gen_s": 7.619
+    }
+  }
+]

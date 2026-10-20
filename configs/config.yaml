@@ -51,6 +51,7 @@ retrieval:
   image_weight: 0.7
   min_text_score: 0.30
   min_rerank_score: -4.0
+  use_reranker: false
 
 generation:
   backend: ollama

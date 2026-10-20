@@ -55,15 +55,22 @@ if question:
                 st.error(str(e))
                 st.stop()
         st.markdown(out["answer"])
+        if out.get("truncated"):
+            st.caption("The answer reached the generation length limit; an unfinished "
+                       "final sentence may have been removed.")
         if out["weak_evidence"] and mode != "no_rag":
             st.warning("Retrieved evidence was weak, so the model was told to abstain if unsure.")
         st.caption(f"retrieval {out['latency']['retrieval_s']}s · generation {out['latency']['generation_s']}s")
 
     if out["contexts"]:
         st.subheader("Evidence")
-        cited = {c["n"] for c in out["citations"]}
+        st.caption("Retrieved evidence, verification: none. A tag means only that the model "
+                   "wrote that [n] in its answer; it does not check that the source supports the claim.")
+        cited = {c["n"] for c in out["citations"] if c.get("status") != "suggested_lexical"}
+        suggested = {c["n"] for c in out["citations"] if c.get("status") == "suggested_lexical"}
         for i, it in enumerate(out["contexts"], 1):
-            mark = "✅ cited" if i in cited else ""
+            mark = ("· referenced by model (unverified)" if i in cited
+                    else "· lexical suggestion (not verification)" if i in suggested else "")
             with st.expander(f"[{i}] {it['doc_id']} · page {it['page_num']} · {it['modality']} {mark}", expanded=i in cited):
                 if it.get("image_path"):
                     img = rag.artifacts_dir / it["image_path"]

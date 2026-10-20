@@ -1,4 +1,3 @@
-
 """Find relevant text, tables and images with weighted RRF and reranking."""
 
 from __future__ import annotations
@@ -85,6 +84,18 @@ def diversify_results(
     return selected
 
 
+def should_use_reranker(requested: bool | None, retrieval_cfg: dict) -> bool:
+    """Decide whether to load the reranker.
+
+    requested: True/False from the caller (e.g. a CLI flag) always wins.
+    None: use retrieval.use_reranker from the config, which defaults to True
+    when the key is absent so existing setups behave exactly as before.
+    """
+    if requested is not None:
+        return bool(requested)
+    return bool(retrieval_cfg.get("use_reranker", True))
+
+
 class MultimodalRetriever:
     def __init__(
         self,
@@ -105,7 +116,7 @@ class MultimodalRetriever:
         reranker_name = cfg["models"].get("reranker")
         self.reranker = None
 
-        if reranker_name and (use_reranker is None or use_reranker):
+        if reranker_name and should_use_reranker(use_reranker, self.rcfg):
             try:
                 self.reranker = get_reranker(reranker_name)
             except Exception as exc:

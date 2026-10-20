@@ -1,4 +1,3 @@
-
 """LLM backends. All expose generate(messages, images=None) -> str.
 
 transformers: Text model through Hugging Face.
@@ -161,8 +160,28 @@ class TransformersVLGenerator:
         )[0].strip()
 
 
+def _ns_to_s(value):
+    return round(value / 1e9, 3) if value else None
+
+
+def _ollama_stats(result: dict) -> dict:
+    """Timing and stop-reason fields from an Ollama /api/chat response."""
+    return {
+        "done_reason": result.get("done_reason"),
+        "load_s": _ns_to_s(result.get("load_duration")),
+        "prompt_tokens": result.get("prompt_eval_count"),
+        "prompt_eval_s": _ns_to_s(result.get("prompt_eval_duration")),
+        "gen_tokens": result.get("eval_count"),
+        "gen_s": _ns_to_s(result.get("eval_duration")),
+    }
+
+
 class OllamaGenerator:
-    """Local Ollama backend with an 8192-token context window."""
+    """Local Ollama backend with an 8192-token context window.
+
+    After each generate() call, last_stats holds Ollama's timing fields and
+    done_reason ("length" means the num_predict limit cut the answer off).
+    """
 
     def __init__(
         self,
@@ -178,8 +197,10 @@ class OllamaGenerator:
             "num_predict": max_new_tokens,
             "num_ctx": 8192,
         }
+        self.last_stats: dict = {}
 
     def generate(self, messages: list[dict], images=None) -> str:
+        self.last_stats = {}
         msgs = [dict(message) for message in messages]
 
         if images:
@@ -230,6 +251,7 @@ class OllamaGenerator:
                     f"Unexpected Ollama response: {result}"
                 )
 
+            self.last_stats = _ollama_stats(result)
             return result["message"]["content"].strip()
 
         except urllib.error.HTTPError as error:
@@ -296,4 +318,3 @@ def get_generator(
 
 def supports_images(backend: str) -> bool:
     return backend in ("transformers_vl", "ollama")
-

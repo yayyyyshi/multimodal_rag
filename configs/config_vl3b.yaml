@@ -1,0 +1,64 @@
+
+# Paths, models and parameters for the whole pipeline.
+# Kaggle and the laptop use the same embedding models.
+# Changing the generation model does not require rebuilding embeddings.
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  artifacts_dir: artifacts
+  chroma_dir: artifacts/chroma
+
+dataset:
+  name: MMLongBench-Doc
+  repo_url: https://github.com/mayubo2333/MMLongBench-Doc
+  local_dir: data/mmlongbench
+  n_docs: 20
+  max_pages: 60
+  seed: 42
+
+extraction:
+  min_text_chars_native: 30
+  use_ocr: true
+  ocr_dpi: 200
+  figure_dpi: 150
+  min_image_side_pt: 60
+  min_figure_area_ratio: 0.03
+  max_figure_area_ratio: 0.95
+
+chunking:
+  max_chars: 1000
+  overlap_chars: 150
+  max_table_rows_per_chunk: 25
+  add_context_header: true
+
+models:
+  text_embedder: BAAI/bge-small-en-v1.5
+  text_query_instruction: "Represent this sentence for searching relevant passages: "
+  clip: openai/clip-vit-base-patch32
+  captioner_backend: qwen_vl
+  captioner_vl: Qwen/Qwen2.5-VL-3B-Instruct
+  captioner: Salesforce/blip-image-captioning-base
+  reranker: BAAI/bge-reranker-base
+  generator: Qwen/Qwen2.5-1.5B-Instruct
+  vl_generator: Qwen/Qwen2.5-VL-3B-Instruct
+
+retrieval:
+  top_k_text: 12
+  top_k_image: 6
+  final_k: 6
+  rrf_k: 60
+  image_weight: 0.7
+  min_text_score: 0.30
+  min_rerank_score: -4.0
+  use_reranker: false
+
+generation:
+  backend: ollama
+  ollama_model: qwen2.5vl:3b
+  ollama_url: http://localhost:11434
+  max_new_tokens: 256
+  temperature: 0.0
+  max_images: 2
+  abstain_text: "Not answerable"
+  abstain_policy: prompt

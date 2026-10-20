@@ -1,0 +1,315 @@
+[
+  {
+    "case": "multi_passage",
+    "category": "needs several passages",
+    "run": 1,
+    "question": "How did Germanwings communicate updates during the first hours of the crisis?",
+    "answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, but their website remained inaccessible. [3] [4] [5] [6]",
+    "raw_answer": "Germanwings communicated updates through Twitter and Facebook within the first hour, but their website remained inaccessible. [3] [4] [5] [6]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": false,
+      "no_known_error": true
+    },
+    "passed": false,
+    "model_referenced": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 12,
+        "modality": "text",
+        "chars": 764,
+        "content": "HILL+KNOWLTON\n(Germanwings.com Hour 3)\npesxherten eigenen Informabonen vor Sobwid beslatgte Einzetheiten vertigbar sind, informienen + Germanwings.com begins to stabilize <_<\n+ By the fifth hour following the incident, the current Crisis site is in place We have recently become aware of media reports speculating on an incident though we still do not have any own confirmed infoematon As soon as definite informaton is avedable. we shail infonm the mecha immediately Please monior our websie www germanwings com for penodic updates\n(Germanwings.com updates Hour 12+) (Germanwings.com Hour 4.5) [Current information —— eee ——a | ‘That art Jimem munnages cent eviormatios ; — ermenat umange of Landes Weathrow Arpor (UMA) 4 vings Eurowings * beg My fge bien ferrets"
+      },
+      {
+        "n": 2,
+        "page": 6,
+        "modality": "text",
+        "chars": 689,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY sTAaTesies\nHee 7 . - (Twitter) + Within the first 60 minutes: — + Germanwings issues first tweet acknowledging incident & tte Sie en canal issues update to Facebook <r jd for periodic updates\ni rT j i a nas dehnde avormahon 1 + Atthe same time, Germanwings website crashes — remains = salistian tan ail Wie: ea mace inaccessible for approx. 2 hours i. A\\s Y eeteny + Nochange to brand colours/logo on social platforms at this aE pris Lsceespebomre ci hove ers of time though we shill do not have amy wn confirmed information —— an\nWir hrabstresanil wn cheser Situation aul unsere (Germanwings.com site) Standieg aitualwerte interretsate\n“ pi a » we emery"
+      },
+      {
+        "n": 3,
+        "page": 1,
+        "modality": "text",
+        "chars": 116,
+        "content": "; GERMANWINGS 9525: THE FIRST 6 HOURS\n: DIGITAL CRISIS ANALYSIS\n: y 25-03-2015 a y BRENDAN HODGSON + AHMED ALSHARIOI"
+      },
+      {
+        "n": 4,
+        "page": 3,
+        "modality": "text",
+        "chars": 403,
+        "content": "HILL+KNOWLTON GERMANWINGS 4U9525 ~ QUICK FACTS Beneneaiee\n+ Analysis Parameters: + First 6 hours following crash - 24-May-2015 % a\n(approx. 11:00 - 17:00 CET)\n+ Supplemented by 24 hour refresh - 1AM CET - 25-May- 2015 baa un, al “| ty tat + Timestamps included in this document are estimates '\nonly.\n+ NOTE: this analysis is not intended as a critique of the o response efforts of any involved party ro,"
+      },
+      {
+        "n": 5,
+        "page": 4,
+        "modality": "text",
+        "chars": 830,
+        "content": "visuals largely drove the media agenda during the first hours, the immediate lack of visuals transformed this quickly into a media-driven story. + The actions taken by three of the key players - Germanwings, Lufthansa and Airbus - to quickly adapt the visual appearance of their website and their social platforms highlights the importance of having clear protocols in place for coordinated brand management in times of catastrophic crisis.\n+ The decision by parent company Lufthansa not to adapt/update its corporate website (or oversight in doing so) in the early hours of the crisis highlights a dilemma facing brands associated with, yet separate from, the affected brand. It suggests the question: Was it Lufthansa’s responsibility as the parent company to support or reflect the public mood in the early hours of the crisis?"
+      },
+      {
+        "n": 6,
+        "page": 9,
+        "modality": "text",
+        "chars": 469,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY SNES\n(Germanwings.com site)\na | a | + Within the first 180 minutes: germanwings” Eurowings * ftuchen | Mein Flug — informieren tne Varta\n+ Germanwings site remains inaccessible + Within the first hour, Twitter and Facebook — Pe eee \\\\. é become only available points of digital lea contact with Germanwings Rites dks deadbeat\nv/ “a ngs > Tyeete LJ\n; ae aac eee\ni OG agree moniter our website for periodic updates (Germanwings Twitter)"
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.755,
+      "generation_s": 8.375
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.065,
+      "prompt_tokens": 1408,
+      "prompt_eval_s": 2.423,
+      "gen_tokens": 33,
+      "gen_s": 3.262
+    }
+  },
+  {
+    "case": "confusable",
+    "category": "two passages easy to confuse",
+    "run": 1,
+    "question": "During the first hour, were Twitter and Facebook available to the public while the Germanwings website was down?",
+    "answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "raw_answer": "Yes, Twitter and Facebook were available to the public while the Germanwings website was down. [3]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      3
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY sTAaTesies\nHee 7 . - (Twitter) + Within the first 60 minutes: — + Germanwings issues first tweet acknowledging incident & tte Sie en canal issues update to Facebook <r jd for periodic updates\ni rT j i a nas dehnde avormahon 1 + Atthe same time, Germanwings website crashes — remains = salistian tan ail Wie: ea mace inaccessible for approx. 2 hours i. A\\s Y eeteny + Nochange to brand colours/logo on social platforms at this aE pris Lsceespebomre ci hove ers of time though we shill do not have amy wn confirmed information —— an\nWir hrabstresanil wn cheser Situation aul unsere (Germanwings.com site) Standieg aitualwerte interretsate\n“ pi a » we emery"
+      },
+      {
+        "n": 2,
+        "page": 9,
+        "modality": "text",
+        "chars": 469,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY SNES\n(Germanwings.com site)\na | a | + Within the first 180 minutes: germanwings” Eurowings * ftuchen | Mein Flug — informieren tne Varta\n+ Germanwings site remains inaccessible + Within the first hour, Twitter and Facebook — Pe eee \\\\. é become only available points of digital lea contact with Germanwings Rites dks deadbeat\nv/ “a ngs > Tyeete LJ\n; ae aac eee\ni OG agree moniter our website for periodic updates (Germanwings Twitter)"
+      },
+      {
+        "n": 3,
+        "page": 18,
+        "modality": "text",
+        "chars": 783,
+        "content": "HILL+KNOWLTON MEDIA / SOCIAL ACTIVITY BY THE NUMBERS REDNESS\n@ Poorer = Germanwings flight #4U9525 (registration Da AIPX) was lost from Flightradar24 at 6800 + TWITTER: feet at 09.39 UTC time\n+ One ofthe first tweets to be posted around the incident came from Flightradar, a widely trusted and used website for tracking flights . Blobally.\n+ Within the first 90 minutes the tweet was retweeted more than\n2,000 times.\n+ Within the first 60 minutes, #Germanwings had become the top trending topic on Twitter ' re rot ast cen\n+ Within the first 60 minutes, according to Sysomos, more than 60,000 Tweets were posted referencing #Germanwings De AS | Wordeete Trends =. © owe\n61 546 ‘Overall Mentions Shara anbewrdt ards Total Montiones <I eo. | Bloga eer unath ae\n© 60,860 sacs Twithar an"
+      },
+      {
+        "n": 4,
+        "page": 10,
+        "modality": "text",
+        "chars": 426,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY REDNESS\n(Germanwings.com site)\n+ Within the first 180 minutes: aM anaa® SS Se + Germanwings appears to be struggling to re- ma activate its website. Tog ee + Atone point, the original site with full — | marketing content appears on the site - p= contradicting its more sombre social — : platforms “aa :\nJ | om\ne =\ni OW _ Please fronior our website for periodic updates. (Germanwings Twitter)"
+      },
+      {
+        "n": 5,
+        "page": 8,
+        "modality": "text",
+        "chars": 398,
+        "content": "HILL+KNOWLTON BRAND CRISIS MODIFICATION eee tne\n(Germanwings Facebook)\ni - a 2 me ae omens 1 + Within the first 120 minutes: “\n+ Germanwings recoloured its logo on both its Twitter and oo Facebook accounts to black and white. —\n+ Parent company Lufthansa follows within a similar time- = frame with its social platforms ;\nA... — ‘\nLufthansa @\n(Lufthansa Facebook) Fowtinon | bee’ | Phubee | il | Me"
+      },
+      {
+        "n": 6,
+        "page": 4,
+        "modality": "text",
+        "chars": 722,
+        "content": "HILL+KNOWLTON KEY FINDINGS/CONCLUSIONS OEE\n+ Asseen during previous incidents, including the Costa Concordia incident (2012), the Asiana Airlines crash at SFO (2013), and more recent aviation disasters, the role of social platforms as back-ups to a company’s corporate site has become increasingly important. The catastrophic failure of the Germanwings website in the initial hours continues to reinforce the importance of having social platforms in place and an impetus to consider and review existing infrastructure.\n+ However, unlike Asiana Airlines, where citizen-generated visuals largely drove the media agenda during the first hours, the immediate lack of visuals transformed this quickly into a media-driven story."
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.146,
+      "generation_s": 4.112
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.021,
+      "prompt_tokens": 1479,
+      "prompt_eval_s": 0.087,
+      "gen_tokens": 23,
+      "gen_s": 1.659
+    }
+  },
+  {
+    "case": "confusable_neg",
+    "category": "negated control (detects premise echoing)",
+    "run": 1,
+    "question": "Was the Germanwings website accessible during the first 60 minutes after the incident?",
+    "answer": "No, the Germanwings website was not accessible during the first 60 minutes after the incident. [1]",
+    "raw_answer": "No, the Germanwings website was not accessible during the first 60 minutes after the incident. [1]",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [
+      1
+    ],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 6,
+        "modality": "text",
+        "chars": 689,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY sTAaTesies\nHee 7 . - (Twitter) + Within the first 60 minutes: — + Germanwings issues first tweet acknowledging incident & tte Sie en canal issues update to Facebook <r jd for periodic updates\ni rT j i a nas dehnde avormahon 1 + Atthe same time, Germanwings website crashes — remains = salistian tan ail Wie: ea mace inaccessible for approx. 2 hours i. A\\s Y eeteny + Nochange to brand colours/logo on social platforms at this aE pris Lsceespebomre ci hove ers of time though we shill do not have amy wn confirmed information —— an\nWir hrabstresanil wn cheser Situation aul unsere (Germanwings.com site) Standieg aitualwerte interretsate\n“ pi a » we emery"
+      },
+      {
+        "n": 2,
+        "page": 12,
+        "modality": "text",
+        "chars": 764,
+        "content": "HILL+KNOWLTON\n(Germanwings.com Hour 3)\npesxherten eigenen Informabonen vor Sobwid beslatgte Einzetheiten vertigbar sind, informienen + Germanwings.com begins to stabilize <_<\n+ By the fifth hour following the incident, the current Crisis site is in place We have recently become aware of media reports speculating on an incident though we still do not have any own confirmed infoematon As soon as definite informaton is avedable. we shail infonm the mecha immediately Please monior our websie www germanwings com for penodic updates\n(Germanwings.com updates Hour 12+) (Germanwings.com Hour 4.5) [Current information —— eee ——a | ‘That art Jimem munnages cent eviormatios ; — ermenat umange of Landes Weathrow Arpor (UMA) 4 vings Eurowings * beg My fge bien ferrets"
+      },
+      {
+        "n": 3,
+        "page": 9,
+        "modality": "text",
+        "chars": 469,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY SNES\n(Germanwings.com site)\na | a | + Within the first 180 minutes: germanwings” Eurowings * ftuchen | Mein Flug — informieren tne Varta\n+ Germanwings site remains inaccessible + Within the first hour, Twitter and Facebook — Pe eee \\\\. é become only available points of digital lea contact with Germanwings Rites dks deadbeat\nv/ “a ngs > Tyeete LJ\n; ae aac eee\ni OG agree moniter our website for periodic updates (Germanwings Twitter)"
+      },
+      {
+        "n": 4,
+        "page": 4,
+        "modality": "text",
+        "chars": 722,
+        "content": "HILL+KNOWLTON KEY FINDINGS/CONCLUSIONS OEE\n+ Asseen during previous incidents, including the Costa Concordia incident (2012), the Asiana Airlines crash at SFO (2013), and more recent aviation disasters, the role of social platforms as back-ups to a company’s corporate site has become increasingly important. The catastrophic failure of the Germanwings website in the initial hours continues to reinforce the importance of having social platforms in place and an impetus to consider and review existing infrastructure.\n+ However, unlike Asiana Airlines, where citizen-generated visuals largely drove the media agenda during the first hours, the immediate lack of visuals transformed this quickly into a media-driven story."
+      },
+      {
+        "n": 5,
+        "page": 10,
+        "modality": "text",
+        "chars": 426,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY REDNESS\n(Germanwings.com site)\n+ Within the first 180 minutes: aM anaa® SS Se + Germanwings appears to be struggling to re- ma activate its website. Tog ee + Atone point, the original site with full — | marketing content appears on the site - p= contradicting its more sombre social — : platforms “aa :\nJ | om\ne =\ni OW _ Please fronior our website for periodic updates. (Germanwings Twitter)"
+      },
+      {
+        "n": 6,
+        "page": 22,
+        "modality": "text",
+        "chars": 813,
+        "content": "HILL+KNOWLTON TRENDS AND BEHAVIOURS a Seen\n+ Within 90 minutes - and despite lack of immediate information — political leaders were quick to react and provide comment on the incident.\n+ Francois Hollande was the first of the world’s rideaetanaier® See ee par raean Hele political leaders to comment on the incident. eo pene mperreeceny pacer aia |\niepeesieatiece —— : + While the French Civil Aviation Authorities have been ai wa Tae hue sy tp ob i A cso active through non-digital channels from the outset 81 cOmmTES, 00 GU 08, Sest, NOUS SOmrnS scented (e.g. statement to the media), their social media presence was limited in the first hours. A first tweet (ir came almost ~6 hours after the crash. (17:31 CET) P| a Bar ar ae a =\nion = Teor drephes, = Phows < woeon Sito\nsepara = ad _ 2) my eT bee me avd tt ee"
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.061,
+      "generation_s": 17.324
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.017,
+      "prompt_tokens": 1562,
+      "prompt_eval_s": 13.206,
+      "gen_tokens": 25,
+      "gen_s": 1.868
+    }
+  },
+  {
+    "case": "repetition_prone",
+    "category": "previously repetitive output",
+    "run": 1,
+    "question": "What were the main findings of the Germanwings digital crisis analysis?",
+    "answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis, and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "raw_answer": "The main findings of the Germanwings digital crisis analysis include the importance of having social platforms in place and an impetus to consider and review existing infrastructure, as well as the role of social platforms in driving media agendas during crises. The analysis also highlights the importance of clear protocols for coordinated brand management in times of catastrophic crisis, and the dilemma faced by brands associated with, yet separate from, the affected brand.",
+    "abstained": false,
+    "flags": {
+      "format_ok": true,
+      "not_truncated": true,
+      "no_repetition": true,
+      "abstain_ok": true,
+      "includes_ok": true,
+      "no_known_error": true
+    },
+    "passed": true,
+    "model_referenced": [],
+    "retrieved": [
+      {
+        "n": 1,
+        "page": 4,
+        "modality": "text",
+        "chars": 722,
+        "content": "HILL+KNOWLTON KEY FINDINGS/CONCLUSIONS OEE\n+ Asseen during previous incidents, including the Costa Concordia incident (2012), the Asiana Airlines crash at SFO (2013), and more recent aviation disasters, the role of social platforms as back-ups to a company’s corporate site has become increasingly important. The catastrophic failure of the Germanwings website in the initial hours continues to reinforce the importance of having social platforms in place and an impetus to consider and review existing infrastructure.\n+ However, unlike Asiana Airlines, where citizen-generated visuals largely drove the media agenda during the first hours, the immediate lack of visuals transformed this quickly into a media-driven story."
+      },
+      {
+        "n": 2,
+        "page": 1,
+        "modality": "text",
+        "chars": 116,
+        "content": "; GERMANWINGS 9525: THE FIRST 6 HOURS\n: DIGITAL CRISIS ANALYSIS\n: y 25-03-2015 a y BRENDAN HODGSON + AHMED ALSHARIOI"
+      },
+      {
+        "n": 3,
+        "page": 6,
+        "modality": "text",
+        "chars": 689,
+        "content": "HILL+KNOWLTON GERMANWINGS ACTIVITY sTAaTesies\nHee 7 . - (Twitter) + Within the first 60 minutes: — + Germanwings issues first tweet acknowledging incident & tte Sie en canal issues update to Facebook <r jd for periodic updates\ni rT j i a nas dehnde avormahon 1 + Atthe same time, Germanwings website crashes — remains = salistian tan ail Wie: ea mace inaccessible for approx. 2 hours i. A\\s Y eeteny + Nochange to brand colours/logo on social platforms at this aE pris Lsceespebomre ci hove ers of time though we shill do not have amy wn confirmed information —— an\nWir hrabstresanil wn cheser Situation aul unsere (Germanwings.com site) Standieg aitualwerte interretsate\n“ pi a » we emery"
+      },
+      {
+        "n": 4,
+        "page": 4,
+        "modality": "text",
+        "chars": 830,
+        "content": "visuals largely drove the media agenda during the first hours, the immediate lack of visuals transformed this quickly into a media-driven story. + The actions taken by three of the key players - Germanwings, Lufthansa and Airbus - to quickly adapt the visual appearance of their website and their social platforms highlights the importance of having clear protocols in place for coordinated brand management in times of catastrophic crisis.\n+ The decision by parent company Lufthansa not to adapt/update its corporate website (or oversight in doing so) in the early hours of the crisis highlights a dilemma facing brands associated with, yet separate from, the affected brand. It suggests the question: Was it Lufthansa’s responsibility as the parent company to support or reflect the public mood in the early hours of the crisis?"
+      },
+      {
+        "n": 5,
+        "page": 12,
+        "modality": "text",
+        "chars": 764,
+        "content": "HILL+KNOWLTON\n(Germanwings.com Hour 3)\npesxherten eigenen Informabonen vor Sobwid beslatgte Einzetheiten vertigbar sind, informienen + Germanwings.com begins to stabilize <_<\n+ By the fifth hour following the incident, the current Crisis site is in place We have recently become aware of media reports speculating on an incident though we still do not have any own confirmed infoematon As soon as definite informaton is avedable. we shail infonm the mecha immediately Please monior our websie www germanwings com for penodic updates\n(Germanwings.com updates Hour 12+) (Germanwings.com Hour 4.5) [Current information —— eee ——a | ‘That art Jimem munnages cent eviormatios ; — ermenat umange of Landes Weathrow Arpor (UMA) 4 vings Eurowings * beg My fge bien ferrets"
+      },
+      {
+        "n": 6,
+        "page": 18,
+        "modality": "text",
+        "chars": 783,
+        "content": "HILL+KNOWLTON MEDIA / SOCIAL ACTIVITY BY THE NUMBERS REDNESS\n@ Poorer = Germanwings flight #4U9525 (registration Da AIPX) was lost from Flightradar24 at 6800 + TWITTER: feet at 09.39 UTC time\n+ One ofthe first tweets to be posted around the incident came from Flightradar, a widely trusted and used website for tracking flights . Blobally.\n+ Within the first 90 minutes the tweet was retweeted more than\n2,000 times.\n+ Within the first 60 minutes, #Germanwings had become the top trending topic on Twitter ' re rot ast cen\n+ Within the first 60 minutes, according to Sysomos, more than 60,000 Tweets were posted referencing #Germanwings De AS | Wordeete Trends =. © owe\n61 546 ‘Overall Mentions Shara anbewrdt ards Total Montiones <I eo. | Bloga eer unath ae\n© 60,860 sacs Twithar an"
+      }
+    ],
+    "weak_evidence": false,
+    "latency": {
+      "retrieval_s": 0.064,
+      "generation_s": 9.177
+    },
+    "generation_stats": {
+      "done_reason": "stop",
+      "load_s": 0.018,
+      "prompt_tokens": 1524,
+      "prompt_eval_s": 0.086,
+      "gen_tokens": 83,
+      "gen_s": 6.88
+    }
+  }
+]

@@ -1,15 +1,19 @@
+"""End-to-end multimodal RAG pipeline.
 
-"""End-to-end multimodal RAG pipeline with conservative evidence suggestions."""
+Source attribution is reported in separate, honestly labelled categories.
+None of them is verified against the answer text:
+
+  contexts          everything retrieved and shown to the model;
+  model-referenced  [n] markers the model wrote (unverified claims);
+  suggested         optional TF-IDF lexical matches; disabled by default
+                    (generation.suggest_citations: true to enable).
+"""
 
 from __future__ import annotations
 
 import json
 import re
 import time
-from difflib import SequenceMatcher
-
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 
 from src.generation.generator import get_generator, supports_images
 from src.generation.prompts import (
@@ -17,19 +21,17 @@ from src.generation.prompts import (
     build_no_rag_messages,
     build_rag_messages,
 )
+from src.pipeline.postprocess import CITE_RE, clean_answer, normalise_abstention
 from src.retrieval.retriever import MultimodalRetriever
 from src.utils.config import load_config, resolve
 from src.vectorstore.chroma_store import ChromaStore
 
 
-CITE_RE = re.compile(r"\[(\d+)\]")
 NUMBERED_LINE_RE = re.compile(r"^\s*\d+[.)]\s+")
-SUGGESTION_RE = re.compile(
-    r"\s*\(suggested evidence:\s*\[\d+\]\)", re.IGNORECASE
-)
-
-MAX_NUMBERED_BULLETS = 4
 SUGGESTION_THRESHOLD = 0.22
+
+STATUS_MODEL = "model_referenced_unverified"
+STATUS_SUGGESTED = "suggested_lexical"
 
 
 def is_abstention(answer: str) -> bool:
@@ -43,109 +45,13 @@ def is_abstention(answer: str) -> bool:
     }
 
 
-def _normalise_bullet(text: str) -> str:
-    """Normalize a bullet for duplicate comparison."""
-    text = NUMBERED_LINE_RE.sub("", text).strip()
-    text = SUGGESTION_RE.sub("", text)
-    text = CITE_RE.sub("", text)
-    text = re.sub(r"[^a-z0-9]+", " ", text.lower())
-    return re.sub(r"\s+", " ", text).strip()
+def remove_repeated_bullets(answer: str, max_bullets: int | None = None) -> str:
+    """Backward-compatible wrapper around postprocess.clean_answer().
 
-
-def _is_duplicate_bullet(candidate: str, previous: list[str]) -> bool:
-    """Detect exact and near-duplicate numbered bullets."""
-    candidate_norm = _normalise_bullet(candidate)
-    if not candidate_norm:
-        return False
-
-    candidate_tokens = set(candidate_norm.split())
-
-    for old_norm in previous:
-        if candidate_norm == old_norm:
-            return True
-
-        old_tokens = set(old_norm.split())
-        if not candidate_tokens or not old_tokens:
-            continue
-
-        jaccard = len(candidate_tokens & old_tokens) / len(
-            candidate_tokens | old_tokens
-        )
-        sequence_ratio = SequenceMatcher(
-            None, candidate_norm, old_norm
-        ).ratio()
-
-        if jaccard >= 0.55 or sequence_ratio >= 0.78:
-            return True
-
-    return False
-
-
-def remove_repeated_bullets(
-    answer: str,
-    max_bullets: int = MAX_NUMBERED_BULLETS,
-) -> str:
-    """Remove duplicate numbered bullets and renumber the remaining list.
-
-    Non-numbered lines are preserved. This is formatting cleanup, not
-    factual verification, and cannot restore content the model omitted.
+    max_bullets is ignored: the old silent cap was removed because it could
+    discard correct content. Formatting only; not factual verification.
     """
-    if not answer or not answer.strip():
-        return answer.strip()
-
-    lines = answer.splitlines()
-    output: list[str] = []
-    bullets: list[str] = []
-    normalized_bullets: list[str] = []
-    in_numbered_list = False
-    inserted_bullets = False
-
-    for line in lines:
-        stripped = line.strip()
-
-        if not NUMBERED_LINE_RE.match(stripped):
-            output.append(line)
-            continue
-
-        in_numbered_list = True
-        content = NUMBERED_LINE_RE.sub("", stripped).strip()
-
-        if _is_duplicate_bullet(content, normalized_bullets):
-            continue
-
-        if len(bullets) >= max_bullets:
-            continue
-
-        bullets.append(content)
-        normalized_bullets.append(_normalise_bullet(content))
-
-    if not in_numbered_list:
-        return answer.strip()
-
-    # Rebuild the cleaned list where the first numbered item appeared.
-    rebuilt: list[str] = []
-
-    for line in output:
-        if NUMBERED_LINE_RE.match(line.strip()):
-            if not inserted_bullets:
-                rebuilt.extend(
-                    f"{index}. {bullet}"
-                    for index, bullet in enumerate(bullets, start=1)
-                )
-                inserted_bullets = True
-            continue
-
-        rebuilt.append(line)
-
-    # Insert the list if the original numbered items were removed.
-    if not inserted_bullets and bullets:
-        rebuilt.extend(
-            f"{index}. {bullet}"
-            for index, bullet in enumerate(bullets, start=1)
-        )
-
-    cleaned = "\n".join(rebuilt).strip()
-    return cleaned or answer.strip()
+    return clean_answer(answer)[0]
 
 
 def suggest_citations(
@@ -157,17 +63,19 @@ def suggest_citations(
 
     These are lexical matches only. They do not prove that a source
     supports a claim and must not be treated as verified citations.
+    Disabled by default; requires scikit-learn only when enabled.
     """
     if not items or is_abstention(answer):
         return answer, []
+
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.metrics.pairwise import cosine_similarity
 
     contexts = [
         (item.get("content") or item.get("caption") or "").strip()
         for item in items
     ]
-    valid_indices = [
-        index for index, content in enumerate(contexts) if content
-    ]
+    valid_indices = [i for i, content in enumerate(contexts) if content]
 
     if not valid_indices:
         return answer, []
@@ -182,12 +90,8 @@ def suggest_citations(
     if not candidates:
         return answer, []
 
-    candidate_texts = [
-        NUMBERED_LINE_RE.sub("", line)
-        for _, line in candidates
-    ]
-    corpus = [contexts[index] for index in valid_indices]
-    corpus.extend(candidate_texts)
+    candidate_texts = [NUMBERED_LINE_RE.sub("", line) for _, line in candidates]
+    corpus = [contexts[i] for i in valid_indices] + candidate_texts
 
     try:
         vectorizer = TfidfVectorizer(
@@ -196,33 +100,26 @@ def suggest_citations(
             sublinear_tf=True,
         )
         vectors = vectorizer.fit_transform(corpus)
-        context_vectors = vectors[:len(valid_indices)]
-        answer_vectors = vectors[len(valid_indices):]
-        scores = cosine_similarity(answer_vectors, context_vectors)
+        scores = cosine_similarity(
+            vectors[len(valid_indices):],
+            vectors[:len(valid_indices)],
+        )
     except ValueError:
-        # Empty vocabulary or no usable lexical features.
         return answer, []
 
     suggested_numbers: set[int] = set()
 
     for row, (line_index, line) in enumerate(candidates):
-        # Preserve citations already supplied by the model.
         if CITE_RE.search(line):
             continue
 
         best_position = int(scores[row].argmax())
-        best_score = float(scores[row, best_position])
-
-        if best_score < threshold:
+        if float(scores[row, best_position]) < threshold:
             continue
 
-        context_index = valid_indices[best_position]
-        source_number = context_index + 1
+        source_number = valid_indices[best_position] + 1
         suggested_numbers.add(source_number)
-
-        lines[line_index] = (
-            f"{line} (suggested evidence: [{source_number}])"
-        )
+        lines[line_index] = f"{line} (suggested evidence: [{source_number}])"
 
     return "\n".join(lines), sorted(suggested_numbers)
 
@@ -283,18 +180,10 @@ class MultimodalRAG:
                 f"and unzip them into {artifacts_dir}"
             )
 
-        manifest = json.loads(
-            manifest_path.read_text(encoding="utf-8")
-        )
+        manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         store = ChromaStore(resolve(cfg["paths"]["chroma_dir"]))
 
-        return cls(
-            cfg,
-            store,
-            manifest,
-            backend,
-            use_reranker,
-        )
+        return cls(cfg, store, manifest, backend, use_reranker)
 
     def _load_images(self, items: list[dict]) -> dict[int, object]:
         """Load images only when the configured generator supports them."""
@@ -330,11 +219,8 @@ class MultimodalRAG:
         return images
 
     @staticmethod
-    def _valid_citation_numbers(
-        answer: str,
-        item_count: int,
-    ) -> set[int]:
-        """Return citation numbers referring to retrieved contexts."""
+    def _valid_citation_numbers(answer: str, item_count: int) -> set[int]:
+        """Return [n] markers that refer to a retrieved context."""
         return {
             int(number)
             for number in CITE_RE.findall(answer)
@@ -377,78 +263,92 @@ class MultimodalRAG:
             )
 
         retrieval_end = time.perf_counter()
+        generation_cfg = self.cfg["generation"]
+        generation_stats: dict = {}
 
         if (
             mode != "no_rag"
-            and self.cfg["generation"].get("abstain_policy") == "hard"
+            and generation_cfg.get("abstain_policy") == "hard"
             and weak
         ):
-            answer_text = ABSTAIN
+            raw_answer = ABSTAIN
         else:
             # Exactly one generation call per query.
-            answer_text = self.generator.generate(
+            raw_answer = self.generator.generate(
                 messages,
                 images=list(images.values()) or None,
             )
+            generation_stats = dict(
+                getattr(self.generator, "last_stats", None) or {}
+            )
 
-        suggested_numbers: list[int] = []
+        done_reason = generation_stats.get("done_reason")
+        truncated = (done_reason == "length") if done_reason else None
+
+        answer_text = normalise_abstention(raw_answer, ABSTAIN)
+        cleanup = {"removed_duplicates": 0, "trimmed_incomplete": False}
 
         if mode != "no_rag" and not is_abstention(answer_text):
-            answer_text = remove_repeated_bullets(answer_text)
+            answer_text, cleanup = clean_answer(
+                answer_text,
+                truncated=bool(truncated),
+            )
 
-            if items:
-                answer_text, suggested_numbers = suggest_citations(
-                    answer_text,
-                    items,
-                )
+        # [n] markers the model actually wrote in the displayed answer.
+        # Computed before any suggestion text is appended.
+        model_numbers = self._valid_citation_numbers(answer_text, len(items))
+
+        suggested_numbers: list[int] = []
+        if (
+            mode != "no_rag"
+            and items
+            and generation_cfg.get("suggest_citations", False)
+            and not is_abstention(answer_text)
+        ):
+            answer_text, suggested_numbers = suggest_citations(
+                answer_text,
+                items,
+            )
 
         generation_end = time.perf_counter()
 
-        valid_numbers = self._valid_citation_numbers(
-            answer_text,
-            len(items),
-        )
-
-        displayed_numbers = sorted(
-            valid_numbers | set(suggested_numbers)
-        )
-
-        citations = [
-            {
+        citations = []
+        for number in sorted(model_numbers | set(suggested_numbers)):
+            item = items[number - 1]
+            from_model = number in model_numbers
+            citations.append({
                 "n": number,
-                "doc_id": items[number - 1]["doc_id"],
-                "page": items[number - 1]["page_num"],
-                "modality": items[number - 1]["modality"],
-                "image_path": (
-                    items[number - 1].get("image_path") or None
-                ),
+                "doc_id": item["doc_id"],
+                "page": item["page_num"],
+                "modality": item["modality"],
+                "image_path": item.get("image_path") or None,
                 "snippet": (
-                    items[number - 1].get("content")
-                    or items[number - 1].get("caption")
-                    or ""
+                    item.get("content") or item.get("caption") or ""
                 )[:300],
-                "suggested": number in suggested_numbers,
-            }
-            for number in displayed_numbers
-        ]
+                "status": STATUS_MODEL if from_model else STATUS_SUGGESTED,
+                "suggested": not from_model,
+            })
 
         return {
             "question": question,
             "mode": mode,
             "answer": answer_text,
+            "raw_answer": raw_answer,
             "abstained": is_abstention(answer_text),
+            # Entries are model-referenced (unverified) or lexical
+            # suggestions; see each entry's "status".
             "citations": citations,
+            "verification": "none",
             "contexts": items,
             "weak_evidence": weak,
             "best_text_score": (
                 retrieval.best_text_score if retrieval else None
             ),
+            "truncated": truncated,
+            "cleanup": cleanup,
+            "generation_stats": generation_stats,
             "latency": {
-                "retrieval_s": round(
-                    retrieval_end - start_time, 3
-                ),
-                "generation_s": round(
-                    generation_end - retrieval_end, 3
-                ),
+                "retrieval_s": round(retrieval_end - start_time, 3),
+                "generation_s": round(generation_end - retrieval_end, 3),
             },
         }

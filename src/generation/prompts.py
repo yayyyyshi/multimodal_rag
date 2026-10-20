@@ -1,63 +1,29 @@
-
 """Prompt templates for retrieval-augmented generation."""
 
 ABSTAIN = "Not answerable"
 
-SYSTEM_RAG = f"""You are a careful document question-answering assistant.
+# Kept deliberately short: a 1.5B model follows a few concrete rules much
+# better than a long rule list, and every prompt token costs CPU time.
+SYSTEM_RAG = f"""You answer questions using only the numbered passages in the user message.
 
-Your task is to answer the user's question using ONLY the supplied numbered
-context passages, tables, figure descriptions, and images.
+- Use only facts stated in the passages. Never add outside knowledge.
+- The passages come from OCR and may be garbled. Ignore unreadable fragments, page headers, dates and author names unless the question asks about them.
+- Keep times, numbers and names exactly as written.
+- Write 1 to 4 short sentences of plain text: no lists, no bold, no headings.
+- Do not repeat a fact. Do not write phrases like "as mentioned in the context". Stop once the question is answered.
+- End each sentence with the number of the passage it comes from, like [2].
+- If the passages do not contain the answer, reply exactly: {ABSTAIN}
 
-STRICT RULES:
+Example
+Context:
+[1] (page 2, text passage)
+The reading room opens at nine and closes at five.
 
-1. EVIDENCE
-- Use only information explicitly supported by the supplied context.
-- Do not use outside knowledge or invent facts.
-- If the context does not contain enough relevant evidence, reply exactly:
-  "{ABSTAIN}"
+[2] (page 3, text passage)
+Membership is free for students.
 
-2. INLINE CITATIONS — MANDATORY
-- Every factual claim must have an inline citation.
-- Use the exact context number in square brackets: [1], [2], etc.
-- Put the citation immediately after the sentence or bullet it supports.
-- Example: "The website failure highlighted the need for backup social
-  platforms [1]."
-- For a bullet containing multiple claims, cite each claim where necessary.
-- Cite only context numbers actually provided in the prompt.
-- Never invent citation numbers.
-- A source must directly support the claim attached to its citation.
-- If multiple sources support a claim, cite them separately, e.g. [1][3].
-- Do not add a bibliography or sources list as a replacement for inline citations.
-
-3. ACCURACY
-- Preserve the meaning and qualifications of the source.
-- Distinguish facts stated in the document from interpretations or questions
-  raised by the document.
-- Do not present speculation as an established fact.
-- If the evidence supports only part of an answer, state only that part.
-
-4. QUESTIONS ABOUT MAIN TOPICS OR FINDINGS
-- Identify distinct topics or findings supported by the retrieved context.
-- Combine repeated points.
-- Do not repeat the same list under multiple headings.
-- Do not claim to summarize all documents when only a subset was retrieved.
-
-5. RESPONSE STYLE
-- Answer the specific question directly.
-- For ordinary factual questions, use 1 short paragraph or at most 4 bullets.
-- Never repeat the same fact or paraphrase the same point in multiple bullets.
-- Do not generate numbered lists unless multiple distinct facts are needed.
-- Stop once the question is answered.
-- Never continue a list merely to make the answer longer.
-- Prefer a concise, complete answer over an exhaustive response.
-- Every factual claim must have an inline citation in the form [1].
-
-Before responding, check each factual sentence:
-(a) Is it supported by the context?
-(b) Does it have an inline citation?
-(c) Does that citation point to a context that supports the claim?
-
-If any answer is no, revise the response. Never fabricate evidence or citations.
+Question: When does the reading room open, and who gets free membership?
+Answer: The reading room opens at nine. [1] Students get free membership. [2]
 """
 
 SYSTEM_NO_RAG = """You are a helpful assistant.
@@ -106,34 +72,28 @@ def build_rag_messages(
     weak: bool = False,
     image_refs: dict[int, object] | None = None,
 ) -> list[dict]:
-    """Build messages for a RAG question."""
+    """Build messages for a RAG question.
+
+    The "Context:" and "Question:" labels and the phrase "weakly related"
+    are relied on by ExtractiveGenerator; keep them.
+    """
     context = format_context(items)
 
-    user_content = (
-        "Answer the question using the numbered evidence below.\n"
-        "Cite every factual claim inline using the exact evidence number, "
-        "for example [1]. Do not invent citations.\n\n"
-        f"Context:\n{context}\n\n"
-    )
+    user_content = f"Context:\n{context}\n\n"
 
     if image_refs:
         user_content += (
-            "Relevant images are attached where supported by the model. "
-            "Use them only as evidence and cite their corresponding numbered "
-            "context when making claims about them.\n\n"
+            "Attached images are additional evidence; cite the numbered "
+            "passage that describes them.\n\n"
         )
 
     if weak:
         user_content += (
-            "Warning: retrieved evidence may be insufficient. "
-            "If it does not support a reliable answer, reply exactly "
-            f'"{ABSTAIN}".\n\n'
+            "Note: the passages are only weakly related to the question. "
+            f'If they do not support a reliable answer, reply exactly "{ABSTAIN}".\n\n'
         )
 
-    user_content += (
-        f"Question: {question}\n\n"
-        "Answer with inline citations after every factual claim:"
-    )
+    user_content += f"Question: {question}\nAnswer:"
 
     return [
         {"role": "system", "content": SYSTEM_RAG},
